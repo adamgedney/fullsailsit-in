@@ -12,6 +12,9 @@ angular.module('fullsailsitinApp', [
         templateUrl: 'views/home.tpl',
         controller: 'MainCtrl'
       })
+      .when('/loggedin', {
+        templateUrl: 'views/tempSitin.tpl',
+      })
       .otherwise({
         redirectTo: '/'
       });

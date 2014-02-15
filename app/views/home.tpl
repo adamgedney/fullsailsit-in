@@ -1,12 +1,4 @@
 
-<!-- <div ng-include src="'views/header.tpl'"></div>
-
-
-<div ng-include src="'views/footer.tpl'"></div> -->
-
-<header>
-</header>
-
   <div class="fold">
     <div class="features">
       <img src="images/logo.jpg">
