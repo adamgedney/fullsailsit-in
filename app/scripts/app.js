@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('fullsailsitin', [
+angular.module('fullsailsitinApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -10,7 +10,7 @@ angular.module('fullsailsitin', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.tpl',
-        controller: 'Home'
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
