@@ -1,87 +1,98 @@
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+/*
+	Thanks for checking out my code!!
+
+
+	Copyright Adam Gedney 2/15/14
+	contact: adam.gedney@gmail.com
+	http://adamgedney.com
+
+"Good UI design is humble.” – Jono DiCarlo
+*/
+/*
+
+
+----------------SASS------------------*/
+$white: #fff;
+$off-white: #f6f6f6;
+$light-grey: #e8e8e8;
+$med-grey: #969696;
+$dark-grey: #333333;
+$black: #000;
+$dark-red: #990100;
+$light-red: #b90504;
+$blue: #0971b2;
+$yellow: #fffc19;
+
+/*----Sass imports----*/
+@import "util";
+@import "reset";
+@import "defaults";
+
+
+
+
+/*--------------------------------------End General / Start Objects------------------------------------*/
+
+.hide-text{
+	text-indent: 200%;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
-/* Space out content a bit */
-body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.red{
+	color: $dark-red;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+.blue{
+	color: $blue;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
+.light-gray{
+	color: $light-grey;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+.dark-gray{
+	color: $dark-grey;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+.underline{
+	text-decoration: underline;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
+/*--------------------------------------End Objects / Start Main------------------------------------*/
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
 
-.marketing p + h4 {
-    margin-top: 28px;
-}
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
