@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-	.controller('Home', function ($scope) {
+	.controller('Action_Login', function ($scope) {
 		console.log($scope);
+
 	});
