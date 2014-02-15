@@ -39,6 +39,10 @@ $yellow: #fffc19;
 	white-space: nowrap;
 }
 
+.bold{
+	font-weight: 700;
+}
+
 .red{
 	color: $dark-red;
 }
@@ -62,10 +66,32 @@ $yellow: #fffc19;
 
 /*--------------------------------------End Objects / Start Main------------------------------------*/
 
+.fold{
+	background: url(../images/girl.jpg) no-repeat 50% 90%;
+	background-size: 205px 270px;
+	height: 100vh;
+}
 
+.features{
+	margin: 54px 0 54px 0;
+	padding: 18px;
+}
 
+.login-btn{
+	@include col(8);
+	@include col_ctr(8);
+	height: 48px;
+	background: $blue;
+	color: $off-white;
+	font-weight: 100;
+	padding: 0;
 
-
+	img{
+		vertical-align: middle;
+		width: 43px;
+		height: 39px;
+	}
+}
 
 
 
