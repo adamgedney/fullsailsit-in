@@ -108,7 +108,36 @@ $yellow: #fffc19;
 
 /*--------------------------------------End Login page / Start sit-in page------------------------------------*/
 
+header{
+	background: $dark-grey;
+	height: 48px;
+	overflow: hidden;
+	padding: 0 18px;
 
+	h1{
+		color: $off-white;
+		font-size: 1.8em;
+		text-align: center;
+		line-height: 48px;
+		display: inline;
+	}
+
+	img{
+		float: right;
+		margin-top: 7px;
+	}
+}
+
+.content{
+	height: 100vh;
+
+	h2{
+		@include col(10);
+		@include col_ctr(10);
+		margin-top: 72px;
+		margin-bottom: 72px;
+	}
+}
 
 
 

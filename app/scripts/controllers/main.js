@@ -7,4 +7,7 @@ angular.module('fullsailsitinApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.user = 'billy bob McQueen';
+
   });
