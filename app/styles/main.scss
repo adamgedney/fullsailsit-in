@@ -137,6 +137,38 @@ header{
 		margin-top: 72px;
 		margin-bottom: 72px;
 	}
+
+	li{
+		font-size: .7em;
+		padding: 0 18px;
+		height: 48px;
+		line-height: 48px;
+		background: $off-white;
+		overflow: hidden;
+
+	}
+
+	li:nth-child(even){
+		background: $light-grey;
+	}
+}
+
+.item-left{
+	text-align: left;
+	font-size: 1.2em;
+	font-weight: 700;
+	float: left;
+	margin-right: 18px;
+}
+
+.item-center{
+	text-align: left;
+	color: $blue;
+}
+
+.item-right{
+	text-align: right;
+	float: right;
 }
 
 
@@ -144,6 +176,15 @@ header{
 
 
 
+
+
+
+footer{
+	p{
+		text-align: center;
+		font-size: 1.4em;
+	}
+}
 
 
 
