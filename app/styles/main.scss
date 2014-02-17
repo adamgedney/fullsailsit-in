@@ -63,6 +63,32 @@ $yellow: #fffc19;
 	text-decoration: underline;
 }
 
+/** Nicholas Gallagher's micro clearfix
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
 
 /*--------------------------------------End Objects / Start Login page------------------------------------*/
 
@@ -111,7 +137,6 @@ $yellow: #fffc19;
 header{
 	background: $dark-grey;
 	height: 48px;
-	overflow: hidden;
 	padding: 0 18px;
 
 	h1{
@@ -126,6 +151,15 @@ header{
 		float: right;
 		margin-top: 7px;
 	}
+}
+
+.slideout{
+	position: absolute;
+	@include col(8);
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: $dark-grey;
 }
 
 .content{
