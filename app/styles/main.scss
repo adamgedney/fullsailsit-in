@@ -167,6 +167,7 @@ header{
 		height: 48px;
 		border-bottom: 1px solid $med-grey;
 		font-size: .8em;
+		cursor: pointer;
 	}
 
 	li:hover{
@@ -227,11 +228,15 @@ header{
 	position: absolute;
 	bottom: 0;
 	padding-left: 6px;
-
+	padding-top: 9px;
+	height: 48px;
+	cursor: pointer;
+	width: 100%;
+	border-top: 1px solid $med-grey;
 
 	p{
 		display: inline;
-		top: 4px;
+		top: 12px;
 		left: 59px;
 		position: absolute;
 	}
@@ -365,7 +370,8 @@ footer{
 
 
 
-
+/*Sass import--------------------*/
+@import "animate";
 
 
 
