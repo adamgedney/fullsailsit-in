@@ -36,7 +36,6 @@ angular.module('fullsailsitinApp')
 
 		};
 
-
 		function switchFalse(){
 			$scope.slideoutSwitch = false;
 		}

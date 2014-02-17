@@ -20,7 +20,8 @@ $dark-grey: #333333;
 $black: #000;
 $dark-red: #990100;
 $light-red: #b90504;
-$blue: #0971b2;
+$blue: #75acb5;
+$dark-blue: #5d8990;
 $yellow: #fffc19;
 
 /*----Sass imports----*/
@@ -292,7 +293,7 @@ header{
 
 .item-center{
 	text-align: left;
-	color: $blue;
+	color: $dark-blue;
 }
 
 .item-right{
