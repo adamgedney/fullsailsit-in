@@ -136,6 +136,7 @@ header{
 		@include col_ctr(10);
 		margin-top: 72px;
 		margin-bottom: 72px;
+		text-align: center;
 	}
 
 	li{
@@ -150,6 +151,10 @@ header{
 
 	li:nth-child(even){
 		background: $light-grey;
+	}
+
+	li:hover{
+		opacity: .5;
 	}
 }
 
@@ -169,12 +174,65 @@ header{
 .item-right{
 	text-align: right;
 	float: right;
+	font-size: .8em;
 }
 
 
+.modal{
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 
+	display: none; /* add this back in to show modal*/
+}
 
+.mod-container{
+	@include col(10);
+	@include col_ctr(10);
+	height: 198px;
+	margin-top: 30vh;
+	background: $off-white;
+	position: relative;
+	border-radius: 2px;
+	padding-top: 18px;
+	box-shadow: 1px 1px 6px $black;
 
+	h2{
+		padding: 0 18px;
+		margin-bottom: 9px;
+		font-size: 1.6em
+	}
+
+	p{
+		padding: 0 18px;
+		font-size: 1.4em;
+	}
+}
+
+.btn{
+	position: absolute;
+	@include col(6);
+	height: 48px;
+	bottom: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	color: $off-white;
+	font-weight: 50;
+}
+
+.cancel-btn{
+	background: $light-red;
+	left: 0;
+}
+
+.request-btn{
+	background: $blue;
+	right: 0;
+}
 
 
 
