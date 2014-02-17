@@ -154,7 +154,7 @@ header{
 }
 
 .slideout{
-	position: absolute;
+	position: fixed;
 	@include col(9);
 	top: 0;
 	bottom: 0;
@@ -171,7 +171,6 @@ header{
 
 	li:hover{
 		opacity: .8;
-		background: $med-grey;
 	}
 }
 
@@ -184,14 +183,14 @@ header{
 	font-size: .5em;
 	color: $med-grey;
 	position: absolute;
-	left: 49px;
+	left: 59px;
 	top: 6px;
 }
 
 .menu-item{
 	position: absolute;
 	bottom: 9px;
-	left: 49px;
+	left: 59px;
 }
 
 .menu-points{
@@ -210,11 +209,40 @@ header{
 
 .leader-menu-item{
 	line-height: 48px;
+	position: relative;
+
 	img{
 		margin-top: 7px;
 		margin-left: 3px;
 	}
+
+	span{
+		position: absolute;
+		top: 0;
+		left: 59px;
+	}
 }
+
+.logout-item{
+	position: absolute;
+	bottom: 0;
+	padding-left: 6px;
+
+
+	p{
+		display: inline;
+		top: 4px;
+		left: 59px;
+		position: absolute;
+	}
+}
+
+
+
+
+
+
+
 
 
 .content{

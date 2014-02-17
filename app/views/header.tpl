@@ -14,6 +14,12 @@
 					<span class="menu-points">21</span>
 						<span class="menu-points-units">sit-ins</span></li>
 
-		<li class="leader-menu-item"><img src="images/leader-icon.png" /> <span class="menu-item">Leaderboard</span></li>
+		<li class="leader-menu-item"><img src="images/leader-icon.png" /> <span>Leaderboard</span></li>
 	</ul>
+
+	<div class="logout-item">
+		<img src="images/logout-icon.png" />
+		<p>Logout</p>
+	</div><!-- /. logout-item-->
+
 </div><!-- /.slideout-->
