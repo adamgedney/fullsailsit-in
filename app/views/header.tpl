@@ -5,4 +5,13 @@
 </header>
 
 <div class="slideout">
+	<ul>
+		<li class="title-bar">Full Sail Sit-In</li>
+
+		<li><img src="images/avatar.jpg" width="46"/>
+			<span class="super">Logged in as:</span>
+				<span class="menu-item">Adam Gedney</span>
+					<span class="menu-points">21</span>
+						<span class="menu-points-units">sit-ins</span></li>
+	</ul>
 </div><!-- /.slideout-->

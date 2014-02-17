@@ -155,11 +155,57 @@ header{
 
 .slideout{
 	position: absolute;
-	@include col(8);
+	@include col(9);
 	top: 0;
 	bottom: 0;
 	right: 0;
 	background: $dark-grey;
+	color: $off-white;
+
+	li{
+		position: relative;
+		height: 48px;
+		border-bottom: 1px solid $med-grey;
+		font-size: .8em;
+	}
+
+	li:hover{
+		opacity: .8;
+		background: $med-grey;
+	}
+}
+
+.title-bar{
+	text-align: center;
+	padding-top: 18px;
+}
+
+.super{
+	font-size: .5em;
+	color: $med-grey;
+	position: absolute;
+	left: 49px;
+	top: 6px;
+}
+
+.menu-item{
+	position: absolute;
+	bottom: 9px;
+	left: 49px;
+}
+
+.menu-points{
+	position: absolute;
+	color: $yellow;
+	right: 42px;
+	bottom: 9px;
+}
+
+.menu-points-units{
+	position: absolute;
+	right: 6px;
+	bottom: 11px;
+	font-size: .5em;
 }
 
 .content{
