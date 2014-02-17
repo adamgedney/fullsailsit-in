@@ -13,5 +13,7 @@
 				<span class="menu-item">Adam Gedney</span>
 					<span class="menu-points">21</span>
 						<span class="menu-points-units">sit-ins</span></li>
+
+		<li class="leader-menu-item"><img src="images/leader-icon.png" /> <span class="menu-item">Leaderboard</span></li>
 	</ul>
 </div><!-- /.slideout-->
