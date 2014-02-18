@@ -162,8 +162,8 @@ $yellow: #fffc19;
 	@include break-lg{
 		@include col(4);
 		@include col_ctr(0);
-		left: 18px;
-		bottom: 327px;
+		position: static;
+		margin-left: 18px;
 	}
 
 	img{
