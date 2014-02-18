@@ -149,6 +149,14 @@ $yellow: #fffc19;
 	}
 }
 
+.desc-reveal{
+	display: none;
+
+	@include break-lg{
+		display: inline;
+	}
+}
+
 .login-btn{
 	position: absolute;
 	bottom: 129px;

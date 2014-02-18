@@ -13,7 +13,7 @@ angular.module('fullsailsitinApp', [
         controller: 'MainCtrl'
       })
       .when('/loggedin', {
-        templateUrl: 'views/tempSitin.tpl',
+        templateUrl: 'views/sitin.tpl',
         controller: 'MainCtrl'
       })
       .otherwise({
