@@ -102,6 +102,11 @@ $yellow: #fffc19;
 	@include break-sm{
 		background-size: 285px 360px;
 	}
+
+	@include break-lg{
+		background-position: 75% 80%;
+		background-size: 445px 560px;
+	}
 }
 
 .features{
@@ -115,13 +120,23 @@ $yellow: #fffc19;
 			@include col(6);
 			@include col_ctr(6);
 		}
+
+		@include break-lg{
+			@include col(4);
+			@include col_ctr(0);
+		}
 	}
 
 	p{
 		@include break-sm{
-		@include col(8);
-		@include col_ctr(8);
-	}
+			@include col(8);
+			@include col_ctr(8);
+		}
+
+		@include break-lg{
+			@include col(4);
+			@include col_ctr(0);
+		}
 	}
 }
 
@@ -142,6 +157,13 @@ $yellow: #fffc19;
 		@include col(5);
 		@include col_ctr(5);
 		bottom: 228px;
+	}
+
+	@include break-lg{
+		@include col(4);
+		@include col_ctr(0);
+		left: 18px;
+		bottom: 327px;
 	}
 
 	img{
