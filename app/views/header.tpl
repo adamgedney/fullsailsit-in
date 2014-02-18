@@ -5,10 +5,10 @@
 	<nav>
 		<ul>
 			<li><a href="#">Leaderboard</a></li>
-			<li><img src="images/avatar.jpg" width="46"/>
+			<li class="nav-profile"><img src="images/avatar.jpg" width="46"/>
 					<span>Adam Gedney</span>
-						<span>21</span>
-							<span>sit-ins</span></li>
+						<span class="yellow">21</span>
+							<span class="small">sit-ins</span></li>
 			<li><a href="#">Logout</a></li>
 
 		</ul>

@@ -18,6 +18,7 @@ $light-grey: #e8e8e8;
 $med-grey: #969696;
 $dark-grey: #333333;
 $black: #000;
+$border-red: #670100;
 $dark-red: #990100;
 $light-red: #b90504;
 $blue: #75acb5;
@@ -40,6 +41,10 @@ $yellow: #fffc19;
 	white-space: nowrap;
 }
 
+.small{
+	font-size: .5em;
+}
+
 .bold{
 	font-weight: 700;
 }
@@ -50,6 +55,10 @@ $yellow: #fffc19;
 
 .blue{
 	color: $blue;
+}
+
+.yellow{
+	color: $yellow;
 }
 
 .light-gray{
@@ -202,11 +211,15 @@ header{
 
 nav{
 	float: right;
+	display: none;
 
 	ul{
+		line-height: 48px;
+		margin: 0;
+
 		li{
 			display: inline-block;
-			line-height: 49px;
+			color: $off-white;
 
 			a{
 				color: $off-white;
@@ -214,8 +227,27 @@ nav{
 
 			img{
 				float: left;
+				margin: 0 9px 0 0;
+				height: 48px;
+				width: 48px;
 			}
 		}
+	}
+
+	@include break-lg{
+		display: inline;
+	}
+}
+
+.nav-profile{
+	padding: 0 18px;
+	margin: 0 18px;
+	height: 48px;
+	border-left: 1px solid $border-red;
+	border-right: 1px solid $border-red;
+
+	.yellow{
+		padding-left: 18px;
 	}
 }
 
