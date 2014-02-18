@@ -29,38 +29,39 @@
 			<li ng-click="confirm()">
 				<span class="item-left">{{acronym}}</span>
 					<span class="item-center">{{className}}</span>
-						<span class="item-right">{{dateTime}}</span>
+						<!-- <span class="item-right">{{dateTime}}</span> -->
 			</li>
 
-			<li ng-click="">
+			<li ng-click="confirm()">
 				<span class="item-left">{{acronym}}</span>
 					<span class="item-center">{{className}}</span>
-						<span class="item-right">{{dateTime}}</span>
+						<!-- <span class="item-right">{{dateTime}}</span> -->
 			</li>
 
-			<li ng-click="">
+			<li ng-click="confirm()">
 				<span class="item-left">{{acronym}}</span>
 					<span class="item-center">{{className}}</span>
-						<span class="item-right">{{dateTime}}</span>
+						<!-- <span class="item-right">{{dateTime}}</span> -->
 			</li>
 
-			<li ng-click="">
+			<li ng-click="confirm()">
 				<span class="item-left">{{acronym}}</span>
 					<span class="item-center">{{className}}</span>
-						<span class="item-right">{{dateTime}}</span>
+						<!-- <span class="item-right">{{dateTime}}</span> -->
 			</li>
 
-			<li ng-click="">
+			<li ng-click="confirm()">
 				<span class="item-left">{{acronym}}</span>
 					<span class="item-center">{{className}}</span>
-						<span class="item-right">{{dateTime}}</span>
+						<!-- <span class="item-right">{{dateTime}}</span> -->
 			</li>
 
-			<li ng-click="">
+			<li ng-click="confirm()">
 				<span class="item-left">{{acronym}}</span>
 					<span class="item-center">{{className}}</span>
-						<span class="item-right">{{dateTime}}</span>
+						<!-- <span class="item-right">{{dateTime}}</span> -->
 			</li>
+
 
 		</ul>
 

@@ -9,8 +9,8 @@ angular.module('fullsailsitinApp')
     ];
 
     $scope.user = 'Billy Bob McQueen';
-    $scope.acronym = 'WDF';
-    $scope.className = 'Web Design Fundamentals';
+    $scope.acronym = 'PPP';
+    $scope.className = 'Principles of Production Process';
     $scope.dateTime = ' 12/12/14 1:24pm';
     $scope.animate = {};
 
