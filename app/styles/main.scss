@@ -98,6 +98,10 @@ $yellow: #fffc19;
 	background-size: 205px 270px;
 	height: 100vh;
 	position: relative;
+
+	@include break-sm{
+		background-size: 285px 360px;
+	}
 }
 
 .features{
@@ -106,6 +110,18 @@ $yellow: #fffc19;
 
 	img{
 		margin-bottom: 18px;
+
+		@include break-sm{
+			@include col(6);
+			@include col_ctr(6);
+		}
+	}
+
+	p{
+		@include break-sm{
+		@include col(8);
+		@include col_ctr(8);
+	}
 	}
 }
 
@@ -121,6 +137,12 @@ $yellow: #fffc19;
 	padding: 0;
 	border: none;
 	border-radius: 2px;
+
+	@include break-sm{
+		@include col(5);
+		@include col_ctr(5);
+		bottom: 228px;
+	}
 
 	img{
 		vertical-align: middle;
@@ -164,6 +186,10 @@ header{
 	right: 0;
 	background: $dark-grey;
 	color: $off-white;
+
+	@include break-sm{
+		@include col(6);
+	}
 
 	li{
 		position: relative;
@@ -272,6 +298,10 @@ header{
 		background: $off-white;
 		overflow: hidden;
 
+		@include break-md{
+			padding: 0 20%;
+		}
+
 	}
 
 	li:nth-child(even){
@@ -289,17 +319,30 @@ header{
 	font-weight: 700;
 	float: left;
 	margin-right: 18px;
+
+	@include break-sm{
+		font-size: 1.4em;
+	}
 }
 
 .item-center{
 	text-align: left;
 	color: $dark-blue;
+
+	@include break-sm{
+		margin-left: 20%;
+		font-size: 1.2em;
+	}
 }
 
 .item-right{
 	text-align: right;
 	float: right;
 	font-size: .8em;
+
+	@include break-sm{
+		font-size: 1.2em;
+	}
 }
 
 
