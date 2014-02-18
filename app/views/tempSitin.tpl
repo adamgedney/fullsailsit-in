@@ -2,7 +2,11 @@
 
 <div ng-include src="'views/header.tpl'"></div>
 
-	<div class="modal">
+
+
+
+
+	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
 			<h2>Send a sit-in request to:</h2>
 			<p>instructor@fullsail.com <br />
@@ -14,11 +18,15 @@
 		</div><!-- /.mod-container-->
 	</div><!-- /.modal-->
 
+
+
+
+
 	<div class="content">
 		<h2>What class would you like to sit in on, {{user}}?</h2>
 
 		<ul>
-			<li ng-click="">
+			<li ng-click="confirm()">
 				<span class="item-left">{{acronym}}</span>
 					<span class="item-center">{{className}}</span>
 						<span class="item-right">{{dateTime}}</span>

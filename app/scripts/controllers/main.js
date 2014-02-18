@@ -16,7 +16,7 @@ angular.module('fullsailsitinApp')
 
     var toggle = false;
 
-    $scope.slideout = function(){
+		$scope.slideout = function(){
 
 			if(!toggle){
 				$scope.animate.type = 'fadeInRightBig';
@@ -34,6 +34,10 @@ angular.module('fullsailsitinApp')
 			}
 
 
+		};
+
+		$scope.confirm = function(){
+			$scope.showModal = true;
 		};
 
 		function switchFalse(){
