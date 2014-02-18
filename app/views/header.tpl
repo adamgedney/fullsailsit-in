@@ -1,6 +1,19 @@
 
 <header class="cf">
 	<h1>Full Sail Sit-In</h1>
+
+	<nav>
+		<ul>
+			<li><a href="#">Leaderboard</a></li>
+			<li><img src="images/avatar.jpg" width="46"/>
+					<span>Adam Gedney</span>
+						<span>21</span>
+							<span>sit-ins</span></li>
+			<li><a href="#">Logout</a></li>
+
+		</ul>
+	</nav>
+
 	<img ng-click="slideout()" class="cursor-true menu-btn animated {{animate.btn}}" src="images/menu.png" alt="menu button"/>
 </header>
 

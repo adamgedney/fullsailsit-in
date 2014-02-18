@@ -200,6 +200,31 @@ header{
 	}
 }
 
+nav{
+	float: right;
+
+	ul{
+		li{
+			display: inline-block;
+			line-height: 49px;
+
+			a{
+				color: $off-white;
+			}
+
+			img{
+				float: left;
+			}
+		}
+	}
+}
+
+.menu-btn{
+	@include break-lg{
+		display: none;
+	}
+}
+
 .slideout{
 	position: fixed;
 	@include col(9);
@@ -208,10 +233,6 @@ header{
 	right: 0;
 	background: $dark-grey;
 	color: $off-white;
-
-	@include break-sm{
-		@include col(6);
-	}
 
 	li{
 		position: relative;
@@ -223,6 +244,10 @@ header{
 
 	li:hover{
 		opacity: .8;
+	}
+
+	@include break-sm{
+		@include col(6);
 	}
 }
 
@@ -319,6 +344,7 @@ header{
 		line-height: 48px;
 		background: $off-white;
 		overflow: hidden;
+		cursor: pointer;
 
 		@include break-md{
 			padding: 0 20%;
