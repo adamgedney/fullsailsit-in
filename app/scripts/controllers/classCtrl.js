@@ -14,16 +14,46 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
+
+		//Class name Hash table
+		var classHash = {
+			'WFP1': 'Web Final Project 1',
+			'WIU': 'Web Interface & Usability',
+			'RMO': 'Rich Media Optomization',
+			'PWA1': 'Programming Web Applications 1',
+			'WIA': 'Web Interaction & Animation',
+			'MDD': 'Mobile Device Deployment',
+			'PWA2': 'Programming Web Applications 2',
+			'SSL': 'Server Side Languages',
+			'DBS': 'Database Structures',
+			'FWF': 'Front End Web Frameworks'
+		};
+
+
 		//GET class names from API
 		var requestUrl = 'http://127.0.0.1:8887/public/get-classes';
+		var classAc = [];
+		var classNa = [];
+		$scope.classData = {};
 
 		$http({method:'GET', url: requestUrl})
-			.success(function(data, status, headers, config){
-				console.log('get classes success', data, status, headers, config);
+			.success(function(data){
 
+				//on success, loops through class data, pushing into
+				//an array for pairing with hash table.
+				for(var i=0;i<data.length;i++){
+					classAc.push(data[i].class);
+					classNa.push(classHash[data[i].class]);
+				}
+
+				//sets scope data on success
+				$scope.classData.classAcronyms = classAc;
+				$scope.classData.classNames = classNa;
+
+				console.log($scope.classData.classAcronyms, $scope.classData.classNames);
 			})
-			.error(function(data, status, headers, config){
-				console.log('get class names error', data, status, headers, config);
+			.error(function(data){
+				console.log('get class names error', data);
 			});
 
 
@@ -65,10 +95,6 @@ angular.module('fullsailsitinApp')
 		function switchFalse(){
 			$scope.menu.slideoutSwitch = false;
 		}
-
-
-
-
 
 
 

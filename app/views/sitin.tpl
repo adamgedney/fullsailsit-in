@@ -6,39 +6,13 @@
 		<h2>What class would you like to sit in on, {{currentUser.name}}?</h2>
 
 		<ul>
-			<li>
+			<li ng-repeat="(class, $index) in classData.classAcronyms">
 				<a href="#/dates">
-					<span class="item-left">{{acronym}}</span>
-						<span class="item-center">{{className}}</span>
+					<span class="item-left">{{classData.classAcronyms[$index]}}</span>
+						<span class="item-center">{{classData.classNames[$index]}}</span>
 							<!-- <span class="item-right">{{dateTime}}</span> -->
 				</a>
 			</li>
-
-			<li>
-				<a href="#/dates">
-					<span class="item-left">{{acronym}}</span>
-						<span class="item-center">{{className}}</span>
-							<!-- <span class="item-right">{{dateTime}}</span> -->
-				</a>
-			</li>
-
-			<li>
-				<a href="#/dates">
-					<span class="item-left">{{acronym}}</span>
-						<span class="item-center">{{className}}</span>
-							<!-- <span class="item-right">{{dateTime}}</span> -->
-				</a>
-			</li>
-
-			<li>
-				<a href="#/dates">
-					<span class="item-left">{{acronym}}</span>
-						<span class="item-center">{{className}}</span>
-							<!-- <span class="item-right">{{dateTime}}</span> -->
-				</a>
-			</li>
-
-
 		</ul>
 
 	</div><!-- /.content-->

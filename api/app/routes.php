@@ -15,7 +15,7 @@ Route::get('/get-classes', function()
 {
 	//http://localhost:8887/public/get-classes
 
-	$classes = DB::select('SELECT class FROM schedule_events WHERE course LIKE "%WDD%"');
+	$classes = DB::select('SELECT DISTINCT(class) FROM schedule_events WHERE course LIKE "%WDD%"');
 
 	header('content-type: application/json; charset=utf-8');
 	header('Access-Control-Allow-Origin: *');
