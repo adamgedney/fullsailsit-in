@@ -1,0 +1,23 @@
+Build controllers
+loginCtrl, logoutCtrl, classCtrl, dateCtrl, notifyCtrl, nextClassCtrl
+
+Install angularFire & firebase via Bower
+
+Build Factory
+fireConn
+
+Build API
+install Laravel in project root, import MySQL database,
+
+	Build Laravel
+	classModel, FSClasses (getClasses, getDates, getTeacher, getEmail, getRoom)
+	emailCtrl
+
+
+
+todo:
+add room number to date/time list
+build hash table of email addresses w/ names
+fix menu button position -slideout behavior
+style menu add class button better
+check attended classes div height for scrolling
