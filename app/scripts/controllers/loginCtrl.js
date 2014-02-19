@@ -2,7 +2,7 @@
 
 /* global Firebase */
 angular.module('fullsailsitinApp')
-	.controller('loginCtrl', ['$scope', '$rootScope', '$window', function ($scope, $rootScope, $window) {
+	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', function ($scope, $rootScope, $window, $cookies) {
 
 		//Called by the login button on the home page
 		$scope.loginUser = function(){
@@ -28,7 +28,7 @@ angular.module('fullsailsitinApp')
 
 						//Checks if user exists in Firebase. If not,
 						//adds the user for tracking
-						checkAndPutUser();
+						checkUser();
 
 					}
 				},function(error){
@@ -38,33 +38,46 @@ angular.module('fullsailsitinApp')
 
 
 
-		function checkAndPutUser(){
+		function checkUser(){
 			var fb = new Firebase('https://sitin.firebaseio.com/users/');
 			var userArray = [];
 			var match = true;
 
 			//retrieves & stores all usernames from Firebase
 			fb.on('child_added', function(snapshot){
-				userArray.push(snapshot.name());
+				userArray.push(snapshot);
 			});
 
 			//Client side query to test for existing user
 			//in Firebase. If not found, throws a 'false'
 			//synchronously picked up by the !match condition below
 			for( var i=0; i<userArray.length; i++){
-				if(userArray[i] === $rootScope.currentUser.name){
+				if(userArray[i].name === $rootScope.currentUser.name){
 					match = true;
+
 				}else{
 					match = false;
 				}
 			}
 
 			//adds username as primary key
-			//under which the user data object is placed
+			//under which the user data object is placed &
+			//sets a username cookie
 			if(!match){
 				fb.child($rootScope.currentUser.name).set($rootScope.currentUser);
+
+				//if this is a new user, set the cookie
+				setUserCookie($rootScope.currentUser.name);
 			}
+
+		}// checkUser()
+
+
+
+		function setUserCookie(username){
+			$cookies.currentUser = username;
 		}
+
 
 
 
