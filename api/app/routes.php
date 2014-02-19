@@ -14,7 +14,9 @@
 Route::get('/get-classes', function()
 {
 	//http://localhost:8887/public/get-classes
-	echo "get classes";
+
+	$classes = DB::select('SELECT class FROM schedule_events WHERE course LIKE "%WDD%"');
+	return json_encode($classes);
 });
 
 Route::get('/get-dates', function()
@@ -38,5 +40,5 @@ Route::get('/get-email', function()
 Route::get('/send-email', function()
 {
 	//http://localhost:8887/public/send-email
-	return View::make('hello');
+
 });
