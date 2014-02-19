@@ -15,6 +15,15 @@ angular.module('fullsailsitinApp')
 					//Sends user to sitin page if user has been authed by firebase
 					if(user !== null){
 						$window.location.href = '#/sitin';
+						console.log(user);
+
+						//Stores basic user data into Firebase if the user
+						//doesn't already exist. **Added jshint ignore to allow the _ char
+						$rootScope.currentUser = {
+							'name' : user.username,
+							'avatar' : user.avatar_url,// jshint ignore:line
+							'email' : user.email
+						};
 					}
 				},function(error){
 					console.log(error, 'user auth failed');
