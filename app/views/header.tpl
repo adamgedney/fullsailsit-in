@@ -4,7 +4,6 @@
 
 	<nav>
 		<ul>
-			<li><a href="#">Leaderboard</a></li>
 			<li class="nav-profile"><img src="images/avatar.jpg" width="46"/>
 					<span>Adam Gedney</span>
 						<span class="yellow">21</span>
@@ -25,8 +24,6 @@
 				<span class="menu-item">Adam Gedney</span>
 					<span class="menu-points">21</span>
 						<span class="menu-points-units">sit-ins</span></li>
-
-		<li class="leader-menu-item"><img src="images/leader-icon.png" height="23" alt="leaderboard icon"/> <span>Leaderboard</span></li>
 	</ul>
 
 	<div class="logout-item">
