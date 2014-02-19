@@ -11,7 +11,32 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/get-classes', function()
 {
+	//http://localhost:8887/public/get-classes
+	echo "get classes";
+});
+
+Route::get('/get-dates', function()
+{
+	//http://localhost:8887/public/get-dates
+	echo "get dates";
+});
+
+Route::get('/get-teacher', function()
+{
+	//http://localhost:8887/public/get-teacher
+	echo "get teacher";
+});
+
+Route::get('/get-email', function()
+{
+	//http://localhost:8887/public/get-email
+	echo "get email";
+});
+
+Route::get('/send-email', function()
+{
+	//http://localhost:8887/public/send-email
 	return View::make('hello');
 });
