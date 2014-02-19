@@ -7,7 +7,7 @@
 
 		<ul>
 			<li ng-repeat="(class, $index) in classData.classAcronyms">
-				<a href="#/dates">
+				<a href="#/dates" ng-click="getTimes({{classData.classAcronyms[$index]}})">
 					<span class="item-left">{{classData.classAcronyms[$index]}}</span>
 						<span class="item-center">{{classData.classNames[$index]}}</span>
 							<!-- <span class="item-right">{{dateTime}}</span> -->
