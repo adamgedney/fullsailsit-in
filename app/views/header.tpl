@@ -24,6 +24,13 @@
 				<span class="menu-item">Adam Gedney</span>
 					<span class="menu-points">21</span>
 						<span class="menu-points-units">sit-ins</span></li>
+
+		<li class="attended-classes">
+			<ul>
+				<li class="center">Attended Classes</li>
+				<li>{{acronym}} {{date}} {{time}} <img src="images/add.png" alt="add next class icon" /></li>
+			</ul>
+		</li>
 	</ul>
 
 	<div class="logout-item">

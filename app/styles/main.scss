@@ -45,6 +45,10 @@ $yellow: #fffc19;
 	font-size: .5em;
 }
 
+.center{
+	text-align: center;
+}
+
 .bold{
 	font-weight: 700;
 }
@@ -347,7 +351,23 @@ nav{
 	}
 }
 
+.attended-classes{
 
+	ul{
+		li{
+			padding: 0 9px;
+			line-height: 48px;
+			img{
+				margin: 0 0 0 9px;
+				vertical-align: middle;
+			}
+		}
+
+		li:first-child{
+			color: $yellow;
+		}
+	}
+}
 
 
 
@@ -397,6 +417,7 @@ nav{
 	font-weight: 100;
 	float: left;
 	margin-right: 18px;
+	color: $dark-grey;
 
 	@include break-sm{
 		font-size: 1.4em;
