@@ -1,37 +1,23 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-  .controller('MainCtrl', ['$scope', 'FireConn', function ($scope, FireConn) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MenuCtrl', ['$scope', function ($scope) {
 
-    $scope.user = 'Billy Bob McQueen';
-    $scope.acronym = 'PPP';
-    $scope.date = 'Wed. 12/12';
-    $scope.time = '1:15pm';
-    $scope.className = 'Principles of Production Process';
-    $scope.dateTime = ' Wed. 12/12 1:24pm';
-    $scope.currentMonth = 'February';
-    $scope.instructor = 'John Cabibo';
-    $scope.animate = {};
-    console.log(FireConn);
 
     var toggle = false;
+    $scope.menu = {};
 
 		$scope.slideout = function(){
 
 			if(!toggle){
-				$scope.animate.type = 'fadeInRightBig';
-				$scope.slideoutSwitch = true;
+				$scope.menu.animate.fx = 'fadeInRightBig';
+				$scope.menu.slideoutSwitch = true;
 
 		    toggle = true;
 
 
 			}else{
-				$scope.animate.type = 'fadeOutRightBig';
+				$scope.menu.animate.fx = 'fadeOutRightBig';
 				setTimeout(switchFalse, 1000);
 
 		    toggle = false;
@@ -42,13 +28,9 @@ angular.module('fullsailsitinApp')
 		};
 
 
-
-		$scope.confirm = function(){
-			$scope.showModal = true;
-		};
-
 		function switchFalse(){
-			$scope.slideoutSwitch = false;
+			$scope.menu.slideoutSwitch = false;
 		}
+
 
 	}]);

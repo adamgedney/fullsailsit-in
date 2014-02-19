@@ -1,5 +1,6 @@
 'use strict';
 
+/* global Firebase */
 angular.module('fullsailsitinApp')
 	.controller('loginCtrl', ['$scope', '$rootScope', '$window', function ($scope, $rootScope, $window) {
 
@@ -16,18 +17,52 @@ angular.module('fullsailsitinApp')
 					if(user !== null){
 						$window.location.href = '#/sitin';
 
-						//Stores basic user data into Firebase if the user
-						//doesn't already exist. **Added jshint ignore to allow the _ char
+						//Stores basic user data into a global scope for sitewide use
+						//when a user has been logged in. **Added jshint ignore to allow the _ char
 						$rootScope.currentUser = {
 							'name' : user.username,
 							'avatar' : user.avatar_url,// jshint ignore:line
 							'email' : user.email
 						};
 
-						console.log($rootScope.currentUser);
+						//Checks for Firebase user.
+						//Adds the user to the Firebase database for tracking
+						checkAndPutUser();
+
 					}
 				},function(error){
 					console.log(error, 'user auth failed');
 				});
 		};
+
+
+
+		function checkAndPutUser(){
+			var fb = new Firebase('https://sitin.firebaseio.com/users/');
+			var userArray = [];
+			var match = false;
+
+			//retrieves & stores all usernames from Firebase
+			fb.on('child_added', function(snapshot){
+				userArray.push(snapshot.name());
+			});
+
+			//Sets up semi-structured data in Firebase
+			//-ordered path: /users/{{name}}/Object
+			//ONLY IF user is not already in database
+			for( var i=0; i<userArray.length; i++){
+				if(userArray[i] === $rootScope.currentUser.name){
+					match = true;
+				}else{
+					match = false;
+				}
+			}
+
+			//adds name username as primary key
+			//under which the user data object is placed
+			fb.child($rootScope.currentUser.name).set($rootScope.currentUser);
+
+
+		}
+
 	}]);

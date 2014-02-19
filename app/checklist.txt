@@ -21,3 +21,4 @@ todo:
 	fix menu button position -slideout behavior
 	style menu add class button better
 	check attended classes div height for scrolling
+	add attended classes to desktop app

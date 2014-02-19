@@ -13,11 +13,11 @@ App.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.tpl',
-      controller: 'loginCtrl'
+      controller: 'MainCtrl'
     })
     .when('/sitin', {
       templateUrl: 'views/sitin.tpl',
-      controller: 'MainCtrl'
+      controller: 'ClassCtrl'
     })
     .when('/dates', {
       templateUrl: 'views/dates.tpl',

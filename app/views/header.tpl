@@ -13,10 +13,13 @@
 		</ul>
 	</nav>
 
-	<img ng-click="slideout()" class="cursor-true menu-btn animated {{animate.btn}}" src="images/menu.png" alt="menu button"/>
+	<img ng-click="slideout()" class="cursor-true menu-btn animated" src="images/menu.png" alt="menu button"/>
 </header>
 
-<div ng-show="slideoutSwitch" class="slideout animated {{animate.type}}">
+
+
+
+<div ng-show="menu.slideoutSwitch" class="slideout animated {{menu.animate}}">
 	<ul>
 		<li></li>
 		<li><img ng-src="{{currentUser.avatar}}" width="46"/>
@@ -46,6 +49,7 @@
 			</ul>
 		</li>
 	</ul>
+
 
 	<div class="logout-item" ng-controller="logoutCtrl" ng-click="logoutUser()">
 		<img src="images/logout-icon.png" height="23" alt="logout button"/>

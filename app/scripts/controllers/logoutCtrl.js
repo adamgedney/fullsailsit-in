@@ -7,8 +7,10 @@ angular.module('fullsailsitinApp')
 		$scope.logoutUser = function(){
 
 			//Logs user out of Github,
+			//erases currentUSer scope data,
 			//then spits them back to login page
 			$rootScope.loginObject.$logout();
+			$rootScope.currentUser = '';
 			$window.location.href = '#/';
 		};
 
