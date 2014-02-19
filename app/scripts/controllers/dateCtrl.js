@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-	.controller('dateCtrl', function ($scope) {
-		console.log($scope);
+	.controller('DateCtrl', ['$scope', '$routeParams', function ($scope, $routeParams) {
+		console.log($scope, $routeParams.a);
 
 
-	});
+	}]);

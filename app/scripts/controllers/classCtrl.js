@@ -44,6 +44,8 @@ angular.module('fullsailsitinApp')
 
 
 
+
+		//Slideout menu controls
 		$scope.date = 'Wed. 12/12';
 		$scope.time = '1:15pm';
 		$scope.dateTime = ' Wed. 12/12 1:24pm';

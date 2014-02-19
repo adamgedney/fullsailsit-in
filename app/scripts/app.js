@@ -19,7 +19,7 @@ App.config(function ($routeProvider) {
       templateUrl: 'views/sitin.tpl',
       controller: 'ClassCtrl'
     })
-    .when('/dates', {
+    .when('/dates/:a', {
       templateUrl: 'views/dates.tpl',
       controller: 'MainCtrl'
     })
