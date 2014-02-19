@@ -8,7 +8,7 @@
 					<span>Adam Gedney</span>
 						<span class="yellow">21</span>
 							<span class="small">sit-ins</span></li>
-			<li><a href="#">Logout</a></li>
+			<li><a ng-controller="logoutCtrl" ng-click="logoutUser()">Logout</a></li>
 
 		</ul>
 	</nav>
@@ -47,7 +47,7 @@
 		</li>
 	</ul>
 
-	<div class="logout-item">
+	<div class="logout-item" ng-controller="logoutCtrl" ng-click="logoutUser()">
 		<img src="images/logout-icon.png" height="23" alt="logout button"/>
 		<p>Logout</p>
 	</div><!-- /. logout-item-->

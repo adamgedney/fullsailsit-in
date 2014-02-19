@@ -15,7 +15,7 @@ App.config(function ($routeProvider) {
       templateUrl: 'views/home.tpl',
       controller: 'loginCtrl'
     })
-    .when('/loggedin', {
+    .when('/sitin', {
       templateUrl: 'views/sitin.tpl',
       controller: 'MainCtrl'
     })
