@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', ['$scope', 'FireConn', function ($scope, FireConn) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,6 +17,7 @@ angular.module('fullsailsitinApp')
     $scope.currentMonth = 'February';
     $scope.instructor = 'John Cabibo';
     $scope.animate = {};
+    console.log(FireConn);
 
     var toggle = false;
 
@@ -50,4 +51,4 @@ angular.module('fullsailsitinApp')
 			$scope.slideoutSwitch = false;
 		}
 
-	});
+	}]);
