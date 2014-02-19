@@ -4,8 +4,8 @@
 
 	<nav>
 		<ul>
-			<li class="nav-profile"><img src="images/avatar.jpg" width="46"/>
-					<span>Adam Gedney</span>
+			<li class="nav-profile"><img ng-src="{{currentUser.avatar}}" width="46"/>
+					<span>{{currentUser.name}}</span>
 						<span class="yellow">21</span>
 							<span class="small">sit-ins</span></li>
 			<li><a ng-controller="logoutCtrl" ng-click="logoutUser()">Logout</a></li>
@@ -19,9 +19,9 @@
 <div ng-show="slideoutSwitch" class="slideout animated {{animate.type}}">
 	<ul>
 		<li></li>
-		<li><img src="images/avatar.jpg" width="46"/>
+		<li><img ng-src="{{currentUser.avatar}}" width="46"/>
 			<span class="super">Logged in as:</span>
-				<span class="menu-item">Adam Gedney</span>
+				<span class="menu-item">{{currentUser.name}}</span>
 					<span class="menu-points">21</span>
 						<span class="menu-points-units">sit-ins</span></li>
 
