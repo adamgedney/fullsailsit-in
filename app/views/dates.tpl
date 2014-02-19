@@ -23,46 +23,34 @@
 
 
 	<div class="content">
-		<h2>What class would you like to sit in on, {{user}}?</h2>
+		<h2>Select a date & time to sit in on <span class="red">{{className}}</span> this {{currentMonth}}.</h2>
 
 		<ul>
-			<li>
-				<a href="#/balls">
-					<span class="item-left">{{acronym}}</span>
-						<span class="item-center">{{className}}</span>
-							<!-- <span class="item-right">{{dateTime}}</span> -->
-				</a>
+			<li class="class-dates" ng-click="confirm()">
+					<span class="item-left">{{date}}</span>
+						<span class="item-right">{{time}}</span>
 			</li>
 
-			<li ng-click="confirm()">
-				<span class="item-left">{{acronym}}</span>
-					<span class="item-center">{{className}}</span>
-						<!-- <span class="item-right">{{dateTime}}</span> -->
+			<li class="class-dates" ng-click="confirm()">
+					<span class="item-left">{{date}}</span>
+						<span class="item-right">{{time}}</span>
 			</li>
 
-			<li ng-click="confirm()">
-				<span class="item-left">{{acronym}}</span>
-					<span class="item-center">{{className}}</span>
-						<!-- <span class="item-right">{{dateTime}}</span> -->
+			<li class="class-dates" ng-click="confirm()">
+					<span class="item-left">{{date}}</span>
+						<span class="item-right">{{time}}</span>
 			</li>
 
-			<li ng-click="confirm()">
-				<span class="item-left">{{acronym}}</span>
-					<span class="item-center">{{className}}</span>
-						<!-- <span class="item-right">{{dateTime}}</span> -->
+			<li class="class-dates" ng-click="confirm()">
+					<span class="item-left">{{date}}</span>
+						<span class="item-right">{{time}}</span>
 			</li>
 
-			<li ng-click="confirm()">
-				<span class="item-left">{{acronym}}</span>
-					<span class="item-center">{{className}}</span>
-						<!-- <span class="item-right">{{dateTime}}</span> -->
+			<li class="class-dates" ng-click="confirm()">
+					<span class="item-left">{{date}}</span>
+						<span class="item-right">{{time}}</span>
 			</li>
 
-			<li ng-click="confirm()">
-				<span class="item-left">{{acronym}}</span>
-					<span class="item-center">{{className}}</span>
-						<!-- <span class="item-right">{{dateTime}}</span> -->
-			</li>
 
 
 		</ul>

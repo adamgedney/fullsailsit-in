@@ -10,8 +10,11 @@ angular.module('fullsailsitinApp')
 
     $scope.user = 'Billy Bob McQueen';
     $scope.acronym = 'PPP';
+    $scope.date = 'Wed. 12/12';
+    $scope.time = '1:15pm';
     $scope.className = 'Principles of Production Process';
-    $scope.dateTime = ' 12/12/14 1:24pm';
+    $scope.dateTime = ' Wed. 12/12 1:24pm';
+    $scope.currentMonth = 'February';
     $scope.animate = {};
 
     var toggle = false;
@@ -36,9 +39,7 @@ angular.module('fullsailsitinApp')
 
 		};
 
-		$scope.chooseTime = function(){
-			// $scope.showModal = true;
-		};
+
 
 		$scope.confirm = function(){
 			$scope.showModal = true;

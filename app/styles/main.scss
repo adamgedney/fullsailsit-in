@@ -410,7 +410,7 @@ nav{
 .item-left{
 	text-align: left;
 	font-size: 1.2em;
-	font-weight: 700;
+	font-weight: 100;
 	float: left;
 	margin-right: 18px;
 
@@ -439,6 +439,17 @@ nav{
 	}
 }
 
+.class-dates{
+
+	.item-left{
+		color: $dark-grey;
+		font-size: 1.4em;
+	}
+
+	.item-right{
+		font-size: 1.4em;
+	}
+}
 
 .modal{
 	background: rgba(0,0,0,.8);
