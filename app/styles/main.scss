@@ -352,14 +352,18 @@ nav{
 }
 
 .attended-classes{
+	position: relative;
 
 	ul{
 		li{
 			padding: 0 9px;
 			line-height: 48px;
+			font-size: .6em;
+
 			img{
-				margin: 0 0 0 9px;
-				vertical-align: middle;
+				position: absolute;
+				right: 35px;
+				top: 7px;
 			}
 		}
 
@@ -369,6 +373,14 @@ nav{
 	}
 }
 
+.attend-next{
+	font-size: .5em;
+	position: absolute;
+	right: 3px;
+	text-align: center;
+	top: 15px;
+	color: $med-grey;
+}
 
 
 

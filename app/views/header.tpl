@@ -28,7 +28,21 @@
 		<li class="attended-classes">
 			<ul>
 				<li class="center">Attended Classes</li>
-				<li>{{acronym}} {{date}} {{time}} <img src="images/add.png" alt="add next class icon" /></li>
+				<li><span class="bold">{{acronym}}</span> {{date}} {{time}}
+					<img src="images/add.png" alt="add next class icon" />
+						<span class="attend-next">Attend Next Class?</span></li>
+
+				<li><span class="bold">{{acronym}}</span> {{date}} {{time}}
+					<img src="images/add.png" alt="add next class icon" />
+						<span class="attend-next">Attend Next Class?</span></li>
+
+				<li><span class="bold">{{acronym}}</span> {{date}} {{time}}
+					<img src="images/add.png" alt="add next class icon" />
+						<span class="attend-next">Attend Next Class?</span></li>
+
+				<li><span class="bold">{{acronym}}</span> {{date}} {{time}}
+					<img src="images/add.png" alt="add next class icon" />
+						<span class="attend-next">Attend Next Class?</span></li>
 			</ul>
 		</li>
 	</ul>
