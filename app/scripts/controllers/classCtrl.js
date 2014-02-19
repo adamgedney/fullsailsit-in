@@ -2,7 +2,7 @@
 
 
 angular.module('fullsailsitinApp')
-	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', function ($scope, $cookies, $rootScope) {
+	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', function ($scope, $cookies, $rootScope, $http) {
 
 		//Checks cookie to find current user cookies
 		//in order to repopulate global user data
@@ -14,7 +14,17 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
+		//GET class names from API
+		var requestUrl = 'http://127.0.0.1:8887/public/get-classes';
 
+		$http({method:'GET', url: requestUrl})
+			.success(function(data, status, headers, config){
+				console.log('get classes success', data, status, headers, config);
+
+			})
+			.error(function(data, status, headers, config){
+				console.log('get class names error', data, status, headers, config);
+			});
 
 
 
