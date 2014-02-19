@@ -16,6 +16,10 @@ angular.module('fullsailsitinApp', [
         templateUrl: 'views/sitin.tpl',
         controller: 'MainCtrl'
       })
+      .when('/dates', {
+        templateUrl: 'views/dates.tpl',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

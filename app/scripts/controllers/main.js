@@ -36,6 +36,10 @@ angular.module('fullsailsitinApp')
 
 		};
 
+		$scope.chooseTime = function(){
+			// $scope.showModal = true;
+		};
+
 		$scope.confirm = function(){
 			$scope.showModal = true;
 		};
