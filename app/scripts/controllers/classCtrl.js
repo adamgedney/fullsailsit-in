@@ -1,30 +1,19 @@
 'use strict';
 
-/* global Firebase */
+
 angular.module('fullsailsitinApp')
 	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', function ($scope, $cookies, $rootScope) {
 
-		//Checks cookie to find current user
+		//Checks cookie to find current user cookies
 		//in order to repopulate global user data
-		var currentUser = $cookies.currentUser;
-		var fb = new Firebase('https://sitin.firebaseio.com/users/');
-		var userArray = [];
-
-		//retrieves & stores all usernames from Firebase
-		fb.on('child_added', function(snapshot){
-			userArray.push(snapshot);
-		});
-
-		//Client side query to find current user
-		for( var i=0; i<userArray.length; i++){
-			if(userArray[i].name === currentUser){
-
-				//If a match is found, set currentUser to this object
-				//populates data for return users
-				$rootScope.currentUser = userArray[i];
-
-			}
+		if($rootScope.currentUser === undefined){
+			$rootScope.currentUser ={
+				'name': $cookies.name,
+				'avatar': $cookies.avatar,
+				'email': $cookies.email
+			};
 		}
+
 
 
 

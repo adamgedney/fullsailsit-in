@@ -65,17 +65,19 @@ angular.module('fullsailsitinApp')
 			//sets a username cookie
 			if(!match){
 				fb.child($rootScope.currentUser.name).set($rootScope.currentUser);
-
-				//if this is a new user, set the cookie
-				setUserCookie($rootScope.currentUser.name);
 			}
+
+			//Set the current user cookies
+			setUserCookies();
 
 		}// checkUser()
 
 
 
-		function setUserCookie(username){
-			$cookies.currentUser = username;
+		function setUserCookies(){
+			$cookies.name = $rootScope.currentUser.name;
+			$cookies.avatar = $rootScope.currentUser.avatar;
+			$cookies.email = $rootScope.currentUser.email;
 		}
 
 
