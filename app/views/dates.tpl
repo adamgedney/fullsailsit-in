@@ -8,9 +8,8 @@
 
 	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
-			<h2>Send a sit-in request to:</h2>
-			<p>instructor@fullsail.com <br />
-			to sit in on WDD 2/23/14 4:15am</p>
+			<h2>Notify {{instructor}}</h2>
+			<p>you'd like to sit in on {{className}} {{date}} {{time}}?</p>
 
 			<button class="btn cancel-btn">Cancel</button>
 			<button class="btn request-btn">Send Request</button>

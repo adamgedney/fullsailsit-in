@@ -15,6 +15,7 @@ angular.module('fullsailsitinApp')
     $scope.className = 'Principles of Production Process';
     $scope.dateTime = ' Wed. 12/12 1:24pm';
     $scope.currentMonth = 'February';
+    $scope.instructor = 'John Cabibo';
     $scope.animate = {};
 
     var toggle = false;
