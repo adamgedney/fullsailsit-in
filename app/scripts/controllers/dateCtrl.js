@@ -77,7 +77,10 @@ angular.module('fullsailsitinApp')
 
 		//Hits the API to send an email to the instructor
 		$scope.sendNotice = function(){
-			var message = '';
+
+			//pulls appropriate email address form hash table
+			//based on current index acronym
+			var instEmail = $rootScope.emailHash[$scope.classDates.name[$scope.currentIndex]];
 
 			var data = {
 				'day': $scope.classDates.classDay[$scope.currentIndex],
@@ -85,12 +88,12 @@ angular.module('fullsailsitinApp')
 				'time': $scope.classDates.classTime[$scope.currentIndex],
 				'instructor': $scope.instructors[$scope.currentIndex],
 				'userEmail': $rootScope.currentUser.email,
-				'instEmail':'',
-				'message': message,
-				'class': $scope.classDates.fullName[$scope.currentIndex]
+				'userName': $rootScope.currentUser.email,
+				'instEmail':instEmail,
+				'className': $scope.classDates.fullName[$scope.currentIndex]
 			};
 
-			var emailUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + data;
+			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?data=' + data;
 
 
 			$http({method:'GET', url: emailUrl, data: data})
