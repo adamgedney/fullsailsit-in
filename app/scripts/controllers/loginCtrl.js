@@ -25,7 +25,8 @@ angular.module('fullsailsitinApp')
 							'name' : user.displayName,
 							'avatar' : user.avatar_url,// jshint ignore:line
 							'email' : user.email,
-							'added' : getDatetime()
+							'added' : getDatetime(),
+							'sitins' : totalSitins()
 						};
 
 						//Checks if user exists in Firebase. If not,
@@ -37,6 +38,30 @@ angular.module('fullsailsitinApp')
 					console.log(error, 'user auth failed');
 				});
 		};
+
+
+
+
+
+
+
+		//Loops through firebase attended directory
+		//searches for all entries where the user matches current user
+		//stores entry in an array for use throughout the site.
+		function totalSitins(){
+			var fb = new Firebase('https://sitin.firebaseio.com/attended/');
+			var attendedArray = [];
+
+			fb.on('child_added', function(snapshot){
+				for(var i=0;i<snapshot.length;i++){
+					if(snapshot[i].user === $rootScope.currentUser.name){
+						attendedArray.push(snapshot[i]);
+					}
+				}
+			});
+
+			return attendedArray;
+		}
 
 
 

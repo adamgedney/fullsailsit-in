@@ -23,3 +23,6 @@ todo:
 	check attended classes div height for scrolling
 	add attended classes to desktop app
 	fix time "undefined" in date function
+
+	restructure duplicate code into factories with factory methods.
+
