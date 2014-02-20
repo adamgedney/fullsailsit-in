@@ -53,5 +53,35 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
       'FWF': 'Front End Web Frameworks'
     };
 
+
+
+    //Instructor email hash table
+    // $rootScope.emailHash = {
+    //   'WFP1': 'ealmeida@fullsail.com',
+    //   'WIU': 'cburke@fullsail.com',
+    //   'RMO': 'acampos@fullsail.com',
+    //   'PWA1': 'lmodomo@fullsail.com',
+    //   'WIA': 'dwilliams@fullsail.com',
+    //   'MDD': 'cchapman@fullsail.com',
+    //   'PWA2': 'swaiman@fullsail.com',
+    //   'SSL': 'tsmith@fullsail.com',
+    //   'DBS': 'jcabibbo@fullsail.com',
+    //   'FWF': 'sbernath@fullsail.com'
+    // };
+    $rootScope.emailHash = {
+      'WFP1': 'adam.gedney@gmail.com',
+      'WIU': 'adam.gedney@gmail.com',
+      'RMO': 'adam.gedney@gmail.com',
+      'PWA1': 'adam.gedney@gmail.com',
+      'WIA': 'adam.gedney@gmail.com',
+      'MDD': 'adam.gedney@gmail.com',
+      'PWA2': 'adam.gedney@gmail.com',
+      'SSL': 'adam.gedney@gmail.com',
+      'DBS': 'adam.gedney@gmail.com',
+      'FWF': 'adam.gedney@gmail.com'
+    };
+
+
+
   }]);
 
