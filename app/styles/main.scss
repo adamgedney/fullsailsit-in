@@ -109,7 +109,7 @@ $yellow: #fffc19;
 .fold{
 	background: url(../images/girl.jpg) no-repeat 50% 90%;
 	background-size: 205px 270px;
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
 
 	@include break-sm{
@@ -206,11 +206,14 @@ header{
 	padding: 0 18px;
 
 	h1{
-		color: $off-white;
 		font-size: 1.8em;
 		text-align: center;
 		line-height: 48px;
 		display: inline;
+
+		a{
+			color: $off-white;
+		}
 	}
 
 	img{
@@ -388,7 +391,7 @@ nav{
 
 
 .content{
-	height: 100vh;
+	min-height: 100vh;
 
 	h2{
 		@include col(10);

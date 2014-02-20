@@ -8,8 +8,8 @@
 
 	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
-			<h2>Notify {{instructor}}</h2>
-			<p>you'd like to sit in on {{classDates.name}} on {{classDates.classDate[currentIndex]}} at {{classDates.classTime[currentIndex]}}?</p>
+			<h2>Notify {{instructors[currentIndex]}}</h2>
+			<p>you'd like to sit in on {{classDates.name}} on {{classDates.classDay[currentIndex]}} {{classDates.classDate[currentIndex]}} at {{classDates.classTime[currentIndex]}}?</p>
 
 			<button ng-click="cancel()" class="btn cancel-btn">Cancel</button>
 			<button class="btn request-btn">Send Request</button>
@@ -22,7 +22,7 @@
 
 
 	<div class="content">
-		<h2>Select a date & time to sit in on <span class="red">{{className}}</span> this {{currentMonth}}.</h2>
+		<h2>Select a date & time to sit in on <span class="red">{{className}}</span> {{classDates.fullName}}.</h2>
 
 		<ul>
 			<li class="class-dates" ng-click="confirm($index)" ng-repeat="(item, $index) in classDates.len">

@@ -33,7 +33,7 @@ Route::get('/get-dates', function()
 
 	$data = $_GET['data'];
 
-	$dates = DB::select('SELECT day, date, start FROM schedule_events WHERE class = ?', array($data));
+	$dates = DB::select('SELECT day, date, start, instructor FROM schedule_events WHERE class = ?', array($data));
 
 	echo json_encode($dates);
 });
