@@ -12,22 +12,24 @@ angular.module('fullsailsitinApp')
 		var classDate = [];
 		var classTime = [];
 		$scope.classDates = {};
-		console.log('test');
+
 		$http({method:'GET', url: requestUrl})
-			.success(function(data, status, headers){
-				console.log(data,status,headers);
+			.success(function(data){
+
 				//on success, loops through class date data, pushing into
 				//an array delivery to ngRepeat.
 				for(var i=0;i<data.length;i++){
 					classDay.push(data[i].day);
 					classDate.push(data[i].date);
-					classTime.push(data[i].time);
+					classTime.push(data[i].start.substr(11));
 				}
 
 				//sets scope data on success
 				$scope.classDates.classDay = classDay;
 				$scope.classDates.classDate = classDate;
 				$scope.classDates.classTime = classTime;
+
+				console.log(classDay, classDate, classTime);
 
 			})
 			.error(function(data, status, headers){
