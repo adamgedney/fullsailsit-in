@@ -28,6 +28,7 @@ angular.module('fullsailsitinApp')
 				$scope.classDates.classDay = classDay;
 				$scope.classDates.classDate = classDate;
 				$scope.classDates.classTime = classTime;
+				$scope.classDates.len = data;
 
 				console.log(classDay, classDate, classTime);
 

@@ -25,33 +25,11 @@
 		<h2>Select a date & time to sit in on <span class="red">{{className}}</span> this {{currentMonth}}.</h2>
 
 		<ul>
-			<li class="class-dates" ng-click="confirm()">
-					<span class="item-left">{{date}}</span>
-						<span class="item-right">{{time}}</span>
+			<li class="class-dates" ng-click="confirm()" ng-repeat="(item, $index) in classDates.len">
+					<span class="item-left">{{classDates.classDay[$index]}}</span>
+						<span class="item-center">{{classDates.classDate[$index]}}</span>
+							<span class="item-right">{{classDates.classTime[$index]}}</span>
 			</li>
-
-			<li class="class-dates" ng-click="confirm()">
-					<span class="item-left">{{date}}</span>
-						<span class="item-right">{{time}}</span>
-			</li>
-
-			<li class="class-dates" ng-click="confirm()">
-					<span class="item-left">{{date}}</span>
-						<span class="item-right">{{time}}</span>
-			</li>
-
-			<li class="class-dates" ng-click="confirm()">
-					<span class="item-left">{{date}}</span>
-						<span class="item-right">{{time}}</span>
-			</li>
-
-			<li class="class-dates" ng-click="confirm()">
-					<span class="item-left">{{date}}</span>
-						<span class="item-right">{{time}}</span>
-			</li>
-
-
-
 		</ul>
 
 	</div><!-- /.content-->
