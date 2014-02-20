@@ -7,6 +7,8 @@ angular.module('fullsailsitinApp')
 		var acro = $routeParams.a;
 
 		//GET class dates where acronyms match from API
+		//passing GET parameter in url as a hack. Using the data parameter
+		//in $http wasn't working
 		var requestUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + acro;
 		var classDay = [];
 		var classDate = [];
@@ -40,8 +42,14 @@ angular.module('fullsailsitinApp')
 
 
 		//Send notification, modal window handlers
-		$scope.confirm = function(){
+		$scope.confirm = function(currentIndex){
 			$scope.showModal = true;
+
+			//Hit API for the instructor's name, then check name against
+			//hash table, adding class, date, and time to modal.
+			console.log(currentIndex);
+			$scope.currentIndex = currentIndex;
+			$scope.classDates.name = acro;
 		};
 
 		$scope.cancel = function(){
