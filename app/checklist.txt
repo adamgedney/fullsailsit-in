@@ -22,3 +22,4 @@ todo:
 	style menu add class button better
 	check attended classes div height for scrolling
 	add attended classes to desktop app
+	fix time "undefined" in date function

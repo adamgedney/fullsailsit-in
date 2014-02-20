@@ -148,15 +148,15 @@ angular.module('fullsailsitinApp')
 		function tallySitins(){// jshint ignore:line
 
 			var fbConn = new Firebase('https://sitin.firebaseio.com/users/');
+			var d = $scope.classDates.classDate[$scope.currentIndex];
 			var obj = {
-				'totalSitins' : 1,
-				'class': $scope.classDates.name,
-				'date': $scope.classDates.classDate[$scope.currentIndex]
+				'date' : d,
+				'name' : $scope.classDates.name
 			};
 
 			//Find the fb child that matches current user, then pushes
 			//the object up into the database.
-			fbConn.child($rootScope.currentUser.name + '/attended').push({'class': obj});
+			fbConn.child($rootScope.currentUser.name).push({d : obj});
 		}
 
 
