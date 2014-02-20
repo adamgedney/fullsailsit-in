@@ -30,6 +30,7 @@
 				<span class="menu-item">{{currentUser.name}}</span>
 					<span class="menu-points">{{currentUser.sitins}}</span>
 						<span class="menu-points-units">sit-ins</span></li>
+		<li class="center"><a href="#/sitin" class="menu-item" >Classes</a></li>
 
 		<li class="attended-classes">
 			<ul>
