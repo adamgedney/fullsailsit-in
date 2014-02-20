@@ -4,7 +4,8 @@
 
 	<nav>
 		<ul>
-			<li>Your Sitins</li>
+			<li><a href="#/sitin">Classes</a></li>
+			<li><a href="#/attended">Your Sitins</a></li>
 
 			<li class="nav-profile"><img ng-src="{{currentUser.avatar}}" width="46"/>
 					<span>{{currentUser.name}}</span>

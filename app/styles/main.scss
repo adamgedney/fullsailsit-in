@@ -236,6 +236,8 @@ nav{
 			display: inline-block;
 			color: $off-white;
 			cursor: pointer;
+			padding: 0 18px;
+			border-left: 1px solid $border-red;
 
 			a{
 				color: $off-white;
@@ -261,11 +263,7 @@ nav{
 
 
 .nav-profile{
-	padding: 0 18px;
-	margin: 0 18px;
 	height: 48px;
-	border-left: 1px solid $border-red;
-	border-right: 1px solid $border-red;
 
 	.yellow{
 		padding-left: 18px;

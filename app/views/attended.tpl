@@ -24,15 +24,15 @@
 
 
 
-
 	<div class="content">
-		<h2>Select a date & time to sit in on <span class="red">{{classDates.fullName}}</span>.</h2>
+		<h2>These are the classes you've requested to sit in on. Keep it up! I bet you feel smarter already, don't you?</h2>
 
 		<ul>
-			<li class="class-dates" ng-click="confirm($index)" ng-repeat="(item, $index) in classDates.len">
-					<span class="item-left">{{classDates.classDay[$index]}}</span>
-						<span class="item-center">{{classDates.classDate[$index]}}</span>
-							<span class="item-right">{{classDates.classTime[$index]}}</span>
+			<li class="class-dates" ng-repeat="item in sitins">
+					<span class="item-left">{{item.class}}</span>
+						<span class="item-center">{{item.classDate}}</span>
+							<span class="item-right"><img src="images/add.png" alt="add next class icon" />
+						<span class="attend-next">Attend Next Class?</span></span>
 			</li>
 		</ul>
 

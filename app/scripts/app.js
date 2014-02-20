@@ -23,6 +23,10 @@ App.config(function ($routeProvider) {
       templateUrl: 'views/dates.tpl',
       controller: 'DateCtrl'
     })
+    .when('/attended', {
+      templateUrl: 'views/attended.tpl',
+      controller: 'DateCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
@@ -43,7 +47,7 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
     $rootScope.classHash = {
       'WFP1': 'Web Final Project 1',
       'WIU': 'Web Interface & Usability',
-      'RMO': 'Rich Media Optomization',
+      'RMO': 'Rich Media Optimization',
       'PWA1': 'Programming Web Applications 1',
       'WIA': 'Web Interaction & Animation',
       'MDD': 'Mobile Device Deployment',
