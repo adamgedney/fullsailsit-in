@@ -13,6 +13,11 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
+		//Default hides modal confirmation message on page load
+		$scope.showConfirmation = true;
+		$scope.cancelButton = 'Cancel';
+		$scope.buttonWidth = '';
+
 		//acronym passed through url for querying API
 		var acro = $routeParams.a;
 
@@ -108,11 +113,15 @@ angular.module('fullsailsitinApp')
 				'&userEmail=' + $rootScope.currentUser.email +
 				'&userName=' + $rootScope.currentUser.name;
 
-			//data: JSON.stringify(obj)
-			//headers: {'Content-Type': 'application/json'}
+			//Had to hack the url. POST method not working properly
 			$http({method:'GET', url: emailUrl})
-			.success(function(data, status){
-				console.log('success', data, status);
+			.success(function(data, status, headers){
+				console.log('email sent success', data, status, headers);
+
+				$scope.showConfirmation = false;
+				$scope.cancelButton = 'Close Window';
+				$scope.buttonWidth = 'cancel-btn-wide';
+
 			})
 			.error(function(data, status, headers){
 				console.log('get class names error', data, status, headers);

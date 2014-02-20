@@ -505,6 +505,11 @@ nav{
 		font-size: 1.4em;
 	}
 
+	img{
+		@include col(1);
+		@include col_ctr(1);
+	}
+
 	@include break-sm{
 		@include col(7);
 		@include col_ctr(7);
@@ -536,6 +541,11 @@ nav{
 .cancel-btn{
 	background: $light-red;
 	left: 0;
+
+}
+
+.cancel-btn-wide{
+	width: 100%;
 }
 
 .request-btn{

@@ -8,11 +8,15 @@
 
 	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
-			<h2>Notify {{instructors[currentIndex]}}</h2>
-			<p>you'd like to sit in on {{classDates.name}} on {{classDates.classDay[currentIndex]}} {{classDates.classDate[currentIndex]}} at {{classDates.classTime[currentIndex]}}?</p>
+			<h2 ng-show="showConfirmation" >Notify {{instructors[currentIndex]}}</h2>
+			<p ng-show="showConfirmation">you'd like to sit in on {{classDates.name}} on {{classDates.classDay[currentIndex]}} {{classDates.classDate[currentIndex]}} at {{classDates.classTime[currentIndex]}}?</p>
 
-			<button ng-click="cancel()" class="btn cancel-btn">Cancel</button>
-			<button ng-click="sendNotice()" class="btn request-btn">Send Request</button>
+			<p ng-show="!showConfirmation">Your notification sent successfully. Please allowed a day or so for your instructor to reply.</p>
+
+			<img ng-show="!showConfirmation" src="images/check.png" alt="check image"/>
+
+			<button ng-click="cancel()" class="btn cancel-btn {{buttonWidth}}">{{cancelButton}}</button>
+			<button ng-show="showConfirmation" ng-click="sendNotice()" class="btn request-btn">Send Request</button>
 
 		</div><!-- /.mod-container-->
 	</div><!-- /.modal-->
