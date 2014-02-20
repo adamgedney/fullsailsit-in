@@ -4,6 +4,7 @@
 angular.module('fullsailsitinApp')
 	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', function ($scope, $routeParams, $http, $rootScope, $cookies) {
 
+
 		//Checks cookie to find current user cookies
 		//in order to repopulate global user data
 		if($rootScope.currentUser === undefined){
@@ -14,6 +15,10 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
+
+
+
+
 		//Default hides & resets modal confirmation message on page load
 		$scope.showConfirmation = true;
 		$scope.cancelButton = 'Cancel';
@@ -21,6 +26,15 @@ angular.module('fullsailsitinApp')
 
 		//acronym passed through url for querying API
 		var acro = $routeParams.a;
+
+
+
+
+
+
+
+
+
 
 		//=========================================
 		//GET class dates where acronyms match from API

@@ -66,7 +66,8 @@ angular.module('fullsailsitinApp')
 
 		    //Get sitin classes here
 		    //Renders in the header view
-		    $scope.sitins = attendedArray;
+		    $rootScope.sitins = attendedArray;
+
 
 			}else{
 				$scope.menu.animate = 'fadeOutRightBig';
