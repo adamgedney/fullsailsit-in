@@ -30,12 +30,23 @@ angular.module('fullsailsitinApp')
 				$scope.classDates.classTime = classTime;
 				$scope.classDates.len = data;
 
-				console.log(classDay, classDate, classTime);
 
 			})
 			.error(function(data, status, headers){
 				console.log('get class names error', data, status, headers);
 			});
+
+
+
+
+		//Send notification, modal window handlers
+		$scope.confirm = function(){
+			$scope.showModal = true;
+		};
+
+		$scope.cancel = function(){
+			$scope.showModal = false;
+		};
 
 
 	}]);

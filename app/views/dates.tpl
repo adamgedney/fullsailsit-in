@@ -11,7 +11,7 @@
 			<h2>Notify {{instructor}}</h2>
 			<p>you'd like to sit in on {{className}} {{date}} {{time}}?</p>
 
-			<button class="btn cancel-btn">Cancel</button>
+			<button ng-click="cancel()" class="btn cancel-btn">Cancel</button>
 			<button class="btn request-btn">Send Request</button>
 
 		</div><!-- /.mod-container-->
