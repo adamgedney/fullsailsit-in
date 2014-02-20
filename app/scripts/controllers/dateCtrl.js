@@ -78,6 +78,11 @@ angular.module('fullsailsitinApp')
 
 		$scope.cancel = function(){
 			$scope.showModal = false;
+
+			//Removes confirmation message styles
+			$scope.showConfirmation = true; //note** This boolean is backward
+			$scope.cancelButton = 'Cancel';
+			$scope.buttonWidth = '';
 		};
 
 
@@ -120,7 +125,7 @@ angular.module('fullsailsitinApp')
 				$scope.cancelButton = 'Close Window';
 				$scope.buttonWidth = 'cancel-btn-wide';
 
-				//Runs the function to add this class booked event
+				//Runs the function to add this booked class
 				//to a running tally of sit ins.
 				tallySitins();
 
@@ -137,15 +142,21 @@ angular.module('fullsailsitinApp')
 
 
 		//Function pushes new sitins into the user object for tallying
+		//This just assumes that the student keeps their appointment
+		//V2 functionality could be a checkin system for checking in while
+		//attending a sitin.
 		function tallySitins(){// jshint ignore:line
 
 			var fbConn = new Firebase('https://sitin.firebaseio.com/users/');
 			var obj = {
 				'totalSitins' : 1,
-				'class': '',
-				'date':''
+				'class': $scope.classDates.name,
+				'date': $scope.classDates.classDate[$scope.currentIndex]
 			};
-			fbConn.child($rootScope.currentUser.name).push(obj);
+
+			//Find the fb child that matches current user, then pushes
+			//the object up into the database.
+			fbConn.child($rootScope.currentUser.name + '/attended').push({'class': obj});
 		}
 
 
