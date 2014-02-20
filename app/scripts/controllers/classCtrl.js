@@ -1,6 +1,6 @@
 'use strict';
 
-
+/* global Firebase */
 angular.module('fullsailsitinApp')
 	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', function ($scope, $cookies, $rootScope, $http) {
 
@@ -15,6 +15,7 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
+		totalSitins();
 
 		//GET class names from API
 		var requestUrl = 'http://127.0.0.1:8887/public/get-classes';
@@ -35,9 +36,6 @@ angular.module('fullsailsitinApp')
 				//sets scope data on success
 				$scope.classData.classAcronyms = classAc;
 				$scope.classData.classNames = classNa;
-
-				// $cookies.sitins = $rootScope.currentUser.sitins;
-				// console.log('test', $rootScope.currentUser.sitins);
 
 			})
 			.error(function(data){
@@ -61,6 +59,9 @@ angular.module('fullsailsitinApp')
 		    toggle = true;
 
 
+		    //Get sitin classes here
+
+
 			}else{
 				$scope.menu.animate = 'fadeOutRightBig';
 				setTimeout(switchFalse, 1000);
@@ -76,6 +77,30 @@ angular.module('fullsailsitinApp')
 		function switchFalse(){
 			$scope.menu.slideoutSwitch = false;
 		}
+
+
+
+
+		//calculates the total sitins, then adds them to the root scope
+		function totalSitins(){//jshint ignore:line
+			var fbAtt = new Firebase('https://sitin.firebaseio.com/attended/');
+			var attendedArray = [];
+			var user = $rootScope.currentUser.name;
+
+			fbAtt.on('child_added', function(snapshot){
+
+				if(snapshot.val().user === user){
+					attendedArray.push(snapshot.val());
+
+					//Runs up the value on the .sitins property
+					//probably not the most efficient way to handle this
+					//async callback
+					$rootScope.currentUser.sitins = attendedArray.length;
+					$cookies.sitins = attendedArray.length; //**Cookie not setting????
+				}
+			});
+		}
+
 
 
 
