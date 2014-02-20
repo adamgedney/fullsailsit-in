@@ -45,40 +45,40 @@ Route::get('/get-dates', function()
 Route::get('/send-email', function()
 {
 	//http://localhost:8887/public/send-email
-	$name = $_POST['name'];
-	$from = $_POST['email'];
-	$site = $_POST['website'];
-	$phone = $_POST['phone'];
-	$services = $_POST['services'];
-	$list = "";
+	$className = $_POST['name'];
+	$userName = $_POST['name'];
+	$userEmail = $_POST['email'];
+	$day = $_POST['email'];
+	$date = $_POST['email'];
+	$time = $_POST['email'];
+	$inst = $_POST['email'];
+	$instEmail = $_POST['email'];
 
-	//loops through checkboxes, concatenating onto list variable
-	foreach ($services as $s){
-	    $list .= $s . ", ";
 
-	}
-
-	//MAIL new subscriber info
+	//Build Mailer
 	$header  = 'MIME-Version: 1.0' . "\r\n";
-	$header .= "Reply-To: info@sgwebmarketing.com\r\n";
-	$header .= "Return-Path: info@sgwebmarketing.com\r\n";
-	$header .= 'From: Adam Gedney <info@sgwebmarketing.com>' . "\r\n";
+	$header .= "Reply-To: ' . $userEmail . '\r\n";
+	$header .= "Return-Path: ' . $userEmail . '\r\n";
+	$header .= 'From: ' . $userName . ' <' . $userEmail . '>' . "\r\n";
 
-	$to = 'info@sgwebmarketing.com';
-	$subject = "New Request For Proposal SG Internet Marketing";
+	$to = $instEmail;
+	$subject = $inst . " You have a new Full Sail sit-in Notification";
 
-	$message = "You have a new RFP inquiry. \r\n \r\n" .
-	"Name: " . $name . " \r\n" .
+	$message = $inst . "You have a new Full Sail sit-in Notification. \r\n \r\n" .
+	"Student Name: " . $userName . " \r\n" .
 	"Email: " . $from . " \r\n" .
-	"Website: " . $site . " \r\n" .
-	"Phone: " . $phone . " \r\n" .
-	"Services: " . $list . " \r\n \r\n" .
-	"Keep on Truckin! \r\n" .
-	"The SGIM Website Ghost";
+	"This student has sent you a sit-in request from the Full Sail Sit-In webapp. Please reply to this student as soon as possible to accept or deny their request to sit in on: " .
+	$className . " \r\n" .
+	"on: " . $day . " " . $date . " \r\n \r\n" .
+	"at: " . $time . " \r\n \r\n" .
+
+	"Again, please reply to this student as soon as possible to accept or deny his/her request to sit in on your lecture. \r\n" .
+	"Keep on Teachin!";
 
 	//send email
-	// mail($to,$subject,$message,$header);
-	mail($to,$subject,$message,$header);
+	$mail = mail($to,$subject,$message,$header);
+
+	return $mail;
 
 });
 

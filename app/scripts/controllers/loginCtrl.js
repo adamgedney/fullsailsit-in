@@ -20,7 +20,7 @@ angular.module('fullsailsitinApp')
 						//Stores basic user data into a global scope for sitewide use
 						//when a user has been logged in. **Added jshint ignore to allow the _ char
 						$rootScope.currentUser = {
-							'name' : user.username,
+							'name' : user.displayName,
 							'avatar' : user.avatar_url,// jshint ignore:line
 							'email' : user.email,
 							'added' : getDatetime()
