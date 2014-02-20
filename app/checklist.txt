@@ -1,12 +1,12 @@
 Build controllers
-loginCtrl, logoutCtrl, classCtrl, dateCtrl, notifyCtrl
+√loginCtrl, logoutCtrl, classCtrl, dateCtrl, notifyCtrl
 
-Install angularFire & firebase via Bower
+√Install angularFire & firebase via Bower
 
 Build Factory
-fireConn
+√fireConn
 
-Build API
+√Build API
 install Laravel in project root, import MySQL database,
 
 	Build Laravel
@@ -17,7 +17,7 @@ install Laravel in project root, import MySQL database,
 
 todo:
 	add room number to date/time list
-	build hash table of email addresses w/ names
+	√build hash table of email addresses w/ names
 	fix menu button position -slideout behavior
 	style menu add class button better
 	check attended classes div height for scrolling

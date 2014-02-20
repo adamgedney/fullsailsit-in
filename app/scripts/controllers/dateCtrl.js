@@ -1,5 +1,6 @@
 'use strict';
 
+/* global Firebase */
 angular.module('fullsailsitinApp')
 	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', function ($scope, $routeParams, $http, $rootScope, $cookies) {
 
@@ -13,7 +14,7 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
-		//Default hides modal confirmation message on page load
+		//Default hides & resets modal confirmation message on page load
 		$scope.showConfirmation = true;
 		$scope.cancelButton = 'Cancel';
 		$scope.buttonWidth = '';
@@ -53,9 +54,6 @@ angular.module('fullsailsitinApp')
 				$scope.classDates.classTime = classTime;
 				$scope.instructors = classInst;
 				$scope.classDates.len = data;
-
-				console.log(classInst);
-
 
 			})
 			.error(function(data, status, headers){
@@ -122,11 +120,69 @@ angular.module('fullsailsitinApp')
 				$scope.cancelButton = 'Close Window';
 				$scope.buttonWidth = 'cancel-btn-wide';
 
+				//Runs the function to add this class booked event
+				//to a running tally of sit ins.
+				tallySitins();
+
 			})
 			.error(function(data, status, headers){
 				console.log('get class names error', data, status, headers);
 			});
 		};
+
+
+
+
+
+
+
+		//Function pushes new sitins into the user object for tallying
+		function tallySitins(){// jshint ignore:line
+
+			var fbConn = new Firebase('https://sitin.firebaseio.com/users/');
+			var obj = {
+				'totalSitins' : 1,
+				'class': '',
+				'date':''
+			};
+			fbConn.child($rootScope.currentUser.name).push(obj);
+		}
+
+
+
+
+
+
+		//=========================================
+		//Menu Slideout controller ** duplicate code. Code exists in loginCtrl as well
+		//=========================================
+		var toggle = false;
+		$scope.menu = {};
+
+		$scope.slideout = function(){
+
+			if(!toggle){
+				$scope.menu.animate = 'fadeInRightBig';
+				$scope.menu.slideoutSwitch = true;
+
+		    toggle = true;
+
+
+			}else{
+				$scope.menu.animate = 'fadeOutRightBig';
+				setTimeout(switchFalse, 1000);
+
+		    toggle = false;
+
+			}
+
+
+		};
+
+
+		function switchFalse(){
+			$scope.menu.slideoutSwitch = false;
+		}
 
 
 	}]);

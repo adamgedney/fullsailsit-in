@@ -45,14 +45,6 @@ Route::get('/get-dates', function()
 Route::get('/send-email', function()
 {
 	//http://localhost:8887/public/send-email
-	// $className = $_POST['className'];
-	// $day = $_POST['day'];
-	// $date = $_POST['date'];
-	// $time = $_POST['time'];
-	// $inst = $_POST['instructor'];
-	// $instEmail = $_POST['instEmail'];
-	// $userEmail = $_POST['userEmail'];
-	// $userName = $_POST['userName'];
 	$className = $_GET['className'];
 	$day = $_GET['day'];
 	$date = $_GET['date'];
