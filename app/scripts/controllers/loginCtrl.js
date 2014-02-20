@@ -4,7 +4,9 @@
 angular.module('fullsailsitinApp')
 	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', function ($scope, $rootScope, $window, $cookies) {
 
+		//=========================================
 		//Called by the login button on the home page
+		//=========================================
 		$scope.loginUser = function(){
 
 			//Runs the angularfire login method
@@ -35,6 +37,11 @@ angular.module('fullsailsitinApp')
 					console.log(error, 'user auth failed');
 				});
 		};
+
+
+
+
+
 
 
 
@@ -74,11 +81,17 @@ angular.module('fullsailsitinApp')
 
 
 
+
+
+
 		function setUserCookies(){
 			$cookies.name = $rootScope.currentUser.name;
 			$cookies.avatar = $rootScope.currentUser.avatar;
 			$cookies.email = $rootScope.currentUser.email;
 		}
+
+
+
 
 
 

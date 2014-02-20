@@ -45,14 +45,23 @@ Route::get('/get-dates', function()
 Route::get('/send-email', function()
 {
 	//http://localhost:8887/public/send-email
-	$className = $_POST['name'];
-	$userName = $_POST['name'];
-	$userEmail = $_POST['email'];
-	$day = $_POST['email'];
-	$date = $_POST['email'];
-	$time = $_POST['email'];
-	$inst = $_POST['email'];
-	$instEmail = $_POST['email'];
+	// $className = $_POST['className'];
+	// $day = $_POST['day'];
+	// $date = $_POST['date'];
+	// $time = $_POST['time'];
+	// $inst = $_POST['instructor'];
+	// $instEmail = $_POST['instEmail'];
+	// $userEmail = $_POST['userEmail'];
+	// $userName = $_POST['userName'];
+	$className = $_GET['className'];
+	$day = $_GET['day'];
+	$date = $_GET['date'];
+	$time = $_GET['time'];
+	$inst = $_GET['instructor'];
+	$instEmail = $_GET['instEmail'];
+	$userEmail = $_GET['userEmail'];
+	$userName = $_GET['userName'];
+
 
 
 	//Build Mailer
@@ -66,7 +75,7 @@ Route::get('/send-email', function()
 
 	$message = $inst . "You have a new Full Sail sit-in Notification. \r\n \r\n" .
 	"Student Name: " . $userName . " \r\n" .
-	"Email: " . $from . " \r\n" .
+	"Email: " . $userEmail . " \r\n" .
 	"This student has sent you a sit-in request from the Full Sail Sit-In webapp. Please reply to this student as soon as possible to accept or deny their request to sit in on: " .
 	$className . " \r\n" .
 	"on: " . $day . " " . $date . " \r\n \r\n" .
@@ -78,7 +87,7 @@ Route::get('/send-email', function()
 	//send email
 	$mail = mail($to,$subject,$message,$header);
 
-	return $mail;
+	echo json_encode($mail);
 
 });
 

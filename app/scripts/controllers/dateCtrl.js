@@ -16,7 +16,9 @@ angular.module('fullsailsitinApp')
 		//acronym passed through url for querying API
 		var acro = $routeParams.a;
 
+		//=========================================
 		//GET class dates where acronyms match from API
+		//=========================================
 		//passing GET parameter in url as a hack. Using the data parameter
 		//in $http wasn't working
 		var requestUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + acro;
@@ -57,8 +59,9 @@ angular.module('fullsailsitinApp')
 
 
 
-
+		//=========================================
 		//Send notification, MODAL WINDOW handlers
+		//=========================================
 		$scope.confirm = function(currentIndex){
 
 
@@ -80,25 +83,36 @@ angular.module('fullsailsitinApp')
 
 			//pulls appropriate email address form hash table
 			//based on current index acronym
-			var instEmail = $rootScope.emailHash[$scope.classDates.name[$scope.currentIndex]];
+			var instEmail = $rootScope.emailHash[$scope.classDates.name];
 
-			var data = {
-				'day': $scope.classDates.classDay[$scope.currentIndex],
-				'date': $scope.classDates.classDate[$scope.currentIndex],
-				'time': $scope.classDates.classTime[$scope.currentIndex],
-				'instructor': $scope.instructors[$scope.currentIndex],
-				'userEmail': $rootScope.currentUser.email,
-				'userName': $rootScope.currentUser.email,
-				'instEmail':instEmail,
-				'className': $scope.classDates.fullName[$scope.currentIndex]
-			};
+			// var obj = {
+			// 	'className': $scope.classDates.fullName,
+			// 	'day': $scope.classDates.classDay[$scope.currentIndex],
+			// 	'date': $scope.classDates.classDate[$scope.currentIndex],
+			// 	'time': $scope.classDates.classTime[$scope.currentIndex],
+			// 	'instructor': $scope.instructors[$scope.currentIndex],
+			// 	'instEmail':instEmail,
+			// 	'userEmail': $rootScope.currentUser.email,
+			// 	'userName': $rootScope.currentUser.name
+			// };
+			// console.log(obj);
 
-			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?data=' + data;
 
+			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?' +
+				'className=' + $scope.classDates.fullName +
+				'&day=' + $scope.classDates.classDay[$scope.currentIndex] +
+				'&date=' + $scope.classDates.classDate[$scope.currentIndex] +
+				'&time=' + $scope.classDates.classTime[$scope.currentIndex] +
+				'&instructor=' + $scope.instructors[$scope.currentIndex] +
+				'&instEmail=' + instEmail +
+				'&userEmail=' + $rootScope.currentUser.email +
+				'&userName=' + $rootScope.currentUser.name;
 
-			$http({method:'GET', url: emailUrl, data: data})
-			.success(function(data){
-				console.log('success', data);
+			//data: JSON.stringify(obj)
+			//headers: {'Content-Type': 'application/json'}
+			$http({method:'GET', url: emailUrl})
+			.success(function(data, status){
+				console.log('success', data, status);
 			})
 			.error(function(data, status, headers){
 				console.log('get class names error', data, status, headers);
