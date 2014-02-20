@@ -24,8 +24,15 @@ Route::get('/get-classes', function()
 
 Route::get('/get-dates', function()
 {
-	//http://localhost:8887/public/get-dates
-	echo "get dates";
+	//http://localhost:8887/public/get-dates?data=PWA1
+
+	$data = $_GET['data'];
+
+	$dates = DB::select('SELECT day, date, start FROM schedule_events WHERE class = ?', array($data));
+
+	header('content-type: application/json; charset=utf-8');
+	header('Access-Control-Allow-Origin: *');
+	echo json_encode($dates);
 });
 
 Route::get('/get-teacher', function()

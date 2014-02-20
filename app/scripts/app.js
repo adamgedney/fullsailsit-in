@@ -21,7 +21,7 @@ App.config(function ($routeProvider) {
     })
     .when('/dates/:a', {
       templateUrl: 'views/dates.tpl',
-      controller: 'MainCtrl'
+      controller: 'DateCtrl'
     })
     .otherwise({
       redirectTo: '/'

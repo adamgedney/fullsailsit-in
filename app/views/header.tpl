@@ -1,6 +1,6 @@
 
 <header class="cf">
-	<h1>Full Sail Sit-In</h1>
+	<h1><a href="#/sitin">Full Sail Sit-In</a></h1>
 
 	<nav>
 		<ul>
