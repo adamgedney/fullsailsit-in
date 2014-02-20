@@ -86,7 +86,8 @@ angular.module('fullsailsitinApp')
 				'instructor': $scope.instructors[$scope.currentIndex],
 				'userEmail': $rootScope.currentUser.email,
 				'instEmail':'',
-				'message': message
+				'message': message,
+				'class': $scope.classDates.fullName[$scope.currentIndex]
 			};
 
 			var emailUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + data;

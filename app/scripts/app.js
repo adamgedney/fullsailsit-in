@@ -68,6 +68,7 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
     //   'DBS': 'jcabibbo@fullsail.com',
     //   'FWF': 'sbernath@fullsail.com'
     // };
+
     $rootScope.emailHash = {
       'WFP1': 'adam.gedney@gmail.com',
       'WIU': 'adam.gedney@gmail.com',
