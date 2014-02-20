@@ -17,22 +17,22 @@ angular.module('fullsailsitinApp')
 					//Controls login auth and forces route.
 					//Sends user to sitin page if user has been authed by firebase
 					if(user !== null){
+
 						$window.location.href = '#/sitin';
 
 						//Stores basic user data into a global scope for sitewide use
 						//when a user has been logged in. **Added jshint ignore to allow the _ char
+						//** currentUser added to in the totalSitins function below
 						$rootScope.currentUser = {
 							'name' : user.displayName,
 							'avatar' : user.avatar_url,// jshint ignore:line
 							'email' : user.email,
-							'added' : getDatetime(),
-							'sitins' : totalSitins()
+							'added' : getDatetime()
 						};
 
 						//Checks if user exists in Firebase. If not,
 						//adds the user for tracking
 						checkUser();
-
 					}
 				},function(error){
 					console.log(error, 'user auth failed');
@@ -45,39 +45,16 @@ angular.module('fullsailsitinApp')
 
 
 
-		//Loops through firebase attended directory
-		//searches for all entries where the user matches current user
-		//stores entry in an array for use throughout the site.
-		function totalSitins(){
-			var fb = new Firebase('https://sitin.firebaseio.com/attended/');
-			var attendedArray = [];
-
-			fb.on('child_added', function(snapshot){
-				for(var i=0;i<snapshot.length;i++){
-					if(snapshot[i].user === $rootScope.currentUser.name){
-						attendedArray.push(snapshot[i]);
-					}
-				}
-			});
-
-			return attendedArray;
-		}
-
-
-
-
-
-
-
 
 		function checkUser(){
+
 			var fb = new Firebase('https://sitin.firebaseio.com/users/');
 			var userArray = [];
 			var match = true;
 
 			//retrieves & stores all usernames from Firebase
 			fb.on('child_added', function(snapshot){
-				userArray.push(snapshot);
+				userArray.push(snapshot.val());
 			});
 
 			//Client side query to test for existing user
@@ -102,6 +79,9 @@ angular.module('fullsailsitinApp')
 			//Set the current user cookies
 			setUserCookies();
 
+			//Calculates total sitins. STORES A COOKIE of the number
+			totalSitins($rootScope.currentUser.name);
+
 		}// checkUser()
 
 
@@ -114,6 +94,38 @@ angular.module('fullsailsitinApp')
 			$cookies.avatar = $rootScope.currentUser.avatar;
 			$cookies.email = $rootScope.currentUser.email;
 		}
+
+
+
+
+
+
+
+
+
+
+
+		//Loops through firebase attended directory
+		//searches for all entries where the user matches current user
+		//stores entry in an array for use throughout the site.
+		function totalSitins(user){
+			var fbAtt = new Firebase('https://sitin.firebaseio.com/attended/');
+			var attendedArray = [];
+
+			fbAtt.on('child_added', function(snapshot){
+
+				if(snapshot.val().user === user){
+					attendedArray.push(snapshot.val());
+
+					//Runs up the value on the .sitins property
+					//probably not the most efficient way to handle this
+					//async callback
+					$rootScope.currentUser.sitins = attendedArray.length;
+				}
+
+			});
+		}
+
 
 
 

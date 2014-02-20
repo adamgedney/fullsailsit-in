@@ -10,7 +10,8 @@ angular.module('fullsailsitinApp')
 			$rootScope.currentUser ={
 				'name': $cookies.name,
 				'avatar': $cookies.avatar,
-				'email': $cookies.email
+				'email': $cookies.email,
+				'sitins': $cookies.sitins
 			};
 		}
 
@@ -34,6 +35,9 @@ angular.module('fullsailsitinApp')
 				//sets scope data on success
 				$scope.classData.classAcronyms = classAc;
 				$scope.classData.classNames = classNa;
+
+				// $cookies.sitins = $rootScope.currentUser.sitins;
+				// console.log('test', $rootScope.currentUser.sitins);
 
 			})
 			.error(function(data){

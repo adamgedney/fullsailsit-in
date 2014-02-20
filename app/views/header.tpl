@@ -6,7 +6,7 @@
 		<ul>
 			<li class="nav-profile"><img ng-src="{{currentUser.avatar}}" width="46"/>
 					<span>{{currentUser.name}}</span>
-						<span class="yellow">21</span>
+						<span class="yellow">{{currentUser.sitins}}</span>
 							<span class="small">sit-ins</span></li>
 			<li><a ng-controller="logoutCtrl" ng-click="logoutUser()">Logout</a></li>
 
@@ -25,7 +25,7 @@
 		<li><img ng-src="{{currentUser.avatar}}" width="46"/>
 			<span class="super">Logged in as:</span>
 				<span class="menu-item">{{currentUser.name}}</span>
-					<span class="menu-points">21</span>
+					<span class="menu-points">{{currentUser.sitins}}</span>
 						<span class="menu-points-units">sit-ins</span></li>
 
 		<li class="attended-classes">
