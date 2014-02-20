@@ -27,7 +27,10 @@ angular.module('fullsailsitinApp')
 		//acronym passed through url for querying API
 		var acro = $routeParams.a;
 
-
+		//Run on page load to populate user sit in data
+		//** duplicate code in teh classCtrl
+		var attendedArray = [];
+		totalSitins();
 
 
 
@@ -231,6 +234,39 @@ angular.module('fullsailsitinApp')
 
 		function switchFalse(){
 			$scope.menu.slideoutSwitch = false;
+		}
+
+
+
+
+
+
+
+
+
+		//calculates the total sitins, then adds them to the root scope
+		//**Need to add this as some sort of service so it'll run
+		//on ever page load.
+		function totalSitins(){//jshint ignore:line
+			var fbAtt = new Firebase('https://sitin.firebaseio.com/attended/');
+			var user = $rootScope.currentUser.name;
+
+			fbAtt.on('child_added', function(snapshot){
+
+				if(snapshot.val().user === user){
+					attendedArray.push(snapshot.val());
+
+					//Runs up the value on the .sitins property
+					//probably not the most efficient way to handle this
+					//async callback
+					$rootScope.currentUser.sitins = attendedArray.length;
+					$cookies.sitins = attendedArray.length; //**Cookie not setting????
+
+				//Get sitin classes here
+			    //Renders in the header view
+			    $rootScope.sitins = attendedArray;
+				}
+			});
 		}
 
 
