@@ -358,6 +358,9 @@ nav{
 	position: relative;
 
 	ul{
+		height: 385px;
+		overflow: scroll;
+
 		li{
 			padding: 0 9px;
 			line-height: 48px;

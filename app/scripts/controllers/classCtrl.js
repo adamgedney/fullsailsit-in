@@ -4,6 +4,11 @@
 angular.module('fullsailsitinApp')
 	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', function ($scope, $cookies, $rootScope, $http) {
 
+		//"globals"
+		var attendedArray = [];
+
+
+
 		//Checks cookie to find current user cookies
 		//in order to repopulate global user data
 		if($rootScope.currentUser === undefined){
@@ -60,7 +65,8 @@ angular.module('fullsailsitinApp')
 
 
 		    //Get sitin classes here
-
+		    //Renders in the header view
+		    $scope.sitins = attendedArray;
 
 			}else{
 				$scope.menu.animate = 'fadeOutRightBig';
@@ -84,7 +90,6 @@ angular.module('fullsailsitinApp')
 		//calculates the total sitins, then adds them to the root scope
 		function totalSitins(){//jshint ignore:line
 			var fbAtt = new Firebase('https://sitin.firebaseio.com/attended/');
-			var attendedArray = [];
 			var user = $rootScope.currentUser.name;
 
 			fbAtt.on('child_added', function(snapshot){

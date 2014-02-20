@@ -31,7 +31,8 @@
 		<li class="attended-classes">
 			<ul>
 				<li class="center">Attended Classes</li>
-				<li><span class="bold">{{acronym}}</span> {{date}}
+
+				<li ng-repeat="item in sitins"><span class="bold">{{item.class}}</span> {{item.classDate}}
 					<img src="images/add.png" alt="add next class icon" />
 						<span class="attend-next">Attend Next Class?</span></li>
 
