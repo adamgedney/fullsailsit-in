@@ -75,4 +75,31 @@ angular.module('fullsailsitinApp')
 		};
 
 
+		//Hits the API to send an email to the instructor
+		$scope.sendNotice = function(){
+			var message = '';
+
+			var data = {
+				'day': $scope.classDates.classDay[$scope.currentIndex],
+				'date': $scope.classDates.classDate[$scope.currentIndex],
+				'time': $scope.classDates.classTime[$scope.currentIndex],
+				'instructor': $scope.instructors[$scope.currentIndex],
+				'userEmail': $rootScope.currentUser.email,
+				'instEmail':'',
+				'message': message
+			};
+
+			var emailUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + data;
+
+
+			$http({method:'GET', url: emailUrl, data: data})
+			.success(function(data){
+				console.log('success', data);
+			})
+			.error(function(data, status, headers){
+				console.log('get class names error', data, status, headers);
+			});
+		};
+
+
 	}]);

@@ -12,7 +12,7 @@
 			<p>you'd like to sit in on {{classDates.name}} on {{classDates.classDay[currentIndex]}} {{classDates.classDate[currentIndex]}} at {{classDates.classTime[currentIndex]}}?</p>
 
 			<button ng-click="cancel()" class="btn cancel-btn">Cancel</button>
-			<button class="btn request-btn">Send Request</button>
+			<button ng-click="sendNotice()" class="btn request-btn">Send Request</button>
 
 		</div><!-- /.mod-container-->
 	</div><!-- /.modal-->

@@ -42,26 +42,6 @@ Route::get('/get-dates', function()
 
 
 
-Route::get('/get-teacher', function()
-{
-	//http://localhost:8887/public/get-teacher
-	echo "get teacher";
-});
-
-
-
-
-
-Route::get('/get-email', function()
-{
-	//http://localhost:8887/public/get-email
-	echo "get email";
-});
-
-
-
-
-
 Route::get('/send-email', function()
 {
 	//http://localhost:8887/public/send-email
