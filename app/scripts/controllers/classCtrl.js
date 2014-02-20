@@ -64,11 +64,6 @@ angular.module('fullsailsitinApp')
 		    toggle = true;
 
 
-		    //Get sitin classes here
-		    //Renders in the header view
-		    $rootScope.sitins = attendedArray;
-
-
 			}else{
 				$scope.menu.animate = 'fadeOutRightBig';
 				setTimeout(switchFalse, 1000);
@@ -89,6 +84,8 @@ angular.module('fullsailsitinApp')
 
 
 		//calculates the total sitins, then adds them to the root scope
+		//**Need to add this as some sort of service so it'll run
+		//on ever page load.
 		function totalSitins(){//jshint ignore:line
 			var fbAtt = new Firebase('https://sitin.firebaseio.com/attended/');
 			var user = $rootScope.currentUser.name;
@@ -103,6 +100,10 @@ angular.module('fullsailsitinApp')
 					//async callback
 					$rootScope.currentUser.sitins = attendedArray.length;
 					$cookies.sitins = attendedArray.length; //**Cookie not setting????
+
+				//Get sitin classes here
+			    //Renders in the header view
+			    $rootScope.sitins = attendedArray;
 				}
 			});
 		}

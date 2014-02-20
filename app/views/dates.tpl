@@ -11,7 +11,7 @@
 			<h2 ng-show="showConfirmation" >Notify {{instructors[currentIndex]}}</h2>
 			<p ng-show="showConfirmation">you'd like to sit in on {{classDates.name}} on {{classDates.classDay[currentIndex]}} {{classDates.classDate[currentIndex]}} at {{classDates.classTime[currentIndex]}}?</p>
 
-			<p ng-show="!showConfirmation">Your notification sent successfully. Please allowed a day or so for your instructor to reply.</p>
+			<p ng-show="!showConfirmation">Your notification sent successfully. Please allow a day or so for your instructor to reply.</p>
 
 			<img ng-show="!showConfirmation" src="images/check.png" alt="check image"/>
 

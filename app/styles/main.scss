@@ -22,7 +22,7 @@ $border-red: #670100;
 $dark-red: #990100;
 $light-red: #b90504;
 $blue: #75acb5;
-$dark-blue: #5d8990;
+$dark-blue: #4c6f75;
 $yellow: #fffc19;
 
 /*----Sass imports----*/
@@ -435,6 +435,7 @@ nav{
 	float: left;
 	margin-right: 18px;
 	color: $dark-grey;
+	@include col(3);
 
 	@include break-sm{
 		font-size: 1.4em;
@@ -444,6 +445,7 @@ nav{
 .item-center{
 	text-align: left;
 	color: $dark-blue;
+	@include col(3);
 
 	@include break-sm{
 		margin-left: 20%;
@@ -455,6 +457,7 @@ nav{
 	text-align: right;
 	float: right;
 	font-size: .8em;
+	@include col(3);
 
 	@include break-sm{
 		font-size: 1.2em;

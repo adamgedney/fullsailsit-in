@@ -26,3 +26,9 @@ todo:
 
 	restructure duplicate code into factories with factory methods.
 
+	change fullsail logo. This one is blurry.
+	change add next class button
+
+	check add new user
+
+
