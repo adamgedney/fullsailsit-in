@@ -7,13 +7,13 @@ angular.module('fullsailsitinApp')
 		var acro = $routeParams.a;
 
 		//GET class dates where acronyms match from API
-		var requestUrl = 'http://127.0.0.1:8887/public/get-dates';
+		var requestUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + acro;
 		var classDay = [];
 		var classDate = [];
 		var classTime = [];
 		$scope.classDates = {};
 		console.log('test');
-		$http({method:'GET', url: requestUrl, data: acro})
+		$http({method:'GET', url: requestUrl})
 			.success(function(data, status, headers){
 				console.log(data,status,headers);
 				//on success, loops through class date data, pushing into

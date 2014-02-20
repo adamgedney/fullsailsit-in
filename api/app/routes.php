@@ -11,16 +11,21 @@
 |
 */
 
+header('content-type: application/json; charset=utf-8');
+header('Access-Control-Allow-Origin: *');
+
 Route::get('/get-classes', function()
 {
 	//http://localhost:8887/public/get-classes
 
 	$classes = DB::select('SELECT DISTINCT(class) FROM schedule_events WHERE course LIKE "%WDD%"');
 
-	header('content-type: application/json; charset=utf-8');
-	header('Access-Control-Allow-Origin: *');
 	echo json_encode($classes);
 });
+
+
+
+
 
 Route::get('/get-dates', function()
 {
@@ -30,10 +35,12 @@ Route::get('/get-dates', function()
 
 	$dates = DB::select('SELECT day, date, start FROM schedule_events WHERE class = ?', array($data));
 
-	header('content-type: application/json; charset=utf-8');
-	header('Access-Control-Allow-Origin: *');
 	echo json_encode($dates);
 });
+
+
+
+
 
 Route::get('/get-teacher', function()
 {
@@ -41,14 +48,26 @@ Route::get('/get-teacher', function()
 	echo "get teacher";
 });
 
+
+
+
+
 Route::get('/get-email', function()
 {
 	//http://localhost:8887/public/get-email
 	echo "get email";
 });
 
+
+
+
+
 Route::get('/send-email', function()
 {
 	//http://localhost:8887/public/send-email
 
 });
+
+
+
+
