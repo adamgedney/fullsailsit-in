@@ -7,7 +7,7 @@
 			<li><a href="#/sitin">Classes</a></li>
 			<li><a href="#/attended">Your Sitins</a></li>
 
-			<li class="nav-profile"><img ng-src="{{currentUser.avatar}}" width="46"/>
+			<li class="nav-profile no-hover"><img ng-src="{{currentUser.avatar}}" width="46"/>
 					<span>{{currentUser.name}}</span>
 						<span class="yellow">{{currentUser.sitins}}</span>
 							<span class="small">sit-ins</span></li>

@@ -13,7 +13,7 @@ angular.module('fullsailsitinApp')
 			//with a callback for success
 			$rootScope.loginObject.$login('github')
 				.then(function(user){
-
+					console.log(user);
 					//Controls login auth and forces route.
 					//Sends user to sitin page if user has been authed by firebase
 					if(user !== null){

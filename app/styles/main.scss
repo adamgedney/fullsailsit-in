@@ -254,6 +254,10 @@ nav{
 		li:hover{
 			opacity: .6;
 		}
+
+		li.no-hover:hover{
+			opacity: 1;
+		}
 	}
 
 	@include break-lg{
