@@ -574,6 +574,12 @@ footer{
 }
 
 
+.four-oh-four{
+	img{
+		max-height: 100vh;
+		@include horiz-align;
+	}
+}
 
 
 

@@ -27,8 +27,11 @@ App.config(function ($routeProvider) {
       templateUrl: 'views/attended.tpl',
       controller: 'DateCtrl'
     })
+    .when('/404', {
+      templateUrl: 'views/404.tpl'
+    })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '404'
     });
 });
 
