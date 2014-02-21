@@ -29,10 +29,10 @@
 
 		<ul>
 			<li class="class-dates" ng-repeat="item in sitins">
-					<span class="item-left">{{item.class}}</span>
-						<span class="item-center">{{item.classDate}}</span>
+					<span class="item-left">{{item.classDate}}</span>
+						<span class="item-center">{{item.class}}</span>
 							<span ng-click="confirm()" class="item-right"><img src="images/add.png" alt="add next class icon" />
-						<span>Attend Next Class?</span></span>
+						<span class="small">Attend Next Class?</span></span>
 			</li>
 		</ul>
 
