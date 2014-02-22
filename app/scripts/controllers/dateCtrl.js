@@ -35,10 +35,10 @@ angular.module('fullsailsitinApp')
 
 
 
-		//Variable built just to run an instance of TotalSitins
+		//Variable built just to run an instance of TotalSitins.
 		//TotalSitins primary funciton is to  add items to $rootScope
 		var ts = TotalSitins;
-		console.log(ts);
+		console.log(ts);//necessary for jshint
 
 
 
@@ -132,7 +132,6 @@ angular.module('fullsailsitinApp')
 			// 	'userEmail': $rootScope.currentUser.email,
 			// 	'userName': $rootScope.currentUser.name
 			// };
-			// console.log(obj);
 
 
 			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?' +
@@ -171,7 +170,7 @@ angular.module('fullsailsitinApp')
 
 
 		//Function pushes new sitins into the user object for tallying
-		//This just assumes that the student keeps their appointment
+		//This just assumes that the student keeps their appointment.
 		//V2 functionality could be a checkin system for checking in while
 		//attending a sitin.
 		function tallySitins(){// jshint ignore:line

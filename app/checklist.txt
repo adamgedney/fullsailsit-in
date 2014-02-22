@@ -16,19 +16,22 @@ install Laravel in project root, import MySQL database,
 
 
 todo:
-	add room number to date/time list
+	IMPORTANT  add room number to date/time list
 	√build hash table of email addresses w/ names
 	fix menu button position -slideout behavior
 	style menu add class button better
-	check attended classes div height for scrolling
-	add attended classes to desktop app
+	√check attended classes div height for scrolling
+	√add attended classes to desktop app
 	fix time "undefined" in date function
 
-	restructure duplicate code into factories with factory methods.
+	√restructure duplicate code into factories with factory methods.
 
 	change fullsail logo. This one is blurry.
-	change add next class button
+	√change add next class button
 
-	check add new user
+	√check add new user
+
+
+	IMPORTANT!   GEt next class funcitoning
 
 

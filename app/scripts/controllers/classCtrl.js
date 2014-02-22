@@ -23,10 +23,10 @@ angular.module('fullsailsitinApp')
 
 
 
-		//Variable built just to run an instance of TotalSitins
-		//TotalSitins primary funciton is to  add items to $rootScope
+		//Variable built just to run an instance of TotalSitins.
+		//TotalSitins primary function is to  add items to $rootScope
 		var ts = TotalSitins;
-		console.log(ts);
+		console.log(ts);//necessary for jshint
 
 
 
