@@ -4,13 +4,10 @@
 angular.module('fullsailsitinApp')
 	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'TotalSitins', function ($scope, $cookies, $rootScope, $http, TotalSitins) {
 
-		//"globals"
-		// var attendedArray = [];
-
-
 
 		//Checks cookie to find current user cookies
 		//in order to repopulate global user data
+		//***Code duplicated in dateCtrl
 		if($rootScope.currentUser === undefined){
 			$rootScope.currentUser ={
 				'name': $cookies.name,
@@ -20,8 +17,14 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
-		// totalSitins();
-		console.log('totalsitins', TotalSitins);
+
+
+		//Variable built just to run an instance of TotalSitins
+		//TotalSitins primary funciton is to  add items to $rootScope
+		var ts = TotalSitins;
+		console.log(ts);
+
+
 
 		//GET class names from API
 		var requestUrl = 'http://127.0.0.1:8887/public/get-classes';

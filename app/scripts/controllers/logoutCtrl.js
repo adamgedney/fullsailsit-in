@@ -20,6 +20,7 @@ angular.module('fullsailsitinApp')
 				$cookies.name = '';
 				$cookies.avatar = '';
 				$cookies.email = '';
+				$cookies.sitins = '';
 			}
 		};
 
