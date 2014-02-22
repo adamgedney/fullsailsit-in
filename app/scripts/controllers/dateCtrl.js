@@ -94,9 +94,9 @@ angular.module('fullsailsitinApp')
 		//=========================================
 		//Send notification, MODAL WINDOW handlers
 		//=========================================
-		$scope.confirm = function(currentIndex){
+		$scope.confirm = function(currentIndex, name, date){
 
-
+			console.log(currentIndex, name, date);
 			$scope.showModal = true;
 
 			//Hit API for the instructor's name, then check name against

@@ -28,10 +28,10 @@
 		<h2>These are the classes you've requested to sit in on. Keep it up! I bet you feel smarter already, don't you?</h2>
 
 		<ul>
-			<li class="class-dates" ng-repeat="(item, $index) in sitins">
+			<li class="class-dates" ng-repeat="item in sitins">
 					<span class="item-left">{{item.class}}</span>
 						<span class="item-center">{{item.classDate}}</span>
-							<span ng-click="confirm($index, {{item.class}}, {{item.date}})" class="item-right"><img src="images/add.png" alt="add next class icon" />
+							<span ng-click="confirm('next', item.class, item.classDate)" class="item-right"><img src="images/add.png" alt="add next class icon" />
 						<span class="small">Attend Next Class?</span></span>
 			</li>
 		</ul>
