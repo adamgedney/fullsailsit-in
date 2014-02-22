@@ -16,7 +16,7 @@
 		</ul>
 	</nav>
 
-	<img ng-click="slideout()" class="cursor-true menu-btn animated" src="images/menu.png" alt="menu button"/>
+	<img ng-click="menu.slideout()" class="cursor-true menu-btn animated" src="images/menu.png" alt="menu button"/>
 </header>
 
 

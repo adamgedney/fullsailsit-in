@@ -2,7 +2,12 @@
 
 /* global Firebase */
 angular.module('fullsailsitinApp')
-	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', 'TotalSitins', function ($scope, $routeParams, $http, $rootScope, $cookies, TotalSitins) {
+	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', 'TotalSitins', 'MenuSlider', function ($scope, $routeParams, $http, $rootScope, $cookies, TotalSitins, MenuSlider) {
+
+
+		//menu slideout controller
+		$scope.menu = MenuSlider;
+
 
 
 		//Checks cookie to find current user cookies
@@ -201,41 +206,6 @@ angular.module('fullsailsitinApp')
 			var	time = day + ' ' + month + ' ' + year + ' ' + hour + ':' + minutes + ':' + ms;
 
 			return time;
-		}
-
-
-
-
-
-		//=========================================
-		//Menu Slideout controller ** duplicate code. Code exists in loginCtrl as well
-		//=========================================
-		var toggle = false;
-		$scope.menu = {};
-
-		$scope.slideout = function(){
-
-			if(!toggle){
-				$scope.menu.animate = 'fadeInRightBig';
-				$scope.menu.slideoutSwitch = true;
-
-		    toggle = true;
-
-
-			}else{
-				$scope.menu.animate = 'fadeOutRightBig';
-				setTimeout(switchFalse, 1000);
-
-		    toggle = false;
-
-			}
-
-
-		};
-
-
-		function switchFalse(){
-			$scope.menu.slideoutSwitch = false;
 		}
 
 
