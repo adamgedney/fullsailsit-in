@@ -1,0 +1,45 @@
+Build controllers
+√loginCtrl, logoutCtrl, classCtrl, dateCtrl, notifyCtrl
+
+√Install angularFire & firebase via Bower
+
+Build Factory
+√fireConn
+
+√Build API
+install Laravel in project root, import MySQL database,
+
+	√Build Laravel
+	classModel, FSClasses (getClasses, getDates, getTeacher, getEmail, getRoom)
+	emailCtrl
+
+
+
+todo:
+	IMPORTANT  add room number to date/time list
+	√build hash table of email addresses w/ names
+	fix menu button position -slideout behavior
+	style menu add class button better
+	√check attended classes div height for scrolling
+	√add attended classes to desktop app
+	fix time "undefined" in date function
+
+	√restructure duplicate code into factories with factory methods.
+
+	change fullsail logo. This one is blurry.
+	√change add next class button
+
+	√check add new user
+
+
+	IMPORTANT!   GEt next class functioning
+			√ng-click the plus img.
+			√on click, get the clicked class acronym & date.
+			Query the api for a match.
+			send the next available class to the modal window.
+			Send that class to api email function.
+
+			-how can I get the current data from the children of an ng-click?
+
+
+
