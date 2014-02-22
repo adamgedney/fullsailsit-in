@@ -101,7 +101,6 @@ angular.module('fullsailsitinApp')
 
 			//Hit API for the instructor's name, then check name against
 			//hash table, adding class, date, and time to modal.
-			console.log(currentIndex);
 			$scope.currentIndex = currentIndex;
 		};
 
@@ -159,7 +158,7 @@ angular.module('fullsailsitinApp')
 
 			})
 			.error(function(data, status, headers){
-				console.log('get class names error', data, status, headers);
+				console.log('email send error', data, status, headers);
 			});
 		};
 
@@ -206,6 +205,10 @@ angular.module('fullsailsitinApp')
 
 			return time;
 		}
+
+
+
+
 
 
 

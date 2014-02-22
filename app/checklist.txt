@@ -9,7 +9,7 @@ Build Factory
 √Build API
 install Laravel in project root, import MySQL database,
 
-	Build Laravel
+	√Build Laravel
 	classModel, FSClasses (getClasses, getDates, getTeacher, getEmail, getRoom)
 	emailCtrl
 
@@ -32,6 +32,14 @@ todo:
 	√check add new user
 
 
-	IMPORTANT!   GEt next class funcitoning
+	IMPORTANT!   GEt next class functioning
+			ng-click the plus img.
+			on click, get the clicked class acronym & date.
+			Query the api for a match.
+			send the next available class to the modal window.
+			Send that class to api email function.
+
+			-how can I get the current data from the children of an ng-click?
+
 
 
