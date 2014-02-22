@@ -99,9 +99,12 @@ angular.module('fullsailsitinApp')
 			console.log(currentIndex, name, date);
 			$scope.showModal = true;
 
-			//Hit API for the instructor's name, then check name against
-			//hash table, adding class, date, and time to modal.
+			//Sets the current index for use in the sendNotice function below
 			$scope.currentIndex = currentIndex;
+
+			if(currentIndex === 'next'){
+				requestNext(name, date);
+			}
 		};
 
 		$scope.cancel = function(){
@@ -114,7 +117,8 @@ angular.module('fullsailsitinApp')
 		};
 
 
-		//Hits the API to send an email to the instructor
+		//Hit API for the instructor's name, then check name against
+		//hash table, adding class, date, and time to modal.
 		$scope.sendNotice = function(){
 
 			//pulls appropriate email address form hash table
@@ -185,6 +189,26 @@ angular.module('fullsailsitinApp')
 			// Builds a record of requested sitins on a unique timestamp
 			//in the "attended" directory.
 			fbConn.child(getTimestamp()).set(obj);
+		}
+
+
+
+
+
+
+
+		function requestNext(name, date){
+
+			//add class acronym to request to query on
+			var rUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + name;
+
+			$http({method:'GET', url: rUrl})
+				.success( function(data){
+					console.log(data, date);
+				})
+				.error(function(data, status, headers){
+					console.log('get class names error', data, status, headers);
+				});
 		}
 
 

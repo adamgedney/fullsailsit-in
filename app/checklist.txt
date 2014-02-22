@@ -33,8 +33,8 @@ todo:
 
 
 	IMPORTANT!   GEt next class functioning
-			ng-click the plus img.
-			on click, get the clicked class acronym & date.
+			√ng-click the plus img.
+			√on click, get the clicked class acronym & date.
 			Query the api for a match.
 			send the next available class to the modal window.
 			Send that class to api email function.
