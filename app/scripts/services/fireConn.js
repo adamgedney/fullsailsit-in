@@ -4,8 +4,7 @@
 angular.module('fullsailsitinApp')
 	.factory('FireConn', ['$firebase', function ($firebase){
 
-		return {
-			connection: function(path){
+		return function(path){
 
 				//attended/
 				//users/
@@ -13,8 +12,7 @@ angular.module('fullsailsitinApp')
 				var instance = new Firebase(url);
 
 				return $firebase(instance);
-			}
-		};
+			};
 
 
 	}]);

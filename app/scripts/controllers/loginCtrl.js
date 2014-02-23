@@ -12,7 +12,7 @@ angular.module('fullsailsitinApp')
 			//with a callback for success
 			$rootScope.loginObject.$login('github')
 				.then(function(user){
-					console.log(user);
+
 					//Controls login auth and forces route.
 					//Sends user to sitin page if user has been authed by firebase
 					if(user !== null){
@@ -48,17 +48,16 @@ angular.module('fullsailsitinApp')
 		function checkUser(){
 
 			// var fb = new Firebase('https://sitin.firebaseio.com/users/');
-			var fb = new FireConn.connection('users');
+			var fb = FireConn('users');// jshint ignore:line
 			var userArray = [];
 			var match = true;
 
-			console.log(fb, 'fireeeee');
+			// console.log(fb, 'fireeeee');
 
 			//retrieves & stores all usernames from Firebase
-			fb.$on('child_added', function(snapshot){
-				userArray.push(snapshot.val());
-
-				console.log('fireconn snap', snapshot.val(), fb);
+			fb.then( function(snapshot){
+				userArray.push(snapshot);
+				console.log(snapshot.$value);
 			});
 
 			//Client side query to test for existing user
@@ -77,7 +76,7 @@ angular.module('fullsailsitinApp')
 			//under which the user data object is placed &
 			//sets a username cookie
 			if(!match){
-				fb.child($rootScope.currentUser.name).set($rootScope.currentUser);
+				fb.$add($rootScope.currentUser);
 			}
 
 			//Set the current user cookies
