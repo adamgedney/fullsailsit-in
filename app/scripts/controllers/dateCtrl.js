@@ -72,21 +72,28 @@ angular.module('fullsailsitinApp')
 		//=========================================
 		$scope.confirm = function(currentIndex, name, date){
 
-			$scope.showModal = true;
-
 			//Sets the current index for use in the sendNotice function below
 			$scope.currentIndex = currentIndex;
 
 			//If currentIndex == next, this means the click originated
-			//from the add next class button. returnNext will query db
+			//from the add next class button. getNext will query db
 			//for the next class
 			if(currentIndex === 'next'){
 
-				// {{classDetails[currentIndex].instructor}}
-				// {{classDetails.name}}
-				// {{classDetails[currentIndex].day}}
-				// {{classDetails[currentIndex].start}}
-				returnNext(name, date);
+				getNext(name, date);
+
+			}else{
+
+				$rootScope.modal = {
+					'instructor': $scope.classDetails[currentIndex].instructor,
+					'name': $scope.classDetails.name,
+					'day': $scope.classDetails[currentIndex].day,
+					'start': $scope.classDetails[currentIndex].start,
+					'again': ''
+				};
+
+				$scope.showModal = true;
+
 			}
 		};
 
@@ -106,14 +113,14 @@ angular.module('fullsailsitinApp')
 
 			//pulls appropriate email address form hash table
 			//based on current index acronym
-			var instEmail = $rootScope.emailHash[$scope.classDetails.name];
+			var instEmail = $rootScope.emailHash[$scope.modal.name];
 
 
 			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?' +
 				'className=' + $scope.classDetails.fullName +
-				'&day=' + $scope.classDetails[$scope.currentIndex].day +
-				'&date=' + $scope.classDetails[$scope.currentIndex].start +
-				'&instructor=' + $scope.classDetails[$scope.currentIndex].instructor +
+				'&day=' + $scope.modal.day +
+				'&date=' + $scope.modal.start +
+				'&instructor=' + $scope.modal.instructor +
 				'&instEmail=' + instEmail +
 				'&userEmail=' + $rootScope.currentUser.email +
 				'&userName=' + $rootScope.currentUser.name;
@@ -129,7 +136,7 @@ angular.module('fullsailsitinApp')
 
 				//Runs the function to add this booked class
 				//to a running tally of sit ins.
-				tallySitins();
+				setSitins();
 
 			})
 			.error(function(data, status, headers){
@@ -147,13 +154,13 @@ angular.module('fullsailsitinApp')
 		//This just assumes that the student keeps their appointment.
 		//V2 functionality could be a checkin system for checking in while
 		//attending a sitin.
-		function tallySitins(){// jshint ignore:line
+		function setSitins(){// jshint ignore:line
 
 			var fbConn = new Firebase('https://sitin.firebaseio.com/attended/');
 
 			var obj = {
-				'classDate' : $scope.classDetails[$scope.currentIndex].start,
-				'class' : $scope.classDetails.name,
+				'classDate' : $scope.modal.start,
+				'class' : $scope.modal.name,
 				'user' : $rootScope.currentUser.name
 			};
 
@@ -168,14 +175,26 @@ angular.module('fullsailsitinApp')
 
 
 
-		function returnNext(name, date){
+		function getNext(name, date){
 
 			//add class acronym to request to query on
 			var rUrl = 'http://127.0.0.1:8887/public/get-next' + '?class=' + name + '&date=' + date;
 
 			$http({method:'GET', url: rUrl})
 				.success( function(data){
-					console.log(data, 'returnnext', name, date);
+
+					//sets modal windows values to reflec the next available class
+					$rootScope.modal = {
+						'instructor': data[0].instructor,
+						'name': name,
+						'day': data[0].day,
+						'start': data[0].start,
+						'again': 'again'
+					};
+
+					$scope.showModal = true;
+
+					console.log($rootScope.modal);
 				})
 				.error(function(data, status, headers){
 					console.log('get class names error', data, status, headers);
