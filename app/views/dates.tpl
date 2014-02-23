@@ -9,7 +9,7 @@
 	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
 			<h2 ng-show="showConfirmation" >Notify {{classDetails[currentIndex].instructor}}</h2>
-			<p ng-show="showConfirmation">you'd like to sit in on {{classDetails[currentIndex].name}} on {{classDetails[currentindex].day}} {{classDetails[currentindex].start}}?</p>
+			<p ng-show="showConfirmation">you'd like to sit in on {{classDetails.name}} on {{classDetails[currentIndex].day}} {{classDetails[currentIndex].start}}?</p>
 
 			<p ng-show="!showConfirmation">Your notification sent successfully. Please allow a day or so for your instructor to reply.</p>
 
