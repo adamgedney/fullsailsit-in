@@ -204,6 +204,11 @@ header{
 	background: $dark-red;
 	height: 48px;
 	padding: 0 18px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 99998;
 
 	h1{
 		font-size: 1.8em;
@@ -219,7 +224,8 @@ header{
 	img{
 		float: right;
 		margin-top: 7px;
-		position: relative;
+		position: fixed;
+		right: 18px;
 		z-index: 9999;
 	}
 }
@@ -297,6 +303,10 @@ nav{
 		cursor: pointer;
 	}
 
+	li:last-child{
+		border: none;
+	}
+
 	li:hover{
 		opacity: .8;
 	}
@@ -341,6 +351,7 @@ nav{
 }
 
 .logout-item{
+	background: $dark-grey;
 	position: absolute;
 	bottom: 0;
 	padding-left: 6px;
@@ -362,7 +373,7 @@ nav{
 	position: relative;
 
 	ul{
-		height: 385px;
+		max-height: 385px;
 		overflow: scroll;
 
 		li{
@@ -386,7 +397,7 @@ nav{
 .attend-next{
 	font-size: .5em;
 	position: absolute;
-	right: 3px;
+	right: 15px;
 	text-align: center;
 	top: 15px;
 	color: $med-grey;

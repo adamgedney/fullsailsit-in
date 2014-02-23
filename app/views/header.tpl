@@ -28,15 +28,15 @@
 				<span class="menu-item">{{currentUser.name}}</span>
 					<span class="menu-points">{{currentUser.sitins}}</span>
 						<span class="menu-points-units">SitIns</span></li>
-		<li class="center"><a href="#/sitin" class="menu-item" >Classes</a></li>
+		<li><a href="#/sitin" class="menu-item" >Classes</a></li>
 
 		<li class="attended-classes">
 			<ul>
-				<li class="center">Your SitIns</li>
+				<li>Your SitIns</li>
 
 				<li ng-click="confirm('next', item.class, item.classDate)"  ng-repeat="item in sitins"><span class="bold">{{item.class}}</span> {{item.classDate}}
 					<img src="images/add.png" alt="add next class icon" />
-						<span class="attend-next">Attend Next Class?</span></li>
+						<span class="attend-next">Attend Next?</span></li>
 
 			</ul>
 		</li>
