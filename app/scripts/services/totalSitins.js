@@ -23,4 +23,6 @@ angular.module('fullsailsitinApp')
 			    $rootScope.sitins = attendedArray;
 				}
 			});
+
+			return attendedArray.length;
 		}]);

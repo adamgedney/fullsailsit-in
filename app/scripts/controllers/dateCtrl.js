@@ -23,15 +23,6 @@ angular.module('fullsailsitinApp')
 
 
 
-		//Default hides & resets modal confirmation message on page load
-		$scope.showConfirmation = true;
-		$scope.cancelButton = 'Cancel';
-		$scope.buttonWidth = '';
-
-
-
-
-
 
 
 		//=========================================

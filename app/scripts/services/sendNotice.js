@@ -10,7 +10,9 @@ angular.module('fullsailsitinApp')
 
 			//Sets the current index for use in the sendNotice function below
 			$rootScope.currentIndex = currentIndex;
+			$rootScope.showConfirmation = false;
 			$rootScope.showModal = true;
+
 			//If currentIndex == next, this means the click originated
 			//from the add next class button. getNext will query db
 			//for the next class
@@ -29,8 +31,6 @@ angular.module('fullsailsitinApp')
 					'again': ''
 				};
 
-				$rootScope.showModal = true;
-
 			}
 		};
 
@@ -41,9 +41,8 @@ angular.module('fullsailsitinApp')
 			$rootScope.showModal = false;
 
 			//Removes confirmation message styles
-			$rootScope.showConfirmation = true; //note** This boolean is backward
-			$rootScope.cancelButton = 'Cancel';
-			$rootScope.buttonWidth = '';
+			//if they were applied
+			$rootScope.showConfirmation = false;
 		};
 
 
@@ -56,7 +55,8 @@ angular.module('fullsailsitinApp')
 			//pulls appropriate email address form hash table
 			//based on current index acronym
 			var instEmail = $rootScope.emailHash[$rootScope.modal.name];
-
+			//reveals successful send message in view
+			$rootScope.showConfirmation = false;
 
 			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?' +
 				'className=' + $rootScope.classDetails.fullName +
@@ -73,9 +73,8 @@ angular.module('fullsailsitinApp')
 			.success(function(data, status, headers){
 				console.log('email sent success', data, status, headers);
 
-				$rootScope.showConfirmation = false;
-				$rootScope.cancelButton = 'Close Window';
-				$rootScope.buttonWidth = 'cancel-btn-wide';
+				//reveals successful send message in view
+				$rootScope.showConfirmation = true;
 
 				//Runs the function to add this booked class
 				//to a running tally of sit ins.

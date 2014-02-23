@@ -405,8 +405,15 @@ nav{
 
 
 
+
+
+
+
+
+
 .content{
 	min-height: 100vh;
+	margin-top: 96px;
 
 	h2{
 		@include col(10);

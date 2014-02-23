@@ -26,6 +26,9 @@ angular.module('fullsailsitinApp')
 
 
 
+
+
+
 		//GET class names from API
 		var requestUrl = 'http://127.0.0.1:8887/public/get-classes';
 		var classAc = [];
