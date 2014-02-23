@@ -2,7 +2,7 @@
 
 /* global Firebase*/
 angular.module('fullsailsitinApp')
-	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', function ($scope, $rootScope, $window, $cookies) {
+	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', '$location', function ($scope, $rootScope, $window, $cookies, $location) {
 
 		//=========================================
 		//Called by the login button on the home page
@@ -18,7 +18,8 @@ angular.module('fullsailsitinApp')
 					//Sends user to sitin page if user has been authed by firebase
 					if(user !== null){
 
-						$window.location.href = '#/sitin';
+						//moves user into app
+						$location.path('/sitin');
 
 						//Stores basic user data into a global scope for sitewide use
 						//when a user has been logged in. **Added jshint ignore to allow the _ char

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-	.controller('logoutCtrl', ['$scope', '$rootScope', '$window', '$cookies', function ($scope, $rootScope, $window, $cookies) {
+	.controller('logoutCtrl', ['$scope', '$rootScope', '$window', '$cookies', '$location', function ($scope, $rootScope, $window, $cookies, $location) {
 
 		//Called by logout buttons in app header or menu
 		$scope.logoutUser = function(){
@@ -12,7 +12,7 @@ angular.module('fullsailsitinApp')
 			$rootScope.loginObject.$logout();
 			$rootScope.currentUser = '';
 			removeUserCookies();
-			$window.location.href = '#/';
+			$location.path('/');
 
 
 			//**set jshint to ignore my function call before declaration

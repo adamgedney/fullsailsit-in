@@ -42,4 +42,7 @@ todo:
 			-how can I get the current data from the children of an ng-click?
 
 
+			IMPORTANT control state. Deny access to app if not authed
+
+
 
