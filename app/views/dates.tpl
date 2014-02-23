@@ -29,7 +29,7 @@
 		<h2>Select a date & time to sit in on <span class="red">{{classDetails.fullName}}</span>.</h2>
 
 		<ul>
-			<li class="class-dates" ng-click="confirm($index, classDetails.fullName, classDetails[$index].start)" ng-repeat="(item, $index) in classDetails">
+			<li class="class-dates" ng-click="confirm($index, classDetails.name, classDetails[$index].start)" ng-repeat="(item, $index) in classDetails">
 					<span class="item-left">{{classDetails[$index].day}}</span>
 						<span class="item-center">{{classDetails[$index].start}}</span>
 							<span class="item-right">{{classDetails[$index].room}}</span>

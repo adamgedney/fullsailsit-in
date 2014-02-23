@@ -102,26 +102,14 @@ angular.module('fullsailsitinApp')
 
 			//pulls appropriate email address form hash table
 			//based on current index acronym
-			var instEmail = $rootScope.emailHash[$scope.classDates.name];
-
-			// var obj = {
-			// 	'className': $scope.classDates.fullName,
-			// 	'day': $scope.classDates.classDay[$scope.currentIndex],
-			// 	'date': $scope.classDates.classDate[$scope.currentIndex],
-			// 	'time': $scope.classDates.classTime[$scope.currentIndex],
-			// 	'instructor': $scope.instructors[$scope.currentIndex],
-			// 	'instEmail':instEmail,
-			// 	'userEmail': $rootScope.currentUser.email,
-			// 	'userName': $rootScope.currentUser.name
-			// };
+			var instEmail = $rootScope.emailHash[$scope.classDetails.name];
 
 
 			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?' +
-				'className=' + $scope.classDates.fullName +
-				'&day=' + $scope.classDates.classDay[$scope.currentIndex] +
-				'&date=' + $scope.classDates.classDate[$scope.currentIndex] +
-				'&time=' + $scope.classDates.classTime[$scope.currentIndex] +
-				'&instructor=' + $scope.instructors[$scope.currentIndex] +
+				'className=' + $scope.classDetails.fullName +
+				'&day=' + $scope.classDetails[$scope.currentIndex].day +
+				'&date=' + $scope.classDetails[$scope.currentIndex].start +
+				'&instructor=' + $scope.classDetails[$scope.currentIndex].instructor +
 				'&instEmail=' + instEmail +
 				'&userEmail=' + $rootScope.currentUser.email +
 				'&userName=' + $rootScope.currentUser.name;
@@ -160,8 +148,8 @@ angular.module('fullsailsitinApp')
 			var fbConn = new Firebase('https://sitin.firebaseio.com/attended/');
 
 			var obj = {
-				'classDate' : $scope.classDates.classDate[$scope.currentIndex],
-				'class' : $scope.classDates.name,
+				'classDate' : $scope.classDetails[$scope.currentIndex].start,
+				'class' : $scope.classDetails.name,
 				'user' : $rootScope.currentUser.name
 			};
 

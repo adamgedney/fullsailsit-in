@@ -48,7 +48,6 @@ Route::get('/send-email', function()
 	$className = $_GET['className'];
 	$day = $_GET['day'];
 	$date = $_GET['date'];
-	$time = $_GET['time'];
 	$inst = $_GET['instructor'];
 	$instEmail = $_GET['instEmail'];
 	$userEmail = $_GET['userEmail'];
@@ -63,17 +62,16 @@ Route::get('/send-email', function()
 	$header .= 'From: ' . $userName . ' <' . $userEmail . '>' . "\r\n";
 
 	$to = $instEmail;
-	$subject = $inst . " You have a new Full Sail sit-in Notification";
+	$subject = $inst . "! You have a new Full Sail sit-in Notification";
 
-	$message = $inst . "You have a new Full Sail sit-in Notification. \r\n \r\n" .
+	$message = $inst . "! You have a new Full Sail sit-in Notification. \r\n \r\n" .
 	"Student Name: " . $userName . " \r\n" .
-	"Email: " . $userEmail . " \r\n" .
+	"Email: " . $userEmail . " \r\n \r\n" .
 	"This student has sent you a sit-in request from the Full Sail Sit-In webapp. Please reply to this student as soon as possible to accept or deny their request to sit in on: " .
 	$className . " \r\n" .
 	"on: " . $day . " " . $date . " \r\n \r\n" .
-	"at: " . $time . " \r\n \r\n" .
 
-	"Again, please reply to this student as soon as possible to accept or deny his/her request to sit in on your lecture. \r\n" .
+	"Again, please reply to this student as soon as possible to accept or deny his/her request to sit in on your lecture. \r\n \r\n" .
 	"Keep on Teachin!";
 
 	//send email
