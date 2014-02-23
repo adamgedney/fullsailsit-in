@@ -433,6 +433,7 @@ nav{
 	}
 }
 
+
 .item-left{
 	text-align: left;
 	font-size: 1.2em;
@@ -461,23 +462,24 @@ nav{
 .item-right{
 	text-align: right;
 	float: right;
-	font-size: .8em;
+	font-size: .9em;
 	@include col(3);
 
-	@include break-sm{
-		font-size: 1.2em;
+	img{
+		vertical-align: middle;
 	}
+
 }
 
 .class-dates{
 
 	.item-left{
 		color: $dark-grey;
-		font-size: 1.4em;
+		font-size: 1.2em;
 	}
 
 	.item-right{
-		font-size: 1.4em;
+		font-size: 1em;
 	}
 }
 

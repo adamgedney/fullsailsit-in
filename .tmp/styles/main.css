@@ -1559,7 +1559,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003436;
+    font-family: \00003437;
   }
 }
 
@@ -1580,7 +1580,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003436;
+      font-family: \00003437;
     }
 }
 
@@ -1595,7 +1595,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003450;
+    font-family: \00003451;
   }
 }
 
@@ -1612,7 +1612,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003450;
+      font-family: \00003451;
     }
 }
 
@@ -1628,31 +1628,15 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003461;
+    font-family: \00003462;
   }
 }
 
 .item-right {
   text-align: right;
   float: right;
-  font-size: .8em;
+  font-size: .9em;
   width: 25%;
-}
-
-@media only screen and (min-width: 480px) {
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
-    }
-
-    line {
-      font-family: \00003461;
-    }
-}
-
-  .item-right {
-    font-size: 1.2em;
-  }
 }
 
 @media -sass-debug-info {
@@ -1661,13 +1645,27 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003474;
+    font-family: \00003468;
+  }
+}
+
+.item-right img {
+  vertical-align: middle;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003476;
   }
 }
 
 .class-dates .item-left {
   color: #333333;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 @media -sass-debug-info {
@@ -1676,12 +1674,12 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003479;
+    font-family: \00003481;
   }
 }
 
 .class-dates .item-right {
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 @media -sass-debug-info {
@@ -1690,7 +1688,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003484;
+    font-family: \00003486;
   }
 }
 
@@ -1710,7 +1708,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003496;
+    font-family: \00003498;
   }
 }
 
@@ -1733,7 +1731,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003507;
+    font-family: \00003509;
   }
 }
 
@@ -1749,7 +1747,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003513;
+    font-family: \00003515;
   }
 }
 
@@ -1764,7 +1762,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003518;
+    font-family: \00003520;
   }
 }
 
@@ -1781,7 +1779,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003496;
+      font-family: \00003498;
     }
 }
 
@@ -1799,7 +1797,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003496;
+      font-family: \00003498;
     }
 }
 
@@ -1817,7 +1815,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003496;
+      font-family: \00003498;
     }
 }
 
@@ -1834,7 +1832,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003539;
+    font-family: \00003541;
   }
 }
 
@@ -1856,7 +1854,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003551;
+    font-family: \00003553;
   }
 }
 
@@ -1871,7 +1869,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003557;
+    font-family: \00003559;
   }
 }
 
@@ -1885,7 +1883,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003561;
+    font-family: \00003563;
   }
 }
 
@@ -1900,7 +1898,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003570;
+    font-family: \00003572;
   }
 }
 
@@ -1915,7 +1913,7 @@ footer p {
   }
 
   line {
-    font-family: \00003578;
+    font-family: \00003580;
   }
 }
 
