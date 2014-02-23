@@ -8,8 +8,8 @@
 
 	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
-			<h2 ng-show="showConfirmation" >Notify {{modal.instructor}}</h2>
-			<p ng-show="showConfirmation">you'd like to sit in on {{modal.name}} on {{modal.day}} {{modal.start}}?</p>
+			<h2 ng-show="showConfirmation" >Notify <span class="red">{{modal.instructor}}</span></h2>
+			<p ng-show="showConfirmation">you'd like to sit in on {{modal.name}} <br /> {{modal.day}} {{modal.start}}?</p>
 
 			<p ng-show="!showConfirmation">Your notification sent successfully. Please allow a day or so for your instructor to reply.</p>
 

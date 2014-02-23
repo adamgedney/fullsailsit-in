@@ -10,13 +10,14 @@ angular.module('fullsailsitinApp')
 
 			//Sets the current index for use in the sendNotice function below
 			$rootScope.currentIndex = currentIndex;
-
+			$rootScope.showModal = true;
 			//If currentIndex == next, this means the click originated
 			//from the add next class button. getNext will query db
 			//for the next class
 			if(currentIndex === 'next'){
 
 				getNext(name, date);
+
 
 			}else{
 
@@ -134,9 +135,6 @@ angular.module('fullsailsitinApp')
 						'again': 'again'
 					};
 
-					$rootScope.showModal = true;
-
-					console.log($rootScope.modal);
 				})
 				.error(function(data, status, headers){
 					console.log('get class names error', data, status, headers);
