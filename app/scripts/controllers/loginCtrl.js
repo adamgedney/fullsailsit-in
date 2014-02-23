@@ -1,8 +1,7 @@
 'use strict';
 
-/* global Firebase */
 angular.module('fullsailsitinApp')
-	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', function ($scope, $rootScope, $window, $cookies) {
+	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', 'FireConn', function ($scope, $rootScope, $window, $cookies, FireConn) {
 
 		//=========================================
 		//Called by the login button on the home page
@@ -48,13 +47,18 @@ angular.module('fullsailsitinApp')
 
 		function checkUser(){
 
-			var fb = new Firebase('https://sitin.firebaseio.com/users/');
+			// var fb = new Firebase('https://sitin.firebaseio.com/users/');
+			var fb = new FireConn.connection('users');
 			var userArray = [];
 			var match = true;
 
+			console.log(fb, 'fireeeee');
+
 			//retrieves & stores all usernames from Firebase
-			fb.on('child_added', function(snapshot){
+			fb.$on('child_added', function(snapshot){
 				userArray.push(snapshot.val());
+
+				console.log('fireconn snap', snapshot.val(), fb);
 			});
 
 			//Client side query to test for existing user

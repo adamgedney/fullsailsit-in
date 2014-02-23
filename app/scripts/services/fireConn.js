@@ -3,8 +3,18 @@
 /*global Firebase*/
 angular.module('fullsailsitinApp')
 	.factory('FireConn', ['$firebase', function ($firebase){
-		var url = 'https://sitin.firebaseio.com/attended/',
-			instance = new Firebase(url);
 
-		return $firebase(instance);
+		return {
+			connection: function(path){
+
+				//attended/
+				//users/
+				var url = 'https://sitin.firebaseio.com/'+ path;
+				var instance = new Firebase(url);
+
+				return $firebase(instance);
+			}
+		};
+
+
 	}]);
