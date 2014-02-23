@@ -49,7 +49,7 @@ angular.module('fullsailsitinApp')
 		$http({method:'GET', url: requestUrl})
 			.success(function(data){
 
-				//adds date object to cope, then adds
+				//adds date object to scope, then adds
 				//acronym and fullname to object
 				$scope.classDetails = data;
 				$scope.classDetails.name = $routeParams.acro;
@@ -72,7 +72,6 @@ angular.module('fullsailsitinApp')
 		//=========================================
 		$scope.confirm = function(currentIndex, name, date){
 
-			console.log(currentIndex, name, date);
 			$scope.showModal = true;
 
 			//Sets the current index for use in the sendNotice function below
@@ -82,6 +81,11 @@ angular.module('fullsailsitinApp')
 			//from the add next class button. returnNext will query db
 			//for the next class
 			if(currentIndex === 'next'){
+
+				// {{classDetails[currentIndex].instructor}}
+				// {{classDetails.name}}
+				// {{classDetails[currentIndex].day}}
+				// {{classDetails[currentIndex].start}}
 				returnNext(name, date);
 			}
 		};
@@ -96,7 +100,7 @@ angular.module('fullsailsitinApp')
 		};
 
 
-		//Hit API for the instructor's name, then check name against
+		//Hit hash table for instructor's email, then check name against
 		//hash table, adding class, date, and time to modal.
 		$scope.sendNotice = function(){
 
@@ -167,11 +171,11 @@ angular.module('fullsailsitinApp')
 		function returnNext(name, date){
 
 			//add class acronym to request to query on
-			var rUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + name;
+			var rUrl = 'http://127.0.0.1:8887/public/get-next' + '?class=' + name + '&date=' + date;
 
 			$http({method:'GET', url: rUrl})
 				.success( function(data){
-					console.log(data, date);
+					console.log(data, 'returnnext', name, date);
 				})
 				.error(function(data, status, headers){
 					console.log('get class names error', data, status, headers);

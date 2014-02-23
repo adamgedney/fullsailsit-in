@@ -41,6 +41,21 @@ Route::get('/get-dates', function()
 
 
 
+Route::get('/get-next', function()
+{
+
+	$class = $_GET['class'];
+	$date = $_GET['date'];
+
+
+	$next = DB::select(DB::raw('SELECT day, date, start, room, instructor FROM schedule_events WHERE class = "' . $class . '" AND start > "' . $date . '" LIMIT 1'));
+
+	echo json_encode($next);
+});
+
+
+
+
 
 Route::get('/send-email', function()
 {
