@@ -1,6 +1,2 @@
-node_modules
-dist
+**/.DS_Store
 working_files
-.tmp
-.sass-cache
-app/bower_components

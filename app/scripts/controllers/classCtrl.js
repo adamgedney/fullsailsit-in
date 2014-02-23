@@ -2,11 +2,8 @@
 
 
 angular.module('fullsailsitinApp')
-	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'TotalSitins', 'MenuSlider', function ($scope, $cookies, $rootScope, $http, TotalSitins, MenuSlider) {
+	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'TotalSitins', function ($scope, $cookies, $rootScope, $http, TotalSitins) {
 
-
-		//menu slideout controller
-		$scope.menu = MenuSlider;
 
 
 		//Checks cookie to find current user cookies

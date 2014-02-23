@@ -9,6 +9,8 @@
 
 module.exports = function (grunt) {
 
+  var pkg = require('./package.json');
+
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
@@ -17,6 +19,38 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+
+    // Configuration to be run (and then tested).
+    buildcontrol: {
+      options: {
+        dir: 'dist'
+      },
+
+      stage: {
+        options: {
+          branch: 'staging',
+          remote: 'git@github.com:adamgedney/fullsailsit-in.git',
+          commit: true,
+          push: true,
+          connectCommits: false,
+          message: 'Check *this* out.' + pkg.version,
+          tag: pkg.version
+        }
+      },
+
+      deploy: {
+        options: {
+          branch: 'gh-pages',
+          remote: 'git@github.com:adamgedney/fullsailsit-in.git',
+          commit: true,
+          push: true,
+          connectCommits: false,
+          message: 'Check *this* out.' + pkg.version,
+          tag: pkg.version
+        }
+      }
+    },
+
 
     // Project settings
     yeoman: {
@@ -186,7 +220,6 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/styles/fonts/*'
           ]
         }
@@ -281,9 +314,11 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
+            '.gitignore',
             '*.html',
+            '*.tpl',
             'views/{,*/}*.html',
-            'bower_components/**/*',
+            'views/{,*/}*.tpl',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -352,6 +387,16 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('deploy', [
+    'buildcontrol:deploy'
+  ]);
+
+  grunt.registerTask('stage', [
+    'buildcontrol:stage'
+  ]);
+
+  //brings in node module into grunt file
+  grunt.loadNpmTasks('grunt-build-control');
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {

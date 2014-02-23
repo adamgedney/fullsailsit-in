@@ -16,13 +16,11 @@
 		</ul>
 	</nav>
 
-	<img ng-click="menu.slideout()" class="cursor-true menu-btn animated" src="images/menu.png" alt="menu button"/>
+	<img ng-click="slideoutSwitch = !slideoutSwitch" class="cursor-true menu-btn animated" src="images/menu.png" alt="menu button"/>
 </header>
 
 
-
-
-<div ng-show="menu.slideoutSwitch" class="slideout animated {{menu.animate}}">
+<div class="slideout animated" ng-class="{'fadeInRightBig': slideoutSwitch , 'fadeOutRightBig': !slideoutSwitch}">
 	<ul>
 		<li></li>
 		<li><img ng-src="{{currentUser.avatar}}" width="46"/>

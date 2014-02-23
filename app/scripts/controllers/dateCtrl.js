@@ -2,11 +2,8 @@
 
 /* global Firebase */
 angular.module('fullsailsitinApp')
-	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', 'TotalSitins', 'MenuSlider', function ($scope, $routeParams, $http, $rootScope, $cookies, TotalSitins, MenuSlider) {
+	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', 'TotalSitins', function ($scope, $routeParams, $http, $rootScope, $cookies, TotalSitins) {
 
-
-		//menu slideout controller
-		$scope.menu = MenuSlider;
 
 
 
@@ -102,8 +99,11 @@ angular.module('fullsailsitinApp')
 			//Sets the current index for use in the sendNotice function below
 			$scope.currentIndex = currentIndex;
 
+			//If currentIndex == next, this means the click originated
+			//from the add next class button. returnNext will query db
+			//for the next class
 			if(currentIndex === 'next'){
-				requestNext(name, date);
+				returnNext(name, date);
 			}
 		};
 
@@ -197,7 +197,7 @@ angular.module('fullsailsitinApp')
 
 
 
-		function requestNext(name, date){
+		function returnNext(name, date){
 
 			//add class acronym to request to query on
 			var rUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + name;
