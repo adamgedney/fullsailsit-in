@@ -2,7 +2,7 @@
 
 
 angular.module('fullsailsitinApp')
-	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'TotalSitins', function ($scope, $cookies, $rootScope, $http, TotalSitins) {
+	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'TotalSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, TotalSitins, SendNotice) {
 
 
 
@@ -53,6 +53,11 @@ angular.module('fullsailsitinApp')
 
 
 
+		//=========================================
+		//Send notification, MODAL WINDOW handlers
+		//=========================================
+		var sn = SendNotice;
+		console.log(sn);
 
 
 
