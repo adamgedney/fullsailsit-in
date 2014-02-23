@@ -1,6 +1,6 @@
 'use strict';
 
-/* global Firebase */
+/* global Firebase*/
 angular.module('fullsailsitinApp')
 	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', function ($scope, $rootScope, $window, $cookies) {
 
@@ -13,7 +13,7 @@ angular.module('fullsailsitinApp')
 			//with a callback for success
 			$rootScope.loginObject.$login('github')
 				.then(function(user){
-
+					console.log(user);
 					//Controls login auth and forces route.
 					//Sends user to sitin page if user has been authed by firebase
 					if(user !== null){
@@ -27,7 +27,8 @@ angular.module('fullsailsitinApp')
 							'name' : user.displayName,
 							'avatar' : user.avatar_url,// jshint ignore:line
 							'email' : user.email,
-							'added' : getDatetime()
+							'added' : getDatetime(),
+							'id': user.uid
 						};
 
 						//Checks if user exists in Firebase. If not,
@@ -50,24 +51,25 @@ angular.module('fullsailsitinApp')
 
 			var fb = new Firebase('https://sitin.firebaseio.com/users/');
 			// var fb = FireConn('users');// jshint ignore:line
-			var match;
+			var match = true;
 
-			// console.log(fb, 'fireeeee');
+			console.log(fb.child($rootScope.currentUser.id), $rootScope.currentUser.id);
 
 			//Client side query to test for existing user
 			//in Firebase. If not found, throws a 'false'
 			//synchronously picked up by the !match condition below
-			fb.$on('child_added', function(snapshot){
-				var n = snapshot.snapshot.value.name;
-				console.log(snapshot.snapshot.value.name, $rootScope.currentUser.name, fb);
-				if(n.toString() === $rootScope.currentUser.name){
+			fb.on('child_added', function(snapshot){
+
+				console.log(snapshot.val().name, $rootScope.currentUser.name);
+
+				if(snapshot.val().name === $rootScope.currentUser.name){
 					match = true;
 
 				}else{
 					match = false;
 
 					//pushes new user data to db
-					// fb.$add($rootScope.currentUser);
+					// fb.set($rootScope.currentUser);
 				}
 			});
 
@@ -75,8 +77,9 @@ angular.module('fullsailsitinApp')
 			//under which the user data object is placed &
 			//sets a username cookie
 			if(!match){
-				fb.$add($rootScope.currentUser);
+				// fb.child($rootScope.currentUser.id).push($rootScope.currentUser);
 			}
+			fb.child($rootScope.currentUser.id).push($rootScope.currentUser);
 			// fb.$add($rootScope.currentUser);
 			//Set the current user cookies
 			setUserCookies();
