@@ -27,7 +27,6 @@ angular.module('fullsailsitinApp')
 							'name' : user.displayName,
 							'avatar' : user.avatar_url,// jshint ignore:line
 							'email' : user.email,
-							'added' : getDatetime(),
 							'id': user.uid
 						};
 
@@ -60,16 +59,17 @@ angular.module('fullsailsitinApp')
 			//synchronously picked up by the !match condition below
 			fb.on('child_added', function(snapshot){
 
-				console.log(snapshot.val().name, $rootScope.currentUser.name);
+				console.log(snapshot.val(), snapshot.val().name, $rootScope.currentUser.name);
 
 				if(snapshot.val().name === $rootScope.currentUser.name){
 					match = true;
+					console.log('true');
 
 				}else{
 					match = false;
+					console.log('false');
+					fb.child($rootScope.currentUser.id).set($rootScope.currentUser);
 
-					//pushes new user data to db
-					// fb.set($rootScope.currentUser);
 				}
 			});
 
@@ -77,10 +77,9 @@ angular.module('fullsailsitinApp')
 			//under which the user data object is placed &
 			//sets a username cookie
 			if(!match){
-				// fb.child($rootScope.currentUser.id).push($rootScope.currentUser);
+				// fb.child($rootScope.currentUser.id).set($rootScope.currentUser);
 			}
-			fb.child($rootScope.currentUser.id).push($rootScope.currentUser);
-			// fb.$add($rootScope.currentUser);
+
 			//Set the current user cookies
 			setUserCookies();
 
@@ -131,30 +130,5 @@ angular.module('fullsailsitinApp')
 		// 	});
 		// }
 
-
-
-
-
-
-
-
-		function getDatetime(){
-			// datetime on 12 hr clock
-			var d = new Date();
-			var	day = d.getDay();
-			var month = d.getMonth() + 1;
-			var year = d.getFullYear();
-			var hour = d.getHours();
-			var minutes = d.getMinutes();
-			var time;
-			if(hour >= 13){
-				hour = hour - 12;
-				time = hour + ':' + minutes;
-
-				time += 'pm';
-			}
-
-			return month + '/' + day + '/' + year + ' ' + time;
-		}
 
 	}]);
