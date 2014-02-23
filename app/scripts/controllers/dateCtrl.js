@@ -41,32 +41,19 @@ angular.module('fullsailsitinApp')
 		//passing GET parameter in url as a hack. Using the data parameter
 		//in $http wasn't working
 		var requestUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + $routeParams.acro;
-		var classDay = [];
-		var classDate = [];
-		var classTime = [];
-		var classInst = [];
-		$scope.classDates = {};
-		$scope.classDates.name = $routeParams.acro;
-		$scope.classDates.fullName = $rootScope.classHash[$routeParams.acro];
 
+		//sets up details obj
+		$scope.classDetails = {};
+
+		//requests dates from API
 		$http({method:'GET', url: requestUrl})
 			.success(function(data){
 
-				//on success, loops through class date data, pushing into
-				//an array delivery to ngRepeat.
-				for(var i=0;i<data.length;i++){
-					classDay.push(data[i].day);
-					classDate.push(data[i].date);
-					classTime.push(data[i].start.substr(11));
-					classInst.push(data[i].instructor);
-				}
-
-				//sets scope data on success
-				$scope.classDates.classDay = classDay;
-				$scope.classDates.classDate = classDate;
-				$scope.classDates.classTime = classTime;
-				$scope.instructors = classInst;
-				$scope.classDates.len = data;
+				//adds date object to cope, then adds
+				//acronym and fullname to object
+				$scope.classDetails = data;
+				$scope.classDetails.name = $routeParams.acro;
+				$scope.classDetails.fullName = $rootScope.classHash[$routeParams.acro];
 
 			})
 			.error(function(data, status, headers){
