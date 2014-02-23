@@ -19,7 +19,7 @@ angular.module('fullsailsitinApp')
 					$rootScope.currentUser.sitins = attendedArray.length;
 
 				//Get sitin classes here
-			    //Renders in the header view
+			    //Renders in the header view..
 			    $rootScope.sitins = attendedArray;
 				}
 			});
