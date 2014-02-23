@@ -49,10 +49,6 @@ angular.module('fullsailsitinApp')
 		function checkUser(){
 
 			var fb = new Firebase('https://sitin.firebaseio.com/users/');
-			// var fb = FireConn('users');// jshint ignore:line
-			var match = true;
-
-			console.log(fb.child($rootScope.currentUser.id), $rootScope.currentUser.id);
 
 			//Client side query to test for existing user
 			//in Firebase. If not found, throws a 'false'
@@ -61,24 +57,12 @@ angular.module('fullsailsitinApp')
 
 				console.log(snapshot.val(), snapshot.val().name, $rootScope.currentUser.name);
 
-				if(snapshot.val().name === $rootScope.currentUser.name){
-					match = true;
-					console.log('true');
-
-				}else{
-					match = false;
-					console.log('false');
+				if(snapshot.val().name !== $rootScope.currentUser.name){
+					//when no user exists, set a new user to firebase
 					fb.child($rootScope.currentUser.id).set($rootScope.currentUser);
-
 				}
 			});
 
-			//adds username as primary key
-			//under which the user data object is placed &
-			//sets a username cookie
-			if(!match){
-				// fb.child($rootScope.currentUser.id).set($rootScope.currentUser);
-			}
 
 			//Set the current user cookies
 			setUserCookies();

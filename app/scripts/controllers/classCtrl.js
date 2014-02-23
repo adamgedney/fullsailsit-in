@@ -13,17 +13,16 @@ angular.module('fullsailsitinApp')
 			$rootScope.currentUser ={
 				'name': $cookies.name,
 				'avatar': $cookies.avatar,
-				'email': $cookies.email,
-				'sitins': $cookies.sitins
+				'email': $cookies.email
 			};
 		}
 
 
 
-		//Variable built just to run an instance of TotalSitins.
-		//TotalSitins primary function is to  add items to $rootScope
-		var ts = TotalSitins;// jshint ignore:line
-		console.log(ts);//necessary for jshint
+		//runs TotalSitins to generate
+		//user total on the rootScope
+		var ts = TotalSitins;
+		console.log(ts);
 
 
 

@@ -16,7 +16,7 @@ install Laravel in project root, import MySQL database,
 
 
 todo:
-	IMPORTANT  add room number to date/time list
+	!!!!**IMPORTANT  add room number to date/time list
 	√build hash table of email addresses w/ names
 	fix menu button position -slideout behavior
 	style menu add class button better
