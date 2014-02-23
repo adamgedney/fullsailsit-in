@@ -1,7 +1,8 @@
 'use strict';
 
+/* global Firebase */
 angular.module('fullsailsitinApp')
-	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', 'FireConn', function ($scope, $rootScope, $window, $cookies, FireConn) {
+	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', function ($scope, $rootScope, $window, $cookies) {
 
 		//=========================================
 		//Called by the login button on the home page
@@ -47,30 +48,28 @@ angular.module('fullsailsitinApp')
 
 		function checkUser(){
 
-			// var fb = new Firebase('https://sitin.firebaseio.com/users/');
-			var fb = FireConn('users');// jshint ignore:line
-			var userArray = [];
-			var match = true;
+			var fb = new Firebase('https://sitin.firebaseio.com/users/');
+			// var fb = FireConn('users');// jshint ignore:line
+			var match;
 
 			// console.log(fb, 'fireeeee');
-
-			//retrieves & stores all usernames from Firebase
-			fb.then( function(snapshot){
-				userArray.push(snapshot);
-				console.log(snapshot.$value);
-			});
 
 			//Client side query to test for existing user
 			//in Firebase. If not found, throws a 'false'
 			//synchronously picked up by the !match condition below
-			for( var i=0; i<userArray.length; i++){
-				if(userArray[i].name === $rootScope.currentUser.name){
+			fb.$on('child_added', function(snapshot){
+				var n = snapshot.snapshot.value.name;
+				console.log(snapshot.snapshot.value.name, $rootScope.currentUser.name, fb);
+				if(n.toString() === $rootScope.currentUser.name){
 					match = true;
 
 				}else{
 					match = false;
+
+					//pushes new user data to db
+					// fb.$add($rootScope.currentUser);
 				}
-			}
+			});
 
 			//adds username as primary key
 			//under which the user data object is placed &
@@ -78,7 +77,7 @@ angular.module('fullsailsitinApp')
 			if(!match){
 				fb.$add($rootScope.currentUser);
 			}
-
+			// fb.$add($rootScope.currentUser);
 			//Set the current user cookies
 			setUserCookies();
 
