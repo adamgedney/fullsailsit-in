@@ -56,7 +56,7 @@ angular.module('fullsailsitinApp')
 			//based on current index acronym
 			var instEmail = $rootScope.emailHash[$rootScope.modal.name];
 			//reveals successful send message in view
-			$rootScope.showConfirmation = false;
+			$rootScope.showConfirmation = true;
 
 			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?' +
 				'className=' + $rootScope.classDetails.fullName +
@@ -108,7 +108,8 @@ angular.module('fullsailsitinApp')
 
 			// Builds a record of requested sitins on a unique timestamp
 			//in the "attended" directory.
-			fbConn.child(getTimestamp()).set(obj);
+			var d = new Date().getTime();
+			fbConn.child(d).set(obj);
 		}
 
 
@@ -138,23 +139,6 @@ angular.module('fullsailsitinApp')
 				.error(function(data, status, headers){
 					console.log('get class names error', data, status, headers);
 				});
-		}
-
-
-
-
-		function getTimestamp(){
-			var d = new Date();
-			var	day = d.getDay();
-			var month = d.getMonth() + 1;
-			var year = d.getFullYear();
-			var hour = d.getHours();
-			var minutes = d.getMinutes();
-			var ms = d.getMilliseconds();
-
-			var	time = day + ' ' + month + ' ' + year + ' ' + hour + ':' + minutes + ':' + ms;
-
-			return time;
 		}
 
 
