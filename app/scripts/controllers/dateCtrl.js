@@ -1,8 +1,13 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', 'GetSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, GetSitins, SendNotice) {
+	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', '$location', 'GetSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, $location, GetSitins, SendNotice) {
 
+		$rootScope.loginObject.$getCurrentUser().then(function(user){
+			if(!user){
+				$location.path('/');
+			}
+		});
 
 
 
@@ -16,7 +21,7 @@ angular.module('fullsailsitinApp')
 			};
 		}
 
-		//runs TotalSitins to generate
+		//runs GetSitins to generate
 		//user total on the rootScope
 		var gs = GetSitins;
 		console.log(gs);

@@ -2,9 +2,13 @@
 
 
 angular.module('fullsailsitinApp')
-	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'GetSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, GetSitins, SendNotice) {
+	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$location', 'GetSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, $location, GetSitins, SendNotice) {
 
-
+		$rootScope.loginObject.$getCurrentUser().then(function(user){
+			if(!user){
+				$location.path('/');
+			}
+		});
 
 		//Checks cookie to find current user cookies
 		//in order to repopulate global user data
@@ -19,7 +23,7 @@ angular.module('fullsailsitinApp')
 
 
 
-		//runs TotalSitins to generate
+		//runs GetSitins to generate
 		//user total on the rootScope
 		var gs = GetSitins;
 		console.log(gs);
