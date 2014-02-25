@@ -16,13 +16,11 @@
 		</ul>
 	</nav>
 
-	<img ng-click="menu.slideout()" class="cursor-true menu-btn animated" src="images/menu.png" alt="menu button"/>
+	<img ng-click="slideoutSwitch = !slideoutSwitch" class="cursor-true menu-btn animated" src="images/menu.png" alt="menu button"/>
 </header>
 
 
-
-
-<div ng-show="menu.slideoutSwitch" class="slideout animated {{menu.animate}}">
+<div class="slideout animated" ng-class="{'fadeInRightBig': slideoutSwitch , 'fadeOutRightBig': !slideoutSwitch}">
 	<ul>
 		<li></li>
 		<li><img ng-src="{{currentUser.avatar}}" width="46"/>
@@ -30,15 +28,15 @@
 				<span class="menu-item">{{currentUser.name}}</span>
 					<span class="menu-points">{{currentUser.sitins}}</span>
 						<span class="menu-points-units">SitIns</span></li>
-		<li class="center"><a href="#/sitin" class="menu-item" >Classes</a></li>
+		<li><a href="#/sitin" class="menu-item" >Classes</a></li>
 
 		<li class="attended-classes">
 			<ul>
-				<li class="center">Your SitIns</li>
+				<li>Your SitIns</li>
 
-				<li ng-repeat="item in sitins"><span class="bold">{{item.class}}</span> {{item.classDate}}
+				<li ng-click="confirm('next', item.class, item.classDate)"  ng-repeat="item in sitins"><span class="bold">{{item.class}}</span> {{item.classDate}}
 					<img src="images/add.png" alt="add next class icon" />
-						<span class="attend-next">Attend Next Class?</span></li>
+						<span class="attend-next">Attend Next?</span></li>
 
 			</ul>
 		</li>
