@@ -76,19 +76,31 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
     //   'FWF': 'sbernath@fullsail.com'
     // };
 
-    $rootScope.emailHash = {
-      'WFP1': 'adam.gedney@gmail.com',
-      'WIU': 'adam.gedney@gmail.com',
-      'RMO': 'adam.gedney@gmail.com',
-      'PWA1': 'adam.gedney@gmail.com',
-      'WIA': 'adam.gedney@gmail.com',
-      'MDD': 'adam.gedney@gmail.com',
-      'PWA2': 'adam.gedney@gmail.com',
-      'SSL': 'adam.gedney@gmail.com',
-      'DBS': 'adam.gedney@gmail.com',
-      'FWF': 'adam.gedney@gmail.com'
-    };
+    // $rootScope.emailHash = {
+    //   'WFP1': 'adam.gedney@gmail.com',
+    //   'WIU': 'adam.gedney@gmail.com',
+    //   'RMO': 'adam.gedney@gmail.com',
+    //   'PWA1': 'adam.gedney@gmail.com',
+    //   'WIA': 'adam.gedney@gmail.com',
+    //   'MDD': 'adam.gedney@gmail.com',
+    //   'PWA2': 'adam.gedney@gmail.com',
+    //   'SSL': 'adam.gedney@gmail.com',
+    //   'DBS': 'adam.gedney@gmail.com',
+    //   'FWF': 'adam.gedney@gmail.com'
+    // };
 
+    $rootScope.emailHash = {
+      'WFP1': 'christopher.chapman@me.com',
+      'WIU': 'christopher.chapman@me.com',
+      'RMO': 'christopher.chapman@me.com',
+      'PWA1': 'christopher.chapman@me.com',
+      'WIA': 'christopher.chapman@me.com',
+      'MDD': 'christopher.chapman@me.com',
+      'PWA2': 'christopher.chapman@me.com',
+      'SSL': 'christopher.chapman@me.com',
+      'DBS': 'christopher.chapman@me.com',
+      'FWF': 'christopher.chapman@me.com'
+    };
 
 
   }]);

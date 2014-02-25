@@ -3,6 +3,7 @@
 angular.module('fullsailsitinApp')
 	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', '$location', 'GetSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, $location, GetSitins, SendNotice) {
 
+		//State control
 		$rootScope.loginObject.$getCurrentUser().then(function(user){
 			if(!user){
 				$location.path('/');
@@ -25,9 +26,6 @@ angular.module('fullsailsitinApp')
 		//user total on the rootScope
 		var gs = GetSitins;
 		console.log(gs);
-
-
-
 
 
 		//=========================================
