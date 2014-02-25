@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', 'TotalSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, TotalSitins, SendNotice) {
+	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', 'GetSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, GetSitins, SendNotice) {
 
 
 
@@ -18,8 +18,8 @@ angular.module('fullsailsitinApp')
 
 		//runs TotalSitins to generate
 		//user total on the rootScope
-		var ts = TotalSitins;
-		console.log(ts);
+		var gs = GetSitins;
+		console.log(gs);
 
 
 

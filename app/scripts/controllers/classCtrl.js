@@ -2,7 +2,7 @@
 
 
 angular.module('fullsailsitinApp')
-	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'TotalSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, TotalSitins, SendNotice) {
+	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', 'GetSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, GetSitins, SendNotice) {
 
 
 
@@ -21,8 +21,8 @@ angular.module('fullsailsitinApp')
 
 		//runs TotalSitins to generate
 		//user total on the rootScope
-		var ts = TotalSitins;
-		console.log(ts);
+		var gs = GetSitins;
+		console.log(gs);
 
 
 
