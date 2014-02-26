@@ -9,7 +9,7 @@
 
 			<li class="nav-profile no-hover"><img ng-src="{{$root.currentUser.avatar}}" width="46"/>
 					<span>{{$root.currentUser.name}}</span>
-						<span class="yellow">{{$root.currentUser.sitins}}</span>
+						<span class="yellow">{{$root.sitins.length}}</span>
 							<span class="small">SitIns</span></li>
 			<li><a ng-controller="logoutCtrl" ng-click="logoutUser()">Logout</a></li>
 
