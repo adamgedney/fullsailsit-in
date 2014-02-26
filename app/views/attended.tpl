@@ -33,7 +33,7 @@
 			<li class="list-titles">
 				<span class="item-left">Class</span>
 					<span class="item-center">Date</span>
-						<span class="item-right">Attend Next Class?</span>
+						<span class="item-right">Attend Next?</span>
 			</li>
 
 			<li ng-click="getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins">
