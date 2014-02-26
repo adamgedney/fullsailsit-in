@@ -169,6 +169,7 @@ $yellow: #fffc19;
 .login-btn{
 	/*position: absolute;*/
 	/*bottom: 129px;*/
+	margin-top: 36px;
 	@include col(8);
 	@include col_ctr(8);
 	height: 48px;
