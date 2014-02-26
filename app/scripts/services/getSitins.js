@@ -5,12 +5,14 @@ angular.module('fullsailsitinApp')
 	.factory('GetSitins', ['$rootScope', function ($rootScope){
 
 
+		return function(name){
+
 			var fb = new Firebase('https://sitin.firebaseio.com/attended/');
 			var attendedArray = [];
 
 			fb.on('child_added', function(snapshot){
 
-				if(snapshot.val().user === $rootScope.currentUser.name){
+				if(snapshot.val().user === name){
 					attendedArray.push(snapshot.val());
 
 					//Runs up the value on the .sitins property
@@ -23,6 +25,5 @@ angular.module('fullsailsitinApp')
 			    $rootScope.sitins = attendedArray;
 				}
 			});
-
-			return attendedArray.length;
-		}]);
+		};
+	}]);

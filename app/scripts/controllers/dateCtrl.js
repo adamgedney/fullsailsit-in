@@ -4,20 +4,24 @@
 angular.module('fullsailsitinApp')
 	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', '$location', 'GetSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, $location, GetSitins, SendNotice) {
 
+		$rootScope.currentUser = {};
+
 		//State control
 		$rootScope.loginObject.$getCurrentUser().then(function(user){
 			if(!user){
 				$location.path('/');
 			}else{
-				//Checks cookie to find current user cookies
-				//in order to repopulate global user data
-				if($rootScope.currentUser === undefined){
-					$rootScope.currentUser ={
-						'name': $cookies.name,
-						'avatar': $cookies.avatar,
-						'email': $cookies.email
-					};
-				}
+
+				//runs GetSitins to generate
+				//user total on the rootScope
+				var gs = new GetSitins(user.displayName);
+				console.log(gs, $rootScope.currentUser.sitins);
+
+				//Repopulates currentUser on page load
+				$rootScope.currentUser.name = user.displayName;
+				$rootScope.currentUser.avatar = user.avatar_url;// jshint ignore:line
+				$rootScope.currentUser.email = user.email;
+				$rootScope.currentUser.id = user.uid;
 			}
 		});
 

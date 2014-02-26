@@ -7,8 +7,8 @@
 			<li><a href="#/sitin">Classes</a></li>
 			<li><a href="#/attended">Your SitIns</a></li>
 
-			<li class="nav-profile no-hover"><img ng-src="{{currentUser.avatar}}" width="46"/>
-					<span>{{currentUser.name}}</span>
+			<li class="nav-profile no-hover"><img ng-src="{{$root.currentUser.avatar}}" width="46"/>
+					<span>{{$root.currentUser.name}}</span>
 						<span class="yellow">{{currentUser.sitins}}</span>
 							<span class="small">SitIns</span></li>
 			<li><a ng-controller="logoutCtrl" ng-click="logoutUser()">Logout</a></li>

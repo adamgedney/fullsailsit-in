@@ -1,34 +1,39 @@
 'use strict';
 
-/* global DIR */
 angular.module('fullsailsitinApp')
 	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$location', 'GetSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, $location, GetSitins, SendNotice) {
 
+		//creates the obj
+		$rootScope.currentUser = {};
+
 		//State control
-		$rootScope.loginObject.$getCurrentUser().then(function(user){
-			if(!user){
-				$location.path('/');
-			}else{
-				//Checks cookie to find current user cookies
-				//in order to repopulate global user data
-				//***Code duplicated in dateCtrl
-				if($rootScope.currentUser === undefined){
-					$rootScope.currentUser ={
-						'name': $cookies.name,
-						'avatar': $cookies.avatar,
-						'email': $cookies.email
-					};
+		$rootScope.loginObject.$getCurrentUser()
+			.then(function(user){
+				if(!user){
+					$location.path('/');
+				}else{
+
+					//runs GetSitins to generate
+					//user total on the rootScope
+					var gs = new GetSitins(user.displayName);
+					console.log(gs, 'gs');
+
+					//Repopulates currentUser on page load
+					$rootScope.currentUser.name = user.displayName;
+					$rootScope.currentUser.avatar = user.avatar_url;// jshint ignore:line
+					$rootScope.currentUser.email = user.email;
+					$rootScope.currentUser.id = user.uid;
+					$rootScope.currentUser.sitins = $rootScope.sitins.length;
 				}
-			}
-		});
+			});
 
-
+		// $rootScope.currentUser.sitins = '12';
 
 
 		//runs GetSitins to generate
-		//user total on the rootScope
-		var gs = GetSitins;
-		console.log(gs);
+		// //user total on the rootScope
+		// var gs = GetSitins(user.displayName);
+		// console.log(gs);
 
 
 
@@ -36,7 +41,7 @@ angular.module('fullsailsitinApp')
 
 
 		//GET class names from API
-		var requestUrl = DIR + '/get-classes';
+		var requestUrl = $rootScope.DIR + '/get-classes';
 		var classAc = [];
 		var classNa = [];
 		$scope.classData = {};

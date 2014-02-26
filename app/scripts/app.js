@@ -41,8 +41,8 @@ App.config(function ($routeProvider) {
 App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $rootScope){
 
   //Defines server root for API
-  $rootScope.DIR = 'http://107.170.58.66/';
-  // $rootScope.DIR = 'http://127.0.0.1:8887/public';
+  // $rootScope.DIR = 'http://107.170.58.66/';
+  $rootScope.DIR = 'http://127.0.0.1:8887/public';
 
 
 
