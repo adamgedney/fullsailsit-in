@@ -464,6 +464,10 @@ nav{
 		}
 	}
 
+	a{
+		color: $dark-grey;
+	}
+
 }
 
 .item-left{
@@ -473,7 +477,7 @@ nav{
 	float: left;
 	margin-right: 18px;
 	color: $dark-grey;
-	@include col(3);
+	@include col(2);
 
 	@include break-sm{
 		font-size: 1.4em;
@@ -482,18 +486,18 @@ nav{
 
 .item-center{
 	text-align: left;
-	@include col(3);
+	@include col(2);
 
 	@include break-sm{
 		margin-left: 20%;
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 }
 
 .item-right{
 	text-align: right;
 	float: right;
-	font-size: .9em;
+	font-size: .8em;
 	@include col(3);
 	color: $dark-blue;
 
@@ -511,7 +515,7 @@ nav{
 	}
 
 	.item-right{
-		font-size: 1em;
+		font-size: .8em;
 	}
 }
 

@@ -107,7 +107,7 @@ angular.module('fullsailsitinApp')
 				.error(function(data, status, headers){
 					console.log('get class names error', data, status, headers);
 				});
-		}
+		};
 
 
 

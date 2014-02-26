@@ -39,7 +39,7 @@
 
 			<li class="class-dates" ng-click="$root.modal = item; $root.showModal = true;" ng-repeat="item in classDetails">
 					<span class="item-left">{{item.day}}</span>
-						<span class="item-center">{{item.start}}</span>
+						<span class="item-center">{{item.start | formatDateString}}</span>
 							<span class="item-right">{{item.room}}</span>
 			</li>
 		</ul>

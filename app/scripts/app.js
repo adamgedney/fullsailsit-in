@@ -36,6 +36,10 @@ App.config(function ($routeProvider) {
 });
 
 
+
+
+
+
 App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $rootScope){
 
     //reference to firebase
@@ -105,3 +109,17 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
 
   }]);
 
+
+
+
+//Filter to convert SQL date string to a new format
+App.filter('formatDateString', function formatDateString($filter){
+
+  return function(str){
+    //replaces - with /
+    var  d = new Date(str.replace(/-/g,'/'));
+
+    //returns a newy structured js date object
+    return $filter('date')(d, 'MMM-dd-yyyy @ h:mma');
+  };
+});
