@@ -974,6 +974,7 @@ header {
   right: 0;
   left: 0;
   z-index: 99998;
+  font-family: 'Open Sans', "Helvetica Neue Light", Helvetica, Arial, sans-serif;
 }
 
 @media -sass-debug-info {
@@ -982,7 +983,7 @@ header {
   }
 
   line {
-    font-family: \00003218;
+    font-family: \00003219;
   }
 }
 
@@ -999,7 +1000,7 @@ header h1 {
   }
 
   line {
-    font-family: \00003224;
+    font-family: \00003225;
   }
 }
 
@@ -1013,7 +1014,7 @@ header h1 a {
   }
 
   line {
-    font-family: \00003229;
+    font-family: \00003230;
   }
 }
 
@@ -1028,7 +1029,7 @@ header img {
   }
 
   line {
-    font-family: \00003235;
+    font-family: \00003236;
   }
 }
 
@@ -1043,7 +1044,7 @@ nav {
   }
 
   line {
-    font-family: \00003239;
+    font-family: \00003240;
   }
 }
 
@@ -1058,7 +1059,7 @@ nav ul {
   }
 
   line {
-    font-family: \00003243;
+    font-family: \00003244;
   }
 }
 
@@ -1068,6 +1069,7 @@ nav ul li {
   cursor: pointer;
   padding: 0 18px;
   border-left: 1px solid #670100;
+  font-weight: 400;
 }
 
 @media -sass-debug-info {
@@ -1076,7 +1078,7 @@ nav ul li {
   }
 
   line {
-    font-family: \00003250;
+    font-family: \00003252;
   }
 }
 
@@ -1090,7 +1092,7 @@ nav ul li a {
   }
 
   line {
-    font-family: \00003254;
+    font-family: \00003256;
   }
 }
 
@@ -1107,7 +1109,7 @@ nav ul li img {
   }
 
   line {
-    font-family: \00003262;
+    font-family: \00003264;
   }
 }
 
@@ -1121,7 +1123,7 @@ nav ul li:hover {
   }
 
   line {
-    font-family: \00003266;
+    font-family: \00003268;
   }
 }
 
@@ -1136,7 +1138,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003235;
+      font-family: \00003236;
     }
 }
 
@@ -1151,7 +1153,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003277;
+    font-family: \00003279;
   }
 }
 
@@ -1165,7 +1167,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003280;
+    font-family: \00003282;
   }
 }
 
@@ -1180,7 +1182,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003285;
+      font-family: \00003287;
     }
 }
 
@@ -1195,7 +1197,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003291;
+    font-family: \00003293;
   }
 }
 
@@ -1215,7 +1217,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003300;
+    font-family: \00003302;
   }
 }
 
@@ -1233,7 +1235,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003308;
+    font-family: \00003310;
   }
 }
 
@@ -1247,7 +1249,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003312;
+    font-family: \00003314;
   }
 }
 
@@ -1262,7 +1264,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003291;
+      font-family: \00003293;
     }
 }
 
@@ -1277,7 +1279,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003321;
+    font-family: \00003323;
   }
 }
 
@@ -1292,7 +1294,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003326;
+    font-family: \00003328;
   }
 }
 
@@ -1310,7 +1312,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003334;
+    font-family: \00003336;
   }
 }
 
@@ -1327,7 +1329,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003341;
+    font-family: \00003343;
   }
 }
 
@@ -1341,7 +1343,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003345;
+    font-family: \00003347;
   }
 }
 
@@ -1358,7 +1360,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003352;
+    font-family: \00003354;
   }
 }
 
@@ -1375,7 +1377,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003359;
+    font-family: \00003361;
   }
 }
 
@@ -1397,7 +1399,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003370;
+    font-family: \00003372;
   }
 }
 
@@ -1414,7 +1416,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003378;
+    font-family: \00003380;
   }
 }
 
@@ -1428,7 +1430,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003381;
+    font-family: \00003383;
   }
 }
 
@@ -1443,7 +1445,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003385;
+    font-family: \00003387;
   }
 }
 
@@ -1459,7 +1461,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003390;
+    font-family: \00003392;
   }
 }
 
@@ -1475,7 +1477,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003397;
+    font-family: \00003399;
   }
 }
 
@@ -1489,7 +1491,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003423;
+    font-family: \00003425;
   }
 }
 
@@ -1504,7 +1506,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003427;
+    font-family: \00003429;
   }
 }
 
@@ -1524,7 +1526,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003437;
+    font-family: \00003439;
   }
 }
 
@@ -1545,7 +1547,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003437;
+      font-family: \00003439;
     }
 }
 
@@ -1560,7 +1562,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003452;
+    font-family: \00003454;
   }
 }
 
@@ -1574,7 +1576,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003455;
+    font-family: \00003457;
   }
 }
 
@@ -1593,7 +1595,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003463;
+    font-family: \00003465;
   }
 }
 
@@ -1607,7 +1609,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003467;
+    font-family: \00003469;
   }
 }
 
@@ -1621,7 +1623,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003471;
+    font-family: \00003473;
   }
 }
 
@@ -1635,7 +1637,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003476;
+    font-family: \00003478;
   }
 }
 
@@ -1649,7 +1651,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003482;
+    font-family: \00003484;
   }
 }
 
@@ -1670,7 +1672,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003482;
+      font-family: \00003484;
     }
 }
 
@@ -1685,7 +1687,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003496;
+    font-family: \00003498;
   }
 }
 
@@ -1701,7 +1703,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003496;
+      font-family: \00003498;
     }
 }
 
@@ -1717,7 +1719,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003506;
+    font-family: \00003508;
   }
 }
 
@@ -1735,7 +1737,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003513;
+    font-family: \00003515;
   }
 }
 
@@ -1750,7 +1752,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003522;
+    font-family: \00003524;
   }
 }
 
@@ -1765,7 +1767,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003527;
+    font-family: \00003529;
   }
 }
 
@@ -1779,7 +1781,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003532;
+    font-family: \00003534;
   }
 }
 
@@ -1799,7 +1801,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003544;
+    font-family: \00003546;
   }
 }
 
@@ -1822,7 +1824,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003555;
+    font-family: \00003557;
   }
 }
 
@@ -1838,7 +1840,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003561;
+    font-family: \00003563;
   }
 }
 
@@ -1853,7 +1855,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003566;
+    font-family: \00003568;
   }
 }
 
@@ -1870,7 +1872,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003544;
+      font-family: \00003546;
     }
 }
 
@@ -1888,7 +1890,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003544;
+      font-family: \00003546;
     }
 }
 
@@ -1906,7 +1908,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003544;
+      font-family: \00003546;
     }
 }
 
@@ -1923,7 +1925,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003587;
+    font-family: \00003589;
   }
 }
 
@@ -1945,7 +1947,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003599;
+    font-family: \00003601;
   }
 }
 
@@ -1960,7 +1962,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003605;
+    font-family: \00003607;
   }
 }
 
@@ -1974,7 +1976,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003609;
+    font-family: \00003611;
   }
 }
 
@@ -1989,7 +1991,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003618;
+    font-family: \00003620;
   }
 }
 
@@ -2004,7 +2006,7 @@ footer p {
   }
 
   line {
-    font-family: \00003626;
+    font-family: \00003628;
   }
 }
 

@@ -7,7 +7,7 @@
 
 		<ul>
 			<li class="list-titles">
-				<span class="item-left">Class ID</span>
+				<span class="item-left">ID</span>
 					<span class="item-center">Class Name</span>
 			</li>
 
