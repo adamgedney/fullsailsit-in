@@ -35,7 +35,15 @@ v2.0 | 20110126
 License: none (public domain)
 */
 
-/* line 8, ../../app/styles/_reset.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_reset\.scss;
+  }
+
+  line {
+    font-family: \000038;
+  }
+}
 
 html,
 body,
@@ -114,7 +122,15 @@ video {
 
 /* HTML5 display-role reset for older browsers */
 
-/* line 19, ../../app/styles/_reset.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_reset\.scss;
+  }
+
+  line {
+    font-family: \0000319;
+  }
+}
 
 article,
 aside,
@@ -130,7 +146,15 @@ section {
   display: block;
 }
 
-/* line 23, ../../app/styles/_reset.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_reset\.scss;
+  }
+
+  line {
+    font-family: \0000323;
+  }
+}
 
 ul {
   list-style: none;
@@ -138,14 +162,30 @@ ul {
 
 /*--------------------------------------End CSS Reset / Start General-------------------------------*/
 
-/* line 9, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \000039;
+  }
+}
 
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 15, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000315;
+  }
+}
 
 body {
   color: #333333;
@@ -153,7 +193,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 21, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000321;
+  }
+}
 
 h1,
 h2,
@@ -162,7 +210,15 @@ h4 {
   font-family: 'Open Sans', "Helvetica Neue Light", Helvetica, Arial, sans-serif;
 }
 
-/* line 25, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000325;
+  }
+}
 
 h1 {
   font-size: 3.6em;
@@ -170,7 +226,15 @@ h1 {
   line-height: 1.5;
 }
 
-/* line 30, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000330;
+  }
+}
 
 h2 {
   font-size: 2.4em;
@@ -178,7 +242,15 @@ h2 {
   line-height: 1.5;
 }
 
-/* line 35, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000335;
+  }
+}
 
 h3 {
   font-size: 1.6em;
@@ -186,7 +258,15 @@ h3 {
   line-height: 1.5;
 }
 
-/* line 40, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000340;
+  }
+}
 
 p,
 ul,
@@ -197,13 +277,29 @@ dl {
   margin-bottom: 20px;
 }
 
-/* line 48, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000348;
+  }
+}
 
 ul {
   line-height: 1.5;
 }
 
-/* line 52, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000352;
+  }
+}
 
 a,
 button,
@@ -211,7 +307,15 @@ button,
   cursor: pointer;
 }
 
-/* line 56, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000356;
+  }
+}
 
 a,
 input[type="submit"] {
@@ -223,13 +327,29 @@ input[type="submit"] {
   /*overrides safari mobile default styling*/
 }
 
-/* line 64, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000364;
+  }
+}
 
 a:visited {
   outline: none;
 }
 
-/* line 68, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000368;
+  }
+}
 
 a:hover,
 input[type="submit"]:hover,
@@ -237,19 +357,43 @@ button:hover {
   opacity: .9;
 }
 
-/* line 72, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000372;
+  }
+}
 
 a.no-tran:hover {
   opacity: 1;
 }
 
-/* line 76, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000376;
+  }
+}
 
 img {
   max-width: 100%;
 }
 
-/* line 80, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000380;
+  }
+}
 
 input,
 button,
@@ -266,28 +410,60 @@ textarea {
   outline: none;
 }
 
-/* line 93, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000393;
+  }
+}
 
 ::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #e8e8e8;
 }
 
-/* line 96, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000396;
+  }
+}
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #e8e8e8;
 }
 
-/* line 99, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \0000399;
+  }
+}
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #e8e8e8;
 }
 
-/* line 102, ../../app/styles/_defaults.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_defaults\.scss;
+  }
+
+  line {
+    font-family: \00003102;
+  }
+}
 
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
@@ -296,7 +472,15 @@ textarea {
 
 /*--------------------------------------End General / Start Objects------------------------------------*/
 
-/* line 38, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000338;
+  }
+}
 
 .hide-text {
   text-indent: 200%;
@@ -304,55 +488,127 @@ textarea {
   white-space: nowrap;
 }
 
-/* line 44, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000344;
+  }
+}
 
 .small {
   font-size: .5em;
 }
 
-/* line 48, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000348;
+  }
+}
 
 .center {
   text-align: center;
 }
 
-/* line 52, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000352;
+  }
+}
 
 .bold {
   font-weight: 700;
 }
 
-/* line 56, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000356;
+  }
+}
 
 .red {
   color: #990100;
 }
 
-/* line 60, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000360;
+  }
+}
 
 .blue {
   color: #75acb5;
 }
 
-/* line 64, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000364;
+  }
+}
 
 .yellow {
   color: #fffc19;
 }
 
-/* line 68, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000368;
+  }
+}
 
 .light-gray {
   color: #e8e8e8;
 }
 
-/* line 72, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000372;
+  }
+}
 
 .dark-gray {
   color: #333333;
 }
 
-/* line 76, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000376;
+  }
+}
 
 .underline {
   text-decoration: underline;
@@ -368,7 +624,15 @@ textarea {
  *    `:before` to contain the top-margins of child elements.
  */
 
-/* line 90, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000390;
+  }
+}
 
 .cf:before,
 .cf:after {
@@ -378,7 +642,15 @@ textarea {
   /* 2 */
 }
 
-/* line 95, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000395;
+  }
+}
 
 .cf:after {
   clear: both;
@@ -389,7 +661,15 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-/* line 103, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003103;
+  }
+}
 
 .cf {
   *zoom: 1;
@@ -397,7 +677,15 @@ textarea {
 
 /*--------------------------------------End Objects / Start Login page------------------------------------*/
 
-/* line 109, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003109;
+  }
+}
 
 .fold {
   background: url(../images/girl.jpg) no-repeat 50% 90%;
@@ -407,7 +695,15 @@ textarea {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 109, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003109;
+    }
+}
 
   .fold {
     background-size: 285px 360px;
@@ -415,7 +711,15 @@ textarea {
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 109, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003109;
+    }
+}
 
   .fold {
     background-position: 75% 80%;
@@ -423,21 +727,45 @@ textarea {
   }
 }
 
-/* line 125, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003125;
+  }
+}
 
 .features {
   margin: 54px 0 0;
   padding: 18px;
 }
 
-/* line 129, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003129;
+  }
+}
 
 .features img {
   margin-bottom: 18px;
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 129, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003129;
+    }
+}
 
   .features img {
     width: 50%;
@@ -447,7 +775,15 @@ textarea {
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 129, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003129;
+    }
+}
 
   .features img {
     width: 33.3333333%;
@@ -457,7 +793,15 @@ textarea {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 143, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003143;
+    }
+}
 
   .features p {
     width: 66.6666666%;
@@ -467,7 +811,15 @@ textarea {
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 143, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003143;
+    }
+}
 
   .features p {
     width: 33.3333333%;
@@ -476,21 +828,45 @@ textarea {
   }
 }
 
-/* line 156, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003156;
+  }
+}
 
 .desc-reveal {
   display: none;
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 156, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003156;
+    }
+}
 
   .desc-reveal {
     display: inline;
   }
 }
 
-/* line 164, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003164;
+  }
+}
 
 .login-btn {
   position: absolute;
@@ -508,7 +884,15 @@ textarea {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 164, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003164;
+    }
+}
 
   .login-btn {
     width: 41.6666666%;
@@ -519,7 +903,15 @@ textarea {
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 164, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003164;
+    }
+}
 
   .login-btn {
     width: 33.3333333%;
@@ -530,7 +922,15 @@ textarea {
   }
 }
 
-/* line 190, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003190;
+  }
+}
 
 .login-btn img {
   vertical-align: middle;
@@ -540,7 +940,15 @@ textarea {
 
 /*--------------------------------------End Login page / Start sit-in page------------------------------------*/
 
-/* line 203, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003203;
+  }
+}
 
 header {
   background: #990100;
@@ -553,7 +961,15 @@ header {
   z-index: 99998;
 }
 
-/* line 213, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003213;
+  }
+}
 
 header h1 {
   font-size: 1.8em;
@@ -562,34 +978,74 @@ header h1 {
   display: inline;
 }
 
-/* line 219, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003219;
+  }
+}
 
 header h1 a {
   color: #f6f6f6;
 }
 
-/* line 224, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003224;
+  }
+}
 
 header img {
   float: right;
   margin-top: 7px;
 }
 
-/* line 230, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003230;
+  }
+}
 
 nav {
   float: right;
   display: none;
 }
 
-/* line 234, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003234;
+  }
+}
 
 nav ul {
   line-height: 48px;
   margin: 0;
 }
 
-/* line 238, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003238;
+  }
+}
 
 nav ul li {
   display: inline-block;
@@ -599,13 +1055,29 @@ nav ul li {
   border-left: 1px solid #670100;
 }
 
-/* line 245, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003245;
+  }
+}
 
 nav ul li a {
   color: #f6f6f6;
 }
 
-/* line 249, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003249;
+  }
+}
 
 nav ul li img {
   float: left;
@@ -614,47 +1086,103 @@ nav ul li img {
   width: 48px;
 }
 
-/* line 257, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003257;
+  }
+}
 
 nav ul li:hover {
   opacity: .6;
 }
 
-/* line 261, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003261;
+  }
+}
 
 nav ul li.no-hover:hover {
   opacity: 1;
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 230, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003230;
+    }
+}
 
   nav {
     display: inline;
   }
 }
 
-/* line 272, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003272;
+  }
+}
 
 .nav-profile {
   height: 48px;
 }
 
-/* line 275, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003275;
+  }
+}
 
 .nav-profile .yellow {
   padding-left: 18px;
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 280, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003280;
+    }
+}
 
   .menu-btn {
     display: none;
   }
 }
 
-/* line 286, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003286;
+  }
+}
 
 .slideout {
   position: fixed;
@@ -666,7 +1194,15 @@ nav ul li.no-hover:hover {
   color: #f6f6f6;
 }
 
-/* line 295, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003295;
+  }
+}
 
 .slideout li {
   position: relative;
@@ -676,34 +1212,74 @@ nav ul li.no-hover:hover {
   cursor: pointer;
 }
 
-/* line 303, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003303;
+  }
+}
 
 .slideout li:last-child {
   border: none;
 }
 
-/* line 307, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003307;
+  }
+}
 
 .slideout li:hover {
   opacity: .8;
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 286, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003286;
+    }
+}
 
   .slideout {
     width: 50%;
   }
 }
 
-/* line 316, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003316;
+  }
+}
 
 .title-bar {
   text-align: center;
   padding-top: 18px;
 }
 
-/* line 321, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003321;
+  }
+}
 
 .super {
   font-size: .5em;
@@ -713,7 +1289,15 @@ nav ul li.no-hover:hover {
   top: 6px;
 }
 
-/* line 329, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003329;
+  }
+}
 
 .menu-item {
   position: absolute;
@@ -722,7 +1306,15 @@ nav ul li.no-hover:hover {
   color: #f6f6f6;
 }
 
-/* line 336, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003336;
+  }
+}
 
 .menu-points {
   position: absolute;
@@ -731,7 +1323,15 @@ nav ul li.no-hover:hover {
   bottom: 9px;
 }
 
-/* line 343, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003343;
+  }
+}
 
 .menu-points-units {
   position: absolute;
@@ -740,7 +1340,15 @@ nav ul li.no-hover:hover {
   font-size: .5em;
 }
 
-/* line 350, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003350;
+  }
+}
 
 .logout-item {
   background: #333333;
@@ -754,7 +1362,15 @@ nav ul li.no-hover:hover {
   border-top: 1px solid #969696;
 }
 
-/* line 361, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003361;
+  }
+}
 
 .logout-item p {
   display: inline;
@@ -763,20 +1379,44 @@ nav ul li.no-hover:hover {
   position: absolute;
 }
 
-/* line 369, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003369;
+  }
+}
 
 .attended-classes {
   position: relative;
 }
 
-/* line 372, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003372;
+  }
+}
 
 .attended-classes ul {
   max-height: 385px;
   overflow: scroll;
 }
 
-/* line 376, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003376;
+  }
+}
 
 .attended-classes ul li {
   padding: 0 9px;
@@ -784,7 +1424,15 @@ nav ul li.no-hover:hover {
   font-size: .6em;
 }
 
-/* line 381, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003381;
+  }
+}
 
 .attended-classes ul li img {
   position: absolute;
@@ -792,13 +1440,29 @@ nav ul li.no-hover:hover {
   top: 7px;
 }
 
-/* line 388, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003388;
+  }
+}
 
 .attended-classes ul li:first-child {
   color: #fffc19;
 }
 
-/* line 394, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003394;
+  }
+}
 
 .attend-next {
   font-size: .5em;
@@ -809,14 +1473,30 @@ nav ul li.no-hover:hover {
   color: #969696;
 }
 
-/* line 414, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003414;
+  }
+}
 
 .content {
   min-height: 100vh;
   margin-top: 96px;
 }
 
-/* line 418, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003418;
+  }
+}
 
 .content h2 {
   width: 83.3333333%;
@@ -828,9 +1508,17 @@ nav ul li.no-hover:hover {
   text-align: center;
 }
 
-/* line 427, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
 
-.content li {
+  line {
+    font-family: \00003428;
+  }
+}
+
+.content ul li {
   font-size: .85em;
   padding: 0 18px;
   height: 48px;
@@ -841,26 +1529,105 @@ nav ul li.no-hover:hover {
 }
 
 @media only screen and (min-width: 770px) {
-  /* line 427, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
 
-  .content li {
+    line {
+      font-family: \00003428;
+    }
+}
+
+  .content ul li {
     padding: 0 20%;
   }
 }
 
-/* line 442, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
 
-.content li:nth-child(even) {
+  line {
+    font-family: \00003443;
+  }
+}
+
+.content ul li.list-titles {
+  background: #333333;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003446;
+  }
+}
+
+.content ul li.list-titles .item-left,
+.content ul li.list-titles .item-center,
+.content ul li.list-titles .item-right {
+  color: #f6f6f6;
+  font-size: 1.4em;
+  font-family: 'Open Sans', "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003454;
+  }
+}
+
+.content ul li.list-titles:hover {
+  opacity: 1;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003458;
+  }
+}
+
+.content ul li:nth-child(even) {
   background: #e8e8e8;
 }
 
-/* line 446, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
 
-.content li:hover {
+  line {
+    font-family: \00003462;
+  }
+}
+
+.content ul li:hover {
   opacity: .5;
 }
 
-/* line 452, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003469;
+  }
+}
 
 .item-left {
   text-align: left;
@@ -873,23 +1640,46 @@ nav ul li.no-hover:hover {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 452, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003469;
+    }
+}
 
   .item-left {
     font-size: 1.4em;
   }
 }
 
-/* line 466, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003483;
+  }
+}
 
 .item-center {
   text-align: left;
-  color: #4c6f75;
   width: 25%;
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 466, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003483;
+    }
+}
 
   .item-center {
     margin-left: 20%;
@@ -897,35 +1687,76 @@ nav ul li.no-hover:hover {
   }
 }
 
-/* line 477, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003493;
+  }
+}
 
 .item-right {
   text-align: right;
   float: right;
   font-size: .9em;
   width: 25%;
+  color: #4c6f75;
 }
 
-/* line 483, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003500;
+  }
+}
 
 .item-right img {
   vertical-align: middle;
 }
 
-/* line 491, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003508;
+  }
+}
 
 .class-dates .item-left {
   color: #333333;
   font-size: 1.2em;
 }
 
-/* line 496, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003513;
+  }
+}
 
 .class-dates .item-right {
   font-size: 1em;
 }
 
-/* line 501, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003518;
+  }
+}
 
 .modal {
   background: rgba(0, 0, 0, 0.8);
@@ -937,7 +1768,15 @@ nav ul li.no-hover:hover {
   right: 0;
 }
 
-/* line 513, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003530;
+  }
+}
 
 .mod-container {
   width: 83.3333333%;
@@ -952,7 +1791,15 @@ nav ul li.no-hover:hover {
   box-shadow: 1px 1px 6px black;
 }
 
-/* line 524, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003541;
+  }
+}
 
 .mod-container h2 {
   padding: 0 18px;
@@ -960,14 +1807,30 @@ nav ul li.no-hover:hover {
   font-size: 1.6em;
 }
 
-/* line 530, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003547;
+  }
+}
 
 .mod-container p {
   padding: 0 18px;
   font-size: 1.4em;
 }
 
-/* line 535, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003552;
+  }
+}
 
 .mod-container img {
   width: 8.33333333%;
@@ -976,7 +1839,15 @@ nav ul li.no-hover:hover {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 513, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003530;
+    }
+}
 
   .mod-container {
     width: 58.3333333%;
@@ -986,7 +1857,15 @@ nav ul li.no-hover:hover {
 }
 
 @media only screen and (min-width: 770px) {
-  /* line 513, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003530;
+    }
+}
 
   .mod-container {
     width: 33.3333333%;
@@ -996,7 +1875,15 @@ nav ul li.no-hover:hover {
 }
 
 @media only screen and (min-width: 961px) {
-  /* line 513, ../../app/styles/main.scss */
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+    }
+
+    line {
+      font-family: \00003530;
+    }
+}
 
   .mod-container {
     width: 25%;
@@ -1005,7 +1892,15 @@ nav ul li.no-hover:hover {
   }
 }
 
-/* line 556, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003573;
+  }
+}
 
 .btn {
   position: absolute;
@@ -1019,34 +1914,74 @@ nav ul li.no-hover:hover {
   font-weight: 50;
 }
 
-/* line 568, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003585;
+  }
+}
 
 .cancel-btn {
   background: #b90504;
   left: 0;
 }
 
-/* line 574, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003591;
+  }
+}
 
 .cancel-btn-wide {
   width: 100%;
 }
 
-/* line 578, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003595;
+  }
+}
 
 .request-btn {
   background: #75acb5;
   right: 0;
 }
 
-/* line 587, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003604;
+  }
+}
 
 footer p {
   text-align: center;
   font-size: 1.4em;
 }
 
-/* line 595, ../../app/styles/main.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003612;
+  }
+}
 
 .four-oh-four img {
   max-height: 500px;
@@ -1071,14 +2006,30 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-/* line 14, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \0000314;
+  }
+}
 
 body {
   /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
   -webkit-backface-visibility: hidden;
 }
 
-/* line 17, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \0000317;
+  }
+}
 
 .animated {
   -webkit-animation-duration: .2s;
@@ -1087,7 +2038,15 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 28, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \0000328;
+  }
+}
 
 .animated.hinge {
   -webkit-animation-duration: .5s;
@@ -1118,7 +2077,15 @@ body {
   }
 }
 
-/* line 55, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \0000355;
+  }
+}
 
 .animated.flash {
   -webkit-animation-name: flash;
@@ -1162,7 +2129,15 @@ body {
   }
 }
 
-/* line 85, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \0000385;
+  }
+}
 
 .animated.shake {
   -webkit-animation-name: shake;
@@ -1206,7 +2181,15 @@ body {
   }
 }
 
-/* line 114, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003114;
+  }
+}
 
 .animated.bounce {
   -webkit-animation-name: bounce;
@@ -1272,7 +2255,15 @@ body {
   }
 }
 
-/* line 152, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003152;
+  }
+}
 
 .animated.tada {
   -webkit-animation-name: tada;
@@ -1343,7 +2334,15 @@ body {
   }
 }
 
-/* line 191, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003191;
+  }
+}
 
 .animated.swing {
   -webkit-transform-origin: top center;
@@ -1435,7 +2434,15 @@ body {
   }
 }
 
-/* line 243, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003243;
+  }
+}
 
 .animated.wobble {
   -webkit-animation-name: wobble;
@@ -1481,7 +2488,15 @@ body {
   }
 }
 
-/* line 272, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003272;
+  }
+}
 
 .animated.pulse {
   -webkit-animation-name: pulse;
@@ -1562,7 +2577,15 @@ body {
   }
 }
 
-/* line 367, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003367;
+  }
+}
 
 .animated.flip {
   -webkit-backface-visibility: visible !important;
@@ -1623,7 +2646,15 @@ body {
   }
 }
 
-/* line 454, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003454;
+  }
+}
 
 .animated.flipInX {
   -webkit-backface-visibility: visible !important;
@@ -1662,7 +2693,15 @@ body {
   }
 }
 
-/* line 508, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003508;
+  }
+}
 
 .animated.flipOutX {
   -webkit-animation-name: flipOutX;
@@ -1723,7 +2762,15 @@ body {
   }
 }
 
-/* line 595, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003595;
+  }
+}
 
 .animated.flipInY {
   -webkit-backface-visibility: visible !important;
@@ -1762,7 +2809,15 @@ body {
   }
 }
 
-/* line 646, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003646;
+  }
+}
 
 .animated.flipOutY {
   -webkit-backface-visibility: visible !important;
@@ -1795,7 +2850,15 @@ body {
   }
 }
 
-/* line 676, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003676;
+  }
+}
 
 .animated.fadeIn {
   -webkit-animation-name: fadeIn;
@@ -1832,7 +2895,15 @@ body {
   }
 }
 
-/* line 730, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003730;
+  }
+}
 
 .animated.fadeInUp {
   -webkit-animation-name: fadeInUp;
@@ -1869,7 +2940,15 @@ body {
   }
 }
 
-/* line 784, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003784;
+  }
+}
 
 .animated.fadeInDown {
   -webkit-animation-name: fadeInDown;
@@ -1906,7 +2985,15 @@ body {
   }
 }
 
-/* line 838, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003838;
+  }
+}
 
 .animated.fadeInLeft {
   -webkit-animation-name: fadeInLeft;
@@ -1943,7 +3030,15 @@ body {
   }
 }
 
-/* line 892, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003892;
+  }
+}
 
 .animated.fadeInRight {
   -webkit-animation-name: fadeInRight;
@@ -1980,7 +3075,15 @@ body {
   }
 }
 
-/* line 946, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \00003946;
+  }
+}
 
 .animated.fadeInUpBig {
   -webkit-animation-name: fadeInUpBig;
@@ -2017,7 +3120,15 @@ body {
   }
 }
 
-/* line 1000, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031000;
+  }
+}
 
 .animated.fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
@@ -2054,7 +3165,15 @@ body {
   }
 }
 
-/* line 1051, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031051;
+  }
+}
 
 .animated.fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
@@ -2091,7 +3210,15 @@ body {
   }
 }
 
-/* line 1105, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031105;
+  }
+}
 
 .animated.fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
@@ -2122,7 +3249,15 @@ body {
   }
 }
 
-/* line 1131, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031131;
+  }
+}
 
 .animated.fadeOut {
   -webkit-animation-name: fadeOut;
@@ -2159,7 +3294,15 @@ body {
   }
 }
 
-/* line 1182, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031182;
+  }
+}
 
 .animated.fadeOutUp {
   -webkit-animation-name: fadeOutUp;
@@ -2196,7 +3339,15 @@ body {
   }
 }
 
-/* line 1236, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031236;
+  }
+}
 
 .animated.fadeOutDown {
   -webkit-animation-name: fadeOutDown;
@@ -2233,7 +3384,15 @@ body {
   }
 }
 
-/* line 1290, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031290;
+  }
+}
 
 .animated.fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;
@@ -2270,7 +3429,15 @@ body {
   }
 }
 
-/* line 1344, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031344;
+  }
+}
 
 .animated.fadeOutRight {
   -webkit-animation-name: fadeOutRight;
@@ -2307,7 +3474,15 @@ body {
   }
 }
 
-/* line 1398, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031398;
+  }
+}
 
 .animated.fadeOutUpBig {
   -webkit-animation-name: fadeOutUpBig;
@@ -2344,7 +3519,15 @@ body {
   }
 }
 
-/* line 1452, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031452;
+  }
+}
 
 .animated.fadeOutDownBig {
   -webkit-animation-name: fadeOutDownBig;
@@ -2381,7 +3564,15 @@ body {
   }
 }
 
-/* line 1506, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031506;
+  }
+}
 
 .animated.fadeOutLeftBig {
   -webkit-animation-name: fadeOutLeftBig;
@@ -2418,7 +3609,15 @@ body {
   }
 }
 
-/* line 1557, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031557;
+  }
+}
 
 .animated.fadeOutRightBig {
   -webkit-animation-name: fadeOutRightBig;
@@ -2505,7 +3704,15 @@ body {
   }
 }
 
-/* line 1687, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031687;
+  }
+}
 
 .slideInDown {
   -webkit-animation-name: slideInDown;
@@ -2540,7 +3747,15 @@ body {
   }
 }
 
-/* line 1738, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031738;
+  }
+}
 
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
@@ -2575,7 +3790,15 @@ body {
   }
 }
 
-/* line 1789, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031789;
+  }
+}
 
 .slideInRight {
   -webkit-animation-name: slideInRight;
@@ -2610,7 +3833,15 @@ body {
   }
 }
 
-/* line 1840, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031840;
+  }
+}
 
 .slideOutLeft {
   -webkit-animation-name: slideOutLeft;
@@ -2645,7 +3876,15 @@ body {
   }
 }
 
-/* line 1891, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031891;
+  }
+}
 
 .slideOutRight {
   -webkit-animation-name: slideOutRight;
@@ -2680,14 +3919,30 @@ body {
   }
 }
 
-/* line 1942, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031942;
+  }
+}
 
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
 
-/* line 1949, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000031949;
+  }
+}
 
 .animated.bounceIn {
   -webkit-animation-name: bounceIn;
@@ -2746,7 +4001,15 @@ body {
   }
 }
 
-/* line 2034, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032034;
+  }
+}
 
 .animated.bounceInUp {
   -webkit-animation-name: bounceInUp;
@@ -2805,7 +4068,15 @@ body {
   }
 }
 
-/* line 2120, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032120;
+  }
+}
 
 .animated.bounceInDown {
   -webkit-animation-name: bounceInDown;
@@ -2864,7 +4135,15 @@ body {
   }
 }
 
-/* line 2206, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032206;
+  }
+}
 
 .animated.bounceInLeft {
   -webkit-animation-name: bounceInLeft;
@@ -2923,7 +4202,15 @@ body {
   }
 }
 
-/* line 2292, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032292;
+  }
+}
 
 .animated.bounceInRight {
   -webkit-animation-name: bounceInRight;
@@ -2982,7 +4269,15 @@ body {
   }
 }
 
-/* line 2378, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032378;
+  }
+}
 
 .animated.bounceOut {
   -webkit-animation-name: bounceOut;
@@ -3030,7 +4325,15 @@ body {
   }
 }
 
-/* line 2448, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032448;
+  }
+}
 
 .animated.bounceOutUp {
   -webkit-animation-name: bounceOutUp;
@@ -3078,7 +4381,15 @@ body {
   }
 }
 
-/* line 2518, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032518;
+  }
+}
 
 .animated.bounceOutDown {
   -webkit-animation-name: bounceOutDown;
@@ -3126,7 +4437,15 @@ body {
   }
 }
 
-/* line 2588, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032588;
+  }
+}
 
 .animated.bounceOutLeft {
   -webkit-animation-name: bounceOutLeft;
@@ -3174,7 +4493,15 @@ body {
   }
 }
 
-/* line 2658, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032658;
+  }
+}
 
 .animated.bounceOutRight {
   -webkit-animation-name: bounceOutRight;
@@ -3217,7 +4544,15 @@ body {
   }
 }
 
-/* line 2717, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032717;
+  }
+}
 
 .animated.rotateIn {
   -webkit-animation-name: rotateIn;
@@ -3260,7 +4595,15 @@ body {
   }
 }
 
-/* line 2779, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032779;
+  }
+}
 
 .animated.rotateInUpLeft {
   -webkit-animation-name: rotateInUpLeft;
@@ -3303,7 +4646,15 @@ body {
   }
 }
 
-/* line 2841, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032841;
+  }
+}
 
 .animated.rotateInDownLeft {
   -webkit-animation-name: rotateInDownLeft;
@@ -3346,7 +4697,15 @@ body {
   }
 }
 
-/* line 2903, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032903;
+  }
+}
 
 .animated.rotateInUpRight {
   -webkit-animation-name: rotateInUpRight;
@@ -3389,7 +4748,15 @@ body {
   }
 }
 
-/* line 2965, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000032965;
+  }
+}
 
 .animated.rotateInDownRight {
   -webkit-animation-name: rotateInDownRight;
@@ -3432,7 +4799,15 @@ body {
   }
 }
 
-/* line 3027, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033027;
+  }
+}
 
 .animated.rotateOut {
   -webkit-animation-name: rotateOut;
@@ -3475,7 +4850,15 @@ body {
   }
 }
 
-/* line 3089, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033089;
+  }
+}
 
 .animated.rotateOutUpLeft {
   -webkit-animation-name: rotateOutUpLeft;
@@ -3518,7 +4901,15 @@ body {
   }
 }
 
-/* line 3151, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033151;
+  }
+}
 
 .animated.rotateOutDownLeft {
   -webkit-animation-name: rotateOutDownLeft;
@@ -3561,7 +4952,15 @@ body {
   }
 }
 
-/* line 3213, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033213;
+  }
+}
 
 .animated.rotateOutUpRight {
   -webkit-animation-name: rotateOutUpRight;
@@ -3604,7 +5003,15 @@ body {
   }
 }
 
-/* line 3275, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033275;
+  }
+}
 
 .animated.rotateOutDownRight {
   -webkit-animation-name: rotateOutDownRight;
@@ -3698,7 +5105,15 @@ body {
   }
 }
 
-/* line 3313, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033313;
+  }
+}
 
 .animated.hinge {
   -webkit-animation-name: hinge;
@@ -3737,7 +5152,15 @@ body {
   }
 }
 
-/* line 3341, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033341;
+  }
+}
 
 .animated.rollIn {
   -webkit-animation-name: rollIn;
@@ -3776,7 +5199,15 @@ body {
   }
 }
 
-/* line 3397, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033397;
+  }
+}
 
 .animated.rollOut {
   -webkit-animation-name: rollOut;
@@ -3841,7 +5272,15 @@ body {
   }
 }
 
-/* line 3434, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033434;
+  }
+}
 
 .animated.lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
@@ -3850,7 +5289,15 @@ body {
   animation-timing-function: ease-out;
 }
 
-/* line 3446, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033446;
+  }
+}
 
 .animated.lightSpeedIn {
   -webkit-animation-duration: 0.5s;
@@ -3889,7 +5336,15 @@ body {
   }
 }
 
-/* line 3475, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033475;
+  }
+}
 
 .animated.lightSpeedOut {
   -webkit-animation-name: lightSpeedOut;
@@ -3898,7 +5353,15 @@ body {
   animation-timing-function: ease-in;
 }
 
-/* line 3487, ../../app/styles/_animate.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/adamgedney\/Documents\/_Docs\/Classes\/26-MDD-MobileDeviceDeployment\/fullsailsitin\/app\/styles\/_animate\.scss;
+  }
+
+  line {
+    font-family: \000033487;
+  }
+}
 
 .animated.lightSpeedOut {
   -webkit-animation-duration: 0.25s;

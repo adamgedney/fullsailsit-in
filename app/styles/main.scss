@@ -424,30 +424,47 @@ nav{
 		text-align: center;
 	}
 
-	li{
-		font-size: .85em;
-		padding: 0 18px;
-		height: 48px;
-		line-height: 48px;
-		background: $off-white;
-		overflow: hidden;
-		cursor: pointer;
+	ul{
+		li{
+			font-size: .85em;
+			padding: 0 18px;
+			height: 48px;
+			line-height: 48px;
+			background: $off-white;
+			overflow: hidden;
+			cursor: pointer;
 
-		@include break-md{
-			padding: 0 20%;
+			@include break-md{
+				padding: 0 20%;
+			}
+
 		}
 
+		li.list-titles{
+			background: $dark-grey;
+
+			.item-left, .item-center, .item-right{
+				color: $off-white;
+				font-size: 1.4em;
+				font-family: 'Open Sans', "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+				font-weight: 400;
+			}
+		}
+
+		li.list-titles:hover{
+			opacity: 1;
+		}
+
+		li:nth-child(even){
+			background: $light-grey;
+		}
+
+		li:hover{
+			opacity: .5;
+		}
 	}
 
-	li:nth-child(even){
-		background: $light-grey;
-	}
-
-	li:hover{
-		opacity: .5;
-	}
 }
-
 
 .item-left{
 	text-align: left;
@@ -465,7 +482,6 @@ nav{
 
 .item-center{
 	text-align: left;
-	color: $dark-blue;
 	@include col(3);
 
 	@include break-sm{
@@ -479,6 +495,7 @@ nav{
 	float: right;
 	font-size: .9em;
 	@include col(3);
+	color: $dark-blue;
 
 	img{
 		vertical-align: middle;
