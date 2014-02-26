@@ -416,8 +416,8 @@ nav{
 	margin-top: 96px;
 
 	h2{
-		@include col(10);
-		@include col_ctr(10);
+		@include col(8);
+		@include col_ctr(8);
 		margin-top: 54px;
 		margin-bottom: 54px;
 		font-size: 1.6em;
@@ -503,6 +503,7 @@ nav{
 
 	img{
 		vertical-align: middle;
+		margin-right: 40%;
 	}
 
 }
@@ -587,7 +588,7 @@ nav{
 }
 
 .cancel-btn{
-	background: $light-red;
+	background: $dark-red;
 	left: 0;
 
 }

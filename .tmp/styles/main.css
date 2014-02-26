@@ -1499,9 +1499,9 @@ nav ul li.no-hover:hover {
 }
 
 .content h2 {
-  width: 83.3333333%;
-  margin-left: 8.33333335%;
-  margin-right: 8.33333335%;
+  width: 66.6666666%;
+  margin-left: 16.6666667%;
+  margin-right: 16.6666667%;
   margin-top: 54px;
   margin-bottom: 54px;
   font-size: 1.6em;
@@ -1731,6 +1731,7 @@ nav ul li.no-hover:hover {
 
 .item-right img {
   vertical-align: middle;
+  margin-right: 40%;
 }
 
 @media -sass-debug-info {
@@ -1739,7 +1740,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003512;
+    font-family: \00003513;
   }
 }
 
@@ -1754,7 +1755,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003517;
+    font-family: \00003518;
   }
 }
 
@@ -1768,7 +1769,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003522;
+    font-family: \00003523;
   }
 }
 
@@ -1788,7 +1789,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003534;
+    font-family: \00003535;
   }
 }
 
@@ -1811,7 +1812,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003545;
+    font-family: \00003546;
   }
 }
 
@@ -1827,7 +1828,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003551;
+    font-family: \00003552;
   }
 }
 
@@ -1842,7 +1843,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003556;
+    font-family: \00003557;
   }
 }
 
@@ -1859,7 +1860,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003534;
+      font-family: \00003535;
     }
 }
 
@@ -1877,7 +1878,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003534;
+      font-family: \00003535;
     }
 }
 
@@ -1895,7 +1896,7 @@ nav ul li.no-hover:hover {
     }
 
     line {
-      font-family: \00003534;
+      font-family: \00003535;
     }
 }
 
@@ -1912,7 +1913,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003577;
+    font-family: \00003578;
   }
 }
 
@@ -1934,12 +1935,12 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003589;
+    font-family: \00003590;
   }
 }
 
 .cancel-btn {
-  background: #b90504;
+  background: #990100;
   left: 0;
 }
 
@@ -1949,7 +1950,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003595;
+    font-family: \00003596;
   }
 }
 
@@ -1963,7 +1964,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003599;
+    font-family: \00003600;
   }
 }
 
@@ -1978,7 +1979,7 @@ nav ul li.no-hover:hover {
   }
 
   line {
-    font-family: \00003608;
+    font-family: \00003609;
   }
 }
 
@@ -1993,7 +1994,7 @@ footer p {
   }
 
   line {
-    font-family: \00003616;
+    font-family: \00003617;
   }
 }
 

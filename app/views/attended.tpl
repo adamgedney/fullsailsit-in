@@ -9,7 +9,7 @@
 	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
 			<h2 ng-show="!showConfirmation" >Notify <span class="red">{{modal.instructor}}</span></h2>
-			<p ng-show="!showConfirmation">you'd like to sit in on {{modal.name}} {{modal.again}} <br /> {{modal.day}} {{modal.start}}?</p>
+			<p ng-show="!showConfirmation">you'd like to sit in on {{modal.name}} {{modal.again}} <br /> {{modal.day}} {{modal.start | formatDateString}}?</p>
 
 			<p ng-show="showConfirmation">Your notification sent successfully. Please allow a day or so for your instructor to reply.</p>
 
@@ -38,7 +38,7 @@
 
 			<li ng-click="getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins">
 					<span class="item-left">{{item.class}}</span>
-						<span class="item-center">{{item.classDate}}</span>
+						<span class="item-center">{{item.classDate | formatDateString}}</span>
 							<span class="item-right"><img src="images/add.png" alt="add next class icon" /></span>
 			</li>
 		</ul>

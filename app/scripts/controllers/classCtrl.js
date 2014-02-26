@@ -4,6 +4,7 @@
 angular.module('fullsailsitinApp')
 	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$location', 'GetSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, $location, GetSitins, SendNotice) {
 
+		//State control
 		$rootScope.loginObject.$getCurrentUser().then(function(user){
 			if(!user){
 				$location.path('/');
