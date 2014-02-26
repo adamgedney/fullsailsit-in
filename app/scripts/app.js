@@ -38,20 +38,43 @@ App.config(function ($routeProvider) {
 
 
 
-App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $rootScope){
+App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSimpleLogin, $rootScope, GetSitins){
+
+  //reference to firebase
+  var db = new Firebase('https://sitin.firebaseio.com');
 
   //Defines server root for API
   // $rootScope.DIR = 'http://107.170.58.66/';
   $rootScope.DIR = 'http://127.0.0.1:8887/public';
 
+  //creates the user obj
+  $rootScope.currentUser = {};
+  console.log('running app');
 
 
 
-  //reference to firebase
-  var db = new Firebase('https://sitin.firebaseio.com');
 
   //sets up simple login
   $rootScope.loginObject = $firebaseSimpleLogin(db);
+
+
+  //Sitins getter to prefetch data before rendering views
+  $rootScope.loginObject.$getCurrentUser()
+    .then(function(user){
+
+      //runs GetSitins to generate
+      //user total on the rootScope
+      var gs = new GetSitins(user.displayName);
+      console.log(gs, $rootScope.currentUser.sitins);
+
+      //Repopulates currentUser on page load
+      $rootScope.currentUser.name = user.displayName;
+      $rootScope.currentUser.avatar = user.avatar_url;// jshint ignore:line
+      $rootScope.currentUser.email = user.email;
+      $rootScope.currentUser.id = user.uid;
+      $rootScope.currentUser.sitins = $rootScope.sitins.length;
+
+    });
 
 
 
