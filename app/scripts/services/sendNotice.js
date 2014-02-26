@@ -5,38 +5,6 @@ angular.module('fullsailsitinApp')
 	.factory('SendNotice', ['$rootScope', '$http', function ($rootScope, $http){
 
 
-
-		$rootScope.confirm = function(currentIndex, name, date){
-
-			//Sets the current index for use in the sendNotice function below
-			$rootScope.currentIndex = currentIndex;
-			$rootScope.showConfirmation = false;
-			$rootScope.showModal = true;
-
-			//If currentIndex == next, this means the click originated
-			//from the add next class button. getNext will query db
-			//for the next class
-			if(currentIndex === 'next'){
-
-				getNext(name, date);
-
-
-			}else{
-
-				$rootScope.modal = {
-					'instructor': $rootScope.classDetails[currentIndex].instructor,
-					'name': $rootScope.classDetails.name,
-					'day': $rootScope.classDetails[currentIndex].day,
-					'start': $rootScope.classDetails[currentIndex].start,
-					'again': ''
-				};
-
-			}
-		};
-
-
-
-
 		$rootScope.cancel = function(){
 			$rootScope.showModal = false;
 
@@ -54,7 +22,7 @@ angular.module('fullsailsitinApp')
 
 			//pulls appropriate email address form hash table
 			//based on current index acronym
-			var instEmail = $rootScope.emailHash[$rootScope.modal.name];
+			var instEmail = $rootScope.emailHash[$rootScope.classDetails.name];
 			//reveals successful send message in view
 			$rootScope.showConfirmation = true;
 
@@ -102,7 +70,7 @@ angular.module('fullsailsitinApp')
 
 			var obj = {
 				'classDate' : $rootScope.modal.start,
-				'class' : $rootScope.modal.name,
+				'class' : $rootScope.classDetails.name,
 				'user' : $rootScope.currentUser.name
 			};
 
@@ -118,7 +86,7 @@ angular.module('fullsailsitinApp')
 
 
 
-		function getNext(name, date){
+		$rootScope.getNext = function(name, date){
 
 			//add class acronym to request to query on
 			var rUrl = 'http://127.0.0.1:8887/public/get-next' + '?class=' + name + '&date=' + date;

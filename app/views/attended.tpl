@@ -30,11 +30,16 @@
 		<h2>These are the classes you've requested to sit in on. Keep it up! I bet you feel smarter already, don't you?</h2>
 
 		<ul>
-			<li ng-click="confirm('next', item.class, item.classDate)"  ng-repeat="item in sitins">
+			<li class="list-titles">
+				<span class="item-left">Class</span>
+					<span class="item-center">Date</span>
+						<span class="item-right">Attend Next Class?</span>
+			</li>
+
+			<li ng-click="getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins">
 					<span class="item-left">{{item.class}}</span>
 						<span class="item-center">{{item.classDate}}</span>
-							<span class="item-right"><img src="images/add.png" alt="add next class icon" />
-						<span>Attend Next Class?</span></span>
+							<span class="item-right"><img src="images/add.png" alt="add next class icon" /></span>
 			</li>
 		</ul>
 

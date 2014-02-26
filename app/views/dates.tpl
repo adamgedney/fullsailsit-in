@@ -9,7 +9,7 @@
 	<div ng-show="showModal" class="modal">
 		<div class="mod-container">
 			<h2 ng-show="!showConfirmation" >Notify <span class="red">{{modal.instructor}}</span></h2>
-			<p ng-show="!showConfirmation">you'd like to sit in on {{modal.name}} {{modal.again}} <br /> {{modal.day}} {{modal.start}}?</p>
+			<p ng-show="!showConfirmation">you'd like to sit in on {{classDetails.name}} {{modal.again}} <br /> {{modal.day}} {{modal.start}}?</p>
 
 			<p ng-show="showConfirmation">Your notification sent successfully. Please allow a day or so for your instructor to reply.</p>
 
@@ -31,10 +31,16 @@
 		<h2>Select a date & time to sit in on <span class="red">{{classDetails.fullName}}</span>.</h2>
 
 		<ul>
-			<li class="class-dates" ng-click="confirm($index, classDetails.name, classDetails[$index].start)" ng-repeat="(item, $index) in classDetails">
-					<span class="item-left">{{classDetails[$index].day}}</span>
-						<span class="item-center">{{classDetails[$index].start}}</span>
-							<span class="item-right">{{classDetails[$index].room}}</span>
+			<li class="list-titles">
+				<span class="item-left">Day</span>
+					<span class="item-center">Date</span>
+						<span class="item-right">Room #</span>
+			</li>
+
+			<li class="class-dates" ng-click="$root.modal = item; $root.showModal = true;" ng-repeat="item in classDetails">
+					<span class="item-left">{{item.day}}</span>
+						<span class="item-center">{{item.start}}</span>
+							<span class="item-right">{{item.room}}</span>
 			</li>
 		</ul>
 

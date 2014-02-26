@@ -34,7 +34,7 @@
 			<ul>
 				<li>Your SitIns</li>
 
-				<li ng-click="confirm('next', item.class, item.classDate)"  ng-repeat="item in sitins"><span class="bold">{{item.class}}</span> {{item.classDate}}
+				<li ng-click="getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins"><span class="bold">{{item.class}}</span> {{item.classDate}}
 					<img src="images/add.png" alt="add next class icon" />
 						<span class="attend-next">Attend Next?</span></li>
 
