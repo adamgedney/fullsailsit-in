@@ -28,15 +28,15 @@
 				<span class="menu-item">{{currentUser.name}}</span>
 					<span class="menu-points">{{currentUser.sitins}}</span>
 						<span class="menu-points-units">SitIns</span></li>
-		<li><a href="#/sitin" class="menu-item" >Classes</a></li>
+		<li><a href="#/sitin" class="menu-item left" >Classes</a></li>
 
 		<li class="attended-classes">
 			<ul>
-				<li>Your SitIns</li>
+				<li>Your SitIns <span class="right">Add next class?</span></li>
 
-				<li ng-click="getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins"><span class="bold">{{item.class}}</span> {{item.classDate}}
+				<li ng-click="getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins"><span class="bold">{{item.class }} &nbsp; </span> {{ item.classDate | formatDateString}}
 					<img src="images/add.png" alt="add next class icon" />
-						<span class="attend-next">Attend Next?</span></li>
+				</li>
 
 			</ul>
 		</li>
