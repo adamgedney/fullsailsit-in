@@ -1,5 +1,6 @@
 'use strict';
 
+
 angular.module('fullsailsitinApp')
 	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', '$location', 'GetSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, $location, GetSitins, SendNotice) {
 
@@ -7,20 +8,21 @@ angular.module('fullsailsitinApp')
 		$rootScope.loginObject.$getCurrentUser().then(function(user){
 			if(!user){
 				$location.path('/');
+			}else{
+				//Checks cookie to find current user cookies
+				//in order to repopulate global user data
+				if($rootScope.currentUser === undefined){
+					$rootScope.currentUser ={
+						'name': $cookies.name,
+						'avatar': $cookies.avatar,
+						'email': $cookies.email
+					};
+				}
 			}
 		});
 
 
 
-		//Checks cookie to find current user cookies
-		//in order to repopulate global user data
-		if($rootScope.currentUser === undefined){
-			$rootScope.currentUser ={
-				'name': $cookies.name,
-				'avatar': $cookies.avatar,
-				'email': $cookies.email
-			};
-		}
 
 		//runs GetSitins to generate
 		//user total on the rootScope
@@ -33,7 +35,7 @@ angular.module('fullsailsitinApp')
 		//=========================================
 		//passing GET parameter in url as a hack. Using the data parameter
 		//in $http wasn't working
-		var requestUrl = 'http://127.0.0.1:8887/public/get-dates' + '?data=' + $routeParams.acro;
+		var requestUrl = $rootScope.DIR + '/get-dates' + '?data=' + $routeParams.acro;
 
 		//sets up details obj
 		$rootScope.classDetails = {};

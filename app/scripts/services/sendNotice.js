@@ -26,7 +26,7 @@ angular.module('fullsailsitinApp')
 			//reveals successful send message in view
 			$rootScope.showConfirmation = true;
 
-			var emailUrl = 'http://127.0.0.1:8887/public/send-email' + '?' +
+			var emailUrl = $rootScope.DIR + '/send-email' + '?' +
 				'className=' + $rootScope.classDetails.fullName +
 				'&day=' + $rootScope.modal.day +
 				'&date=' + $rootScope.modal.start +
@@ -89,7 +89,7 @@ angular.module('fullsailsitinApp')
 		$rootScope.getNext = function(name, date){
 
 			//add class acronym to request to query on
-			var rUrl = 'http://127.0.0.1:8887/public/get-next' + '?class=' + name + '&date=' + date;
+			var rUrl = $rootScope.DIR + '/get-next' + '?class=' + name + '&date=' + date;
 
 			$http({method:'GET', url: rUrl})
 				.success( function(data){
