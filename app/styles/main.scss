@@ -434,6 +434,18 @@ nav{
 		margin-bottom: 54px;
 		font-size: 1.6em;
 		text-align: center;
+
+		@include break-sm{
+			margin-top: 141px;
+			margin-bottom: 90px;
+			font-size: 1.8em;
+		}
+
+		@include break-md{
+			margin-top: 171px;
+			margin-bottom: 120px;
+			font-size: 2.4em;
+		}
 	}
 
 	ul{
