@@ -2,37 +2,37 @@
 
 /* global Firebase */
 var App = angular.module('fullsailsitinApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute',
-  'firebase'
-]);
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute',
+    'firebase'
+  ]);
 
 App.config(function ($routeProvider) {
   $routeProvider
-    .when('/', {
-      templateUrl: 'views/home.tpl',
-      controller: 'MainCtrl'
-    })
-    .when('/sitin', {
-      templateUrl: 'views/sitin.tpl',
-      controller: 'ClassCtrl'
-    })
-    .when('/dates/:acro', {
-      templateUrl: 'views/dates.tpl',
-      controller: 'DateCtrl'
-    })
-    .when('/attended', {
-      templateUrl: 'views/attended.tpl',
-      controller: 'DateCtrl'
-    })
-    .when('/404', {
-      templateUrl: 'views/404.tpl'
-    })
-    .otherwise({
-      redirectTo: '404'
-    });
+  .when('/', {
+    templateUrl: 'views/home.tpl',
+    controller: 'MainCtrl'
+  })
+  .when('/sitin', {
+    templateUrl: 'views/sitin.tpl',
+    controller: 'ClassCtrl'
+  })
+  .when('/dates/:acro', {
+    templateUrl: 'views/dates.tpl',
+    controller: 'DateCtrl'
+  })
+  .when('/attended', {
+    templateUrl: 'views/attended.tpl',
+    controller: 'DateCtrl'
+  })
+  .when('/404', {
+    templateUrl: 'views/404.tpl'
+  })
+  .otherwise({
+    redirectTo: '404'
+  });
 });
 
 
@@ -42,28 +42,46 @@ App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSi
 
   //reference to firebase
   var db = new Firebase('https://sitin.firebaseio.com');
+  //sets up simple login
+  $rootScope.loginObject = $firebaseSimpleLogin(db);
+
 
   //Defines server root for API
   // $rootScope.DIR = 'http://107.170.58.66/';
   $rootScope.DIR = 'http://127.0.0.1:8887/public';
 
-  //Adds obj to scope to prevent interpolation errors
+  //Adds objs to scope to prevent interpolation errors
   //on page loads
   $rootScope.modal = {
     'day' : '',
     'start' : ''
   };
 
+  $rootScope.currentUser = {};
 
 
-  //sets up simple login
-  $rootScope.loginObject = $firebaseSimpleLogin(db);
 
 
-  //runs GetSitins to generate
-  //user total on the rootScope
-  var gs = GetSitins;
-  console.log(gs);
+  //Builds currentUser on app load.
+  //Mainly for page refreshes
+  $rootScope.loginObject.$getCurrentUser()
+  .then(function(user){
+    if(user){
+      //Pulates currentUser on page load
+      $rootScope.currentUser.name = user.displayName;
+      // $rootScope.currentUser.avatar = user.avatar_url;// jshint ignore:line
+      // $rootScope.currentUser.email = user.email;
+      // $rootScope.currentUser.id = user.uid;
+
+      //runs GetSitins to generate
+      //user total on the rootScope
+      var gs = GetSitins;
+      console.log(gs);
+
+      console.log(user);
+    }
+  });
+
 
 
   //Class name Hash table
@@ -128,7 +146,25 @@ App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSi
 
 
 
+App.filter('toArray', function () {
+  return function (obj) {
+    if (!(obj instanceof Object)) {
+      return obj;
+    }
 
+    return Object.keys(obj).filter(function(key){if(key.charAt(0) !== '$') {return key;}}).map(function (key) {
+      return Object.defineProperty(obj[key], '$key', {value: key});
+    });
+  };
+});
+
+App.filter('length', function(){
+
+  return function(array)
+  {
+    return array.length;
+  };
+});
 
 //Filter to convert SQL date string to a new format
 App.filter('formatDateString',  function formatDateString($filter){

@@ -2,26 +2,12 @@
 
 /* global Firebase */
 angular.module('fullsailsitinApp')
-	.factory('GetSitins', ['$rootScope', function ($rootScope){
+	.factory('GetSitins', ['$rootScope','$firebase', function ($rootScope,$firebase){
 
 			var fb = new Firebase('https://sitin.firebaseio.com/attended/');
-			var attendedArray = [];
 
-			fb.on('child_added', function(snapshot){
+			$rootScope.attended = $firebase(fb);
 
-				if(snapshot.val().user === $rootScope.currentUser.name){
-					attendedArray.push(snapshot.val());
-				}
-				console.log(attendedArray, $rootScope.currentUser.name);
-
-				//Runs up sitins to array length on child_added event
-				$rootScope.currentUser.sitins = attendedArray.length;
-
-			//Get sitin classes here
-		    //Renders in the header view..
-		    $rootScope.sitins = attendedArray;
-
-			});
 
 
 		}]);
