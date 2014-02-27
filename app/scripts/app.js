@@ -38,7 +38,7 @@ App.config(function ($routeProvider) {
 
 
 
-App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $rootScope){
+App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSimpleLogin, $rootScope, GetSitins){
 
   //reference to firebase
   var db = new Firebase('https://sitin.firebaseio.com');
@@ -60,6 +60,10 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
   $rootScope.loginObject = $firebaseSimpleLogin(db);
 
 
+  //runs GetSitins to generate
+  //user total on the rootScope
+  var gs = GetSitins;
+  console.log(gs);
 
 
   //Class name Hash table
@@ -119,7 +123,7 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
   // };
 
 
-}]);
+}]);// app.run
 
 
 
