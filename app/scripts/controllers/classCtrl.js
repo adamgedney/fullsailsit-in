@@ -13,16 +13,17 @@ angular.module('fullsailsitinApp')
 				if(!user){
 					$location.path('/');
 				}else{
-					//runs GetSitins to generate
-					//user total on the rootScope
-					var gs = GetSitins;
-					console.log(gs, $rootScope.currentUser.sitins);
 
 					//Repopulates currentUser on page load
 					$rootScope.currentUser.name = user.displayName;
 					$rootScope.currentUser.avatar = user.avatar_url;// jshint ignore:line
 					$rootScope.currentUser.email = user.email;
 					$rootScope.currentUser.id = user.uid;
+
+					//runs GetSitins to generate
+					//user total on the rootScope
+					var gs = GetSitins;
+					console.log(gs, $rootScope.currentUser.sitins);
 				}
 			});
 

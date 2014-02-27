@@ -12,9 +12,9 @@ angular.module('fullsailsitinApp')
 				if(snapshot.val().user === $rootScope.currentUser.name){
 					attendedArray.push(snapshot.val());
 				}
+				console.log(attendedArray, $rootScope.currentUser.name);
 
-
-				//Sets sitins to array length on value event
+				//Runs up sitins to array length on child_added event
 				$rootScope.currentUser.sitins = attendedArray.length;
 
 			//Get sitin classes here
