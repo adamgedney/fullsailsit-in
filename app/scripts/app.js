@@ -47,6 +47,13 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
   // $rootScope.DIR = 'http://107.170.58.66/';
   $rootScope.DIR = 'http://127.0.0.1:8887/public';
 
+  //Adds obj to scope to prevent interpolation errors
+  //on page loads
+  $rootScope.modal = {
+    'day' : '',
+    'start' : ''
+  };
+
 
 
   //sets up simple login
@@ -117,8 +124,10 @@ App.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $r
 
 
 
+
+
 //Filter to convert SQL date string to a new format
-App.filter('formatDateString', function formatDateString($filter){
+App.filter('formatDateString',  function formatDateString($filter){
 
   return function(str){
     //replaces - with /
