@@ -59,7 +59,8 @@ App.run(['$firebaseSimpleLogin', '$rootScope', '$firebase', function($firebaseSi
 
 
   //Defines server root for API
-  $rootScope.DIR = 'http://127.0.0.1:8887/public';
+  // $rootScope.DIR = 'http://127.0.0.1:8887/public';
+  $rootScope.DIR = 'http://107.170.58.66/';
 
   //Adds objs to scope to prevent interpolation errors
   //on page loads

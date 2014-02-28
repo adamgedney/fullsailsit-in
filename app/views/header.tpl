@@ -29,7 +29,7 @@
 
 
 
-<div class="slideout animated" ng-class="{'fadeInRightBig': slideoutSwitch , 'fadeOutRightBig': !slideoutSwitch}">
+<div class="slideout animated" ng-class="{'fadeInRightBig': slideoutSwitch , 'fadeOutRightBig': slideoutSwitch === false}">
 	<ul>
 		<li></li>
 		<li><img ng-src="{{currentUser.avatar}}" width="46"/>

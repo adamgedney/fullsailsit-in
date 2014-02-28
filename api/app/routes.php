@@ -11,8 +11,17 @@
 |
 */
 
-header('content-type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: *');
+// public function __construct()
+// {
+//     $this->afterFilter(function($response)
+//     {
+//         $response->headers->set('Access-Control-Allow-Origin', '*');
+//         return $response;
+//     });
+// };
+
+// header('content-type: application/json; charset=utf-8');
+// header('Access-Control-Allow-Origin: *');
 
 Route::get('/get-classes', function()
 {
@@ -20,7 +29,9 @@ Route::get('/get-classes', function()
 
 	$classes = DB::select('SELECT DISTINCT(class) FROM schedule_events WHERE course LIKE "%WDD%"');
 
-	echo json_encode($classes);
+	// return json_encode($classes);
+	header('Access-Control-Allow-Origin: *');
+	return Response::json($classes);
 });
 
 
@@ -35,7 +46,8 @@ Route::get('/get-dates', function()
 
 	$dates = DB::select('SELECT class, day, date, start, room, instructor FROM schedule_events WHERE class = ?', array($data));
 
-	echo json_encode($dates);
+	header('Access-Control-Allow-Origin: *');
+	return Response::json($dates);
 });
 
 
@@ -50,7 +62,8 @@ Route::get('/get-next', function()
 
 	$next = DB::select(DB::raw('SELECT day, date, start, room, instructor FROM schedule_events WHERE class = "' . $class . '" AND start > "' . $date . '" LIMIT 1'));
 
-	echo json_encode($next);
+	header('Access-Control-Allow-Origin: *');
+	return Response::json($next);
 });
 
 
@@ -92,7 +105,8 @@ Route::get('/send-email', function()
 	//send email
 	$mail = mail($to,$subject,$message,$header);
 
-	echo json_encode($mail);
+	header('Access-Control-Allow-Origin: *');
+	return Response::json($mail);
 
 });
 
