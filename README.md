@@ -19,6 +19,8 @@ It IS working though. It may have been the sendmail SMTP service that slowed thi
 Email me if you have any questions.
 
 
+LINK TO PITCH VIDEO: https://vimeo.com/87887005
+
 
 Thanks again for everything, Chris & Rachel.
 :)
