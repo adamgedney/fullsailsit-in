@@ -14,7 +14,7 @@ angular.module('fullsailsitinApp')
 					$location.path('/');
 				}else{
 
-					//Repopulates currentUser on page load
+					//Repopulates currentUser on page load - for refresh
 					$rootScope.currentUser.name = user.displayName;
 					$rootScope.currentUser.avatar = user.avatar_url;// jshint ignore:line
 					$rootScope.currentUser.email = user.email;

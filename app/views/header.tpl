@@ -24,6 +24,11 @@
 
 
 
+
+
+
+
+
 <div class="slideout animated" ng-class="{'fadeInRightBig': slideoutSwitch , 'fadeOutRightBig': !slideoutSwitch}">
 	<ul>
 		<li></li>
@@ -46,10 +51,12 @@
 		</li>
 	</ul>
 
-
 	<div class="logout-item" ng-controller="logoutCtrl" ng-click="logoutUser()">
 		<img src="images/logout-icon.png" height="23" alt="logout button"/>
 		<p>Logout</p>
 	</div><!-- /. logout-item-->
 
 </div><!-- /.slideout-->
+
+
+

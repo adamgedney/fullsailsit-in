@@ -3,10 +3,10 @@
 <div ng-include src="'views/header.tpl'"></div>
 
 
-
-
 	<!-- modal window tmp.-->
 	<div ng-include src="'views/modal.tpl'"></div>
+
+
 
 
 
@@ -30,6 +30,9 @@
 		</ul>
 
 	</div><!-- /.content-->
+
+
+
 
 
 <div ng-include src="'views/footer.tpl'"></div>

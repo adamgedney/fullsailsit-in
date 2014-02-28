@@ -9,6 +9,13 @@ var App = angular.module('fullsailsitinApp', [
     'firebase'
   ]);
 
+
+
+
+
+
+
+
 App.config(function ($routeProvider) {
   $routeProvider
   .when('/', {
@@ -38,6 +45,11 @@ App.config(function ($routeProvider) {
 
 
 
+
+
+
+
+
 App.run(['$firebaseSimpleLogin', '$rootScope', '$firebase', function($firebaseSimpleLogin, $rootScope, $firebase){
 
   //reference to firebase
@@ -56,6 +68,7 @@ App.run(['$firebaseSimpleLogin', '$rootScope', '$firebase', function($firebaseSi
     'start' : ''
   };
 
+  //instantiates objs
   $rootScope.sitins = [];
   $rootScope.currentUser = {};
 
@@ -142,7 +155,7 @@ App.run(['$firebaseSimpleLogin', '$rootScope', '$firebase', function($firebaseSi
 
 
 
-
+//Filters obj to array: Rachel wrote this
 App.filter('toArray', function () {
   return function (obj) {
     if (!(obj instanceof Object)) {
@@ -158,7 +171,7 @@ App.filter('toArray', function () {
 
 
 
-
+//Filters for array length in view : Rachel wrote this
 App.filter('length', function(){
 
   return function(array)

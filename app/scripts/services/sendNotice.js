@@ -66,8 +66,6 @@ angular.module('fullsailsitinApp')
 		//attending a sitin.
 		function setSitins(){// jshint ignore:line
 
-			// var fbConn = $firebase(new Firebase('https://sitin.firebaseio.com/users/' + $rootScope.currentUser.id + '/attended'));
-
 			var obj = {
 				'classDate' : $rootScope.modal.start,
 				'class' : $rootScope.modal.class,
@@ -75,7 +73,8 @@ angular.module('fullsailsitinApp')
 			};
 
 
-			//This is angularfire reference
+			//This is an angularfire reference to user/**/attended
+			//We push the new sitin obj.
 			$rootScope.sitins.$add(obj);
 		}
 
