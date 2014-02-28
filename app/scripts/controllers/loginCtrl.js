@@ -2,7 +2,7 @@
 
 /* global Firebase*/
 angular.module('fullsailsitinApp')
-	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', '$location', 'GetSitins', function ($scope, $rootScope, $window, $cookies, $location, GetSitins) {
+	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', '$location', function ($scope, $rootScope, $window, $cookies, $location) {
 
 		//=========================================
 		//Called by the login button on the home page
@@ -47,8 +47,8 @@ angular.module('fullsailsitinApp')
 
 		//runs GetSitins to generate
 		//user total on the rootScope
-		var gs = GetSitins;
-		console.log(gs);
+		// var gs = GetSitins;
+		// console.log(gs);
 
 
 

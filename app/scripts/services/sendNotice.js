@@ -1,6 +1,6 @@
 'use strict';
 
-/* global Firebase */
+
 angular.module('fullsailsitinApp')
 	.factory('SendNotice', ['$rootScope', '$http', function ($rootScope, $http){
 
@@ -66,18 +66,17 @@ angular.module('fullsailsitinApp')
 		//attending a sitin.
 		function setSitins(){// jshint ignore:line
 
-			var fbConn = new Firebase('https://sitin.firebaseio.com/attended/');
+			// var fbConn = $firebase(new Firebase('https://sitin.firebaseio.com/users/' + $rootScope.currentUser.id + '/attended'));
 
 			var obj = {
 				'classDate' : $rootScope.modal.start,
-				'class' : $rootScope.classDetails.name,
+				'class' : $rootScope.modal.class,
 				'user' : $rootScope.currentUser.name
 			};
 
-			// Builds a record of requested sitins on a unique timestamp
-			//in the "attended" directory.
-			var d = new Date().getTime();
-			fbConn.child(d).set(obj);
+
+			//This is angularfire reference
+			$rootScope.sitins.$add(obj);
 		}
 
 
@@ -87,6 +86,7 @@ angular.module('fullsailsitinApp')
 
 
 		$rootScope.getNext = function(name, date){
+			console.log(name, date);
 
 			//add class acronym to request to query on
 			var rUrl = $rootScope.DIR + '/get-next' + '?class=' + name + '&date=' + date;
@@ -94,10 +94,10 @@ angular.module('fullsailsitinApp')
 			$http({method:'GET', url: rUrl})
 				.success( function(data){
 
-					//sets modal windows values to reflec the next available class
+					//sets modal windows values to reflect the next available class
 					$rootScope.modal = {
 						'instructor': data[0].instructor,
-						'name': name,
+						'class': name,
 						'day': data[0].day,
 						'start': data[0].start,
 						'again': 'again'

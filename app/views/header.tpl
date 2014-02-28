@@ -9,7 +9,7 @@
 
 			<li class="nav-profile no-hover"><img ng-src="{{$root.currentUser.avatar}}" width="46"/>
 					<span>{{$root.currentUser.name}}</span>
-						<span class="yellow">{{currentUser.sitins | toArray }}</span>
+						<span class="yellow">{{sitins | toArray | length}}</span>
 							<span class="small">SitIns</span></li>
 			<li><a ng-controller="logoutCtrl" ng-click="logoutUser()">Logout</a></li>
 
@@ -20,13 +20,17 @@
 </header>
 
 
+
+
+
+
 <div class="slideout animated" ng-class="{'fadeInRightBig': slideoutSwitch , 'fadeOutRightBig': !slideoutSwitch}">
 	<ul>
 		<li></li>
 		<li><img ng-src="{{currentUser.avatar}}" width="46"/>
 			<span class="super">Logged in as:</span>
 				<span class="menu-item">{{currentUser.name}}</span>
-					<span class="menu-points">{{currentUser.sitins}}</span>
+					<span class="menu-points">{{sitins | toArray | length}}</span>
 						<span class="menu-points-units">SitIns</span></li>
 		<li><a href="#/sitin" class="menu-item left" >Classes</a></li>
 

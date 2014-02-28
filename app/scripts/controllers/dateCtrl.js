@@ -2,7 +2,7 @@
 
 
 angular.module('fullsailsitinApp')
-	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', '$location', 'GetSitins', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, $location, GetSitins, SendNotice) {
+	.controller('DateCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$cookies', '$location', 'SendNotice', function ($scope, $routeParams, $http, $rootScope, $cookies, $location, SendNotice) {
 
 		//sets up details obj
 		$rootScope.currentUser = {};
@@ -20,10 +20,6 @@ angular.module('fullsailsitinApp')
 					$rootScope.currentUser.email = user.email;
 					$rootScope.currentUser.id = user.uid;
 
-					//runs GetSitins to generate
-					//user total on the rootScope
-					var gs = GetSitins;
-					console.log(gs, $rootScope.currentUser.sitins);
 				}
 			});
 

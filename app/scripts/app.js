@@ -38,7 +38,7 @@ App.config(function ($routeProvider) {
 
 
 
-App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSimpleLogin, $rootScope, GetSitins){
+App.run(['$firebaseSimpleLogin', '$rootScope', '$firebase', function($firebaseSimpleLogin, $rootScope, $firebase){
 
   //reference to firebase
   var db = new Firebase('https://sitin.firebaseio.com');
@@ -47,7 +47,6 @@ App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSi
 
 
   //Defines server root for API
-  // $rootScope.DIR = 'http://107.170.58.66/';
   $rootScope.DIR = 'http://127.0.0.1:8887/public';
 
   //Adds objs to scope to prevent interpolation errors
@@ -57,6 +56,7 @@ App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSi
     'start' : ''
   };
 
+  $rootScope.sitins = [];
   $rootScope.currentUser = {};
 
 
@@ -67,18 +67,15 @@ App.run(['$firebaseSimpleLogin', '$rootScope', 'GetSitins', function($firebaseSi
   $rootScope.loginObject.$getCurrentUser()
   .then(function(user){
     if(user){
-      //Pulates currentUser on page load
+      //Populates currentUser on page load
       $rootScope.currentUser.name = user.displayName;
-      // $rootScope.currentUser.avatar = user.avatar_url;// jshint ignore:line
-      // $rootScope.currentUser.email = user.email;
-      // $rootScope.currentUser.id = user.uid;
+      $rootScope.currentUser.id = user.uid;
 
-      //runs GetSitins to generate
-      //user total on the rootScope
-      var gs = GetSitins;
-      console.log(gs);
 
-      console.log(user);
+      var fb = new Firebase('https://sitin.firebaseio.com/users/' + $rootScope.currentUser.id + '/attended');
+
+      //Uses this in sendNotice factory
+      $rootScope.sitins = $firebase(fb);
     }
   });
 
@@ -158,6 +155,10 @@ App.filter('toArray', function () {
   };
 });
 
+
+
+
+
 App.filter('length', function(){
 
   return function(array)
@@ -165,6 +166,10 @@ App.filter('length', function(){
     return array.length;
   };
 });
+
+
+
+
 
 //Filter to convert SQL date string to a new format
 App.filter('formatDateString',  function formatDateString($filter){

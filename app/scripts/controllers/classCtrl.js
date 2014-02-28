@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullsailsitinApp')
-	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$location', 'GetSitins', 'SendNotice', function ($scope, $cookies, $rootScope, $http, $location, GetSitins, SendNotice) {
+	.controller('ClassCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$location', 'SendNotice', function ($scope, $cookies, $rootScope, $http, $location, SendNotice) {
 
 
 		//sets up details obj
@@ -22,8 +22,8 @@ angular.module('fullsailsitinApp')
 
 					//runs GetSitins to generate
 					//user total on the rootScope
-					var gs = GetSitins;
-					console.log(gs, $rootScope.currentUser.sitins);
+					// var gs = GetSitins;
+					// console.log(gs, $rootScope.currentUser.sitins);
 				}
 			});
 
