@@ -6,6 +6,8 @@
 
 			<p ng-show="showConfirmation">Your notification sent successfully. Please allow a day or so for your instructor to reply.</p>
 
+			<p ng-show="showFailure">Oops Something wenst wrong. Your request wasn't sent. Please refresh this page and try again.</p>
+
 			<img ng-show="showConfirmation" src="images/check.png" alt="check image"/>
 
 			<button ng-show="!showConfirmation" ng-click="cancel()" class="btn cancel-btn">Cancel</button>

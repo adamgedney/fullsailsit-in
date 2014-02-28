@@ -51,6 +51,9 @@ angular.module('fullsailsitinApp')
 			})
 			.error(function(data, status, headers){
 				console.log('email send error', data, status, headers);
+
+				//Visible error handling to inform user their email wasn't sent
+				$rootScope.showFailure = true;
 			});
 		};
 
