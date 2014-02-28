@@ -43,7 +43,7 @@
 			<ul>
 				<li>Your SitIns <span class="right">Add next class?</span></li>
 
-				<li ng-click="getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins"><span class="bold">{{item.class }} &nbsp; </span> {{ item.classDate | formatDateString}}
+				<li ng-click="$root.getNext(item.class, item.classDate); $root.showModal = true;"  ng-repeat="item in sitins"><span class="bold">{{item.class }} &nbsp; </span> {{ item.classDate | formatDateString}}
 					<img src="images/add.png" alt="add next class icon" />
 				</li>
 
