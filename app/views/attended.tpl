@@ -3,7 +3,7 @@
 <div ng-include src="'views/header.tpl'"></div>
 
 	<!-- modal window tmp.-->
-	<div ng-include src="'views/modal.tpl'"></div>
+	<div ng-show="showModal" ng-include src="'views/modal.tpl'"></div>
 
 
 

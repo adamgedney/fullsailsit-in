@@ -89,6 +89,7 @@ angular.module('fullsailsitinApp')
 
 		$rootScope.getNext = function(name, date){
 			console.log(name, date);
+			$rootScope.showModal = true;
 
 			//add class acronym to request to query on
 			var rUrl = $rootScope.DIR + '/get-next' + '?class=' + name + '&date=' + date;

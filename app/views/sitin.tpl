@@ -2,6 +2,9 @@
 
 <div ng-include src="'views/header.tpl'"></div>
 
+	<!-- modal window tmp.-->
+	<div ng-show="showModal" ng-include src="'views/modal.tpl'"></div>
+
 	<div class="content">
 		<h2>What class would you like to sit in on, {{currentUser.name}}?</h2>
 
