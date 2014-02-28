@@ -49,8 +49,8 @@ angular.module('fullsailsitinApp')
 				setSitins();
 
 			})
-			.error(function(data, status, headers){
-				console.log('email send error', data, status, headers);
+			.error(function(status, headers){
+				console.log('email send error', status, headers);
 
 				//Visible error handling to inform user their email wasn't sent
 				$rootScope.showFailure = true;
@@ -69,7 +69,7 @@ angular.module('fullsailsitinApp')
 		//attending a sitin.
 		function setSitins(){// jshint ignore:line
 
-			var obj = {
+			var sitinObj = {
 				'classDate' : $rootScope.modal.start,
 				'class' : $rootScope.modal.class,
 				'user' : $rootScope.currentUser.name
@@ -78,7 +78,7 @@ angular.module('fullsailsitinApp')
 
 			//This is an angularfire reference to user/**/attended
 			//We push the new sitin obj.
-			$rootScope.sitins.$add(obj);
+			$rootScope.sitins.$add(sitinObj);
 		}
 
 

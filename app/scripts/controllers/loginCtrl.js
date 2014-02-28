@@ -2,7 +2,7 @@
 
 /* global Firebase*/
 angular.module('fullsailsitinApp')
-	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$cookies', '$location', function ($scope, $rootScope, $window, $cookies, $location) {
+	.controller('loginCtrl', ['$scope', '$rootScope', '$window', '$location', '$firebase', function ($scope, $rootScope, $window, $location, $firebase) {
 
 		//=========================================
 		//Called by the login button on the home page
@@ -45,49 +45,26 @@ angular.module('fullsailsitinApp')
 
 
 
-		//runs GetSitins to generate
-		//user total on the rootScope
-		// var gs = GetSitins;
-		// console.log(gs);
-
-
-
-
-
-
 		function checkUser(){
 
-			var fb = new Firebase('https://sitin.firebaseio.com/users/');
+			//reference to current user, if they eist, in fb
+			var fb = $firebase(new Firebase('https://sitin.firebaseio.com/users/' + $rootScope.currentUser.id ));
 
-			//Client side query to test for existing user
-			//in Firebase. If not found, throws a 'false'
-			//synchronously picked up by the !match condition below
-			fb.on('child_added', function(snapshot){
+			//queries fb for the user snapshot.
+			//If it doesn't exist, we create the new user
+			fb.$on('loaded', function(snapshot){
+				console.log(snapshot);
 
-				console.log(snapshot.val(), snapshot.val().name, $rootScope.currentUser.name);
+				if(snapshot === null){
+					console.log('user doesnt already exist');
 
-				if(snapshot.val().name !== $rootScope.currentUser.name){
-					//when no user exists, set a new user to firebase
-					fb.child($rootScope.currentUser.id).set($rootScope.currentUser);
+					//when no user exists in fb, set a new user
+					fb.$set($rootScope.currentUser);
+				}else{
+					console.log('user already exists');
 				}
 			});
-
-
-			//Set the current user cookies
-			setUserCookies();
-
 		}// checkUser()
-
-
-
-
-
-
-		function setUserCookies(){
-			$cookies.name = $rootScope.currentUser.name;
-			$cookies.avatar = $rootScope.currentUser.avatar;
-			$cookies.email = $rootScope.currentUser.email;
-		}
 
 
 
